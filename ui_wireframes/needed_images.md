@@ -38,7 +38,7 @@
 - [ ] **[SEC_04] Bento Gallery - Large Card:** Needs a wide shot of an off-grid inverter and lithium battery bank (LiFePO4) installed in a villa technical room with clean cable management.
 - [ ] **[SEC_04] Bento Gallery - Small Card 1:** Needs a close-up of Tier-1 monocrystalline 600W+ solar panels (Jinko/Trina/LONGi branding visible) on a villa roof.
 - [ ] **[SEC_04] Bento Gallery - Small Card 2:** Needs a close-up of LiFePO4 lithium battery modules (BYD/Growatt/Vmax branding visible) with BMS visible.
-- [ ] **[SEC_08] CTA Section - Grain Texture:** Needs a subtle repeating grain/noise texture PNG for the premium CTA background overlay.
+- [x] **[SEC_08] CTA Section - Grain Texture:** ✅ DELIVERED — `img/grain-texture.png` (subtle repeating RGBA noise, used as the CTA background overlay).
 
 ---
 
