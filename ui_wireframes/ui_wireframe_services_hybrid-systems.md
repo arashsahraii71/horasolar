@@ -146,7 +146,7 @@
             <div class="w-full rounded-xl bg-navy-mid border border-solar-gold/40 p-4 text-center"
                  :class="{ 'ring-2 ring-solar-gold': activeRung === 1 }">
               <span class="text-solar-gold font-bold text-lg">🏠 اولویت ۲: بار مصرفی (Load)</span>
-              <p class="text-pure-white/70 text-sm mt-1">تلقیم مستقیم از پنل‌ها</p>
+              <p class="text-pure-white/70 text-sm mt-1">تأمین مستقیم از پنل‌ها</p>
             </div>
             <svg class="w-1 h-8"><line x1="50%" y1="0" x2="50%" y2="100%" stroke="#F5A623" stroke-width="2" stroke-dasharray="6"/></svg>
             <div class="w-full rounded-xl bg-navy-mid border border-solar-gold/40 p-4 text-center"

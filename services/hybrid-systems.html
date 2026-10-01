@@ -137,11 +137,11 @@ tailwind.config={theme:{extend:{colors:{'solar-gold':'#F5A623','deep-navy':'#0A1
 <div class="lg:col-span-5 lg:sticky lg:top-20" aria-label="نمودار اولویت‌بندی انرژی در سیستم هیبریدی" role="img">
 <div class="glass-card p-8">
 <div class="flex flex-col gap-4 items-center">
-<div class="w-full rounded-xl bg-solar-gold/20 border-2 border-solar-gold p-4 text-center" :class="{ 'ring-2 ring-solar-gold': activeRung === 0 }"><span class="text-solar-gold font-black text-xl">اولویت ۱: پنل‌های خورشیدی</span><p class="text-pure-white/70 text-sm mt-1">مصروف مستقیم + شارژ باتری</p></div>
+<div class="w-full rounded-xl bg-solar-gold/20 border-2 border-solar-gold p-4 text-center" :class="{ 'ring-2 ring-solar-gold': activeRung === 0 }"><span class="text-solar-gold font-black text-xl">☀️ اولویت ۱: پنل‌های خورشیدی</span><p class="text-pure-white/70 text-sm mt-1">مصروف مستقیم + شارژ باتری</p></div>
 <svg class="w-1 h-8"><line x1="50%" y1="0" x2="50%" y2="100%" stroke="#F5A623" stroke-width="2" stroke-dasharray="6"/></svg>
-<div class="w-full rounded-xl bg-navy-mid border border-solar-gold/40 p-4 text-center"><span class="text-solar-gold font-bold text-lg">اولویت ۲: بار مصرفی (Load)</span><p class="text-pure-white/70 text-sm mt-1">تلقیم مستقیم از پنل‌ها</p></div>
+<div class="w-full rounded-xl bg-navy-mid border border-solar-gold/40 p-4 text-center"><span class="text-solar-gold font-bold text-lg">🏠 اولویت ۲: بار مصرفی (Load)</span><p class="text-pure-white/70 text-sm mt-1">تأمین مستقیم از پنل‌ها</p></div>
 <svg class="w-1 h-8"><line x1="50%" y1="0" x2="50%" y2="100%" stroke="#F5A623" stroke-width="2" stroke-dasharray="6"/></svg>
-<div class="w-full rounded-xl bg-navy-mid border border-solar-gold/40 p-4 text-center"><span class="text-solar-gold font-bold text-lg">اولویت ۳: باتری ذخیره‌ساز</span><p class="text-pure-white/70 text-sm mt-1">مازاد تولید / پشتیبان قطعی</p></div>
+<div class="w-full rounded-xl bg-navy-mid border border-solar-gold/40 p-4 text-center"><span class="text-solar-gold font-bold text-lg">🔋 اولویت ۳: باتری ذخیره‌ساز</span><p class="text-pure-white/70 text-sm mt-1">مازاد تولید / پشتیبان قطعی</p></div>
 <svg class="w-1 h-8"><line x1="50%" y1="0" x2="50%" y2="100%" stroke="#F5A623" stroke-width="2" stroke-dasharray="6"/></svg>
 <div class="w-full rounded-xl bg-navy-mid border border-solar-gold/40 p-4 text-center"><span class="text-solar-gold font-bold text-lg">اولویت ۴: شبکه برق شهری</span><p class="text-pure-white/70 text-sm mt-1">جبران کمبود / فروش مازاد</p></div>
 <svg class="w-1 h-8"><line x1="50%" y1="0" x2="50%" y2="100%" stroke="#F5A623" stroke-width="2" stroke-dasharray="6"/></svg>
@@ -153,7 +153,7 @@ tailwind.config={theme:{extend:{colors:{'solar-gold':'#F5A623','deep-navy':'#0A1
 <h2 class="font-vazirmatn font-extrabold text-2xl md:text-4xl text-pure-white">مکانیزم <span class="text-solar-gold">سوئیچینگ هوشمند</span> و اینورترهای هیبریدی</h2>
 <p class="text-pure-white/85 text-base md:text-lg leading-relaxed">معماری فنی یک سیستم هیبریدی بر پایه یک پردازشگر مرکزی در داخل اینورتر هیبریدی استوار است. این پردازشگر (Smart Energy Manager) به صورت لحظه‌ای پروفایل مصرف شما را تحلیل می‌کند. الگوریتم استاندارد به این شکل برنامه‌ریزی می‌شود: در طول روز، انرژی تولیدی پنل‌ها مستقیماً صرف روشن نگه‌داشتن تجهیزات می‌شود. مازاد این انرژی، بانک باتری‌ها را شارژ می‌کند. اگر مصرف شما بیش از تولید پنل‌ها باشد، اینورتر به صورت هوشمند کمبود را از شبکه برق شهری جبران می‌کند. در زمان قطعی کامل شبکه، مدار ایزوله شده و جریان بدون قطعی (شبیه به عملکرد دستگاه UPS صنعتی) از باتری‌ها کشیده می‌شود.</p>
 <div class="glass-card p-6 border-s-4 border-solar-gold bg-cream-warm/5">
-<p class="text-sm font-bold text-solar-gold mb-1">نکته کلیدی برای موتورهای جستجو</p>
+<p class="text-sm font-bold text-solar-gold mb-1">🔑 نکته کلیدی برای موتورهای جستجو</p>
 <p class="text-pure-white/90 text-base leading-relaxed">قلب تپنده یک نیروگاه هیبریدی، اینورتر هوشمند آن است. این دستگاه به صورت دینامیک اولویت‌بندی می‌کند که بار مصرفی ابتدا از پنل‌ها، سپس از باتری و در نهایت از شبکه برق شهری یا دیزل ژنراتور تامین شود.</p>
 </div>
 </div>
@@ -177,7 +177,7 @@ tailwind.config={theme:{extend:{colors:{'solar-gold':'#F5A623','deep-navy':'#0A1
 </div>
 </div>
 <div class="lg:absolute lg:start-1/2 lg:top-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 z-20 w-full lg:max-w-md mx-auto mt-6 lg:mt-0 glass-card p-6 border-2 border-solar-gold">
-<p class="text-sm font-bold text-solar-gold mb-1">خلاصه تصمیم‌ساز</p>
+<p class="text-sm font-bold text-solar-gold mb-1">💡 خلاصه تصمیم‌ساز</p>
 <p class="text-pure-white/90 text-base leading-relaxed">سیستم‌های هیبریدی پاسخ مهندسی قطعی به معضل خاموشی‌های تابستان و زمستان در ایران هستند. این سیستم‌ها نیاز به استفاده از دیزل ژنراتورهای پرهزینه، پرسر و صدا و آلاینده را به طور کامل مرتفع می‌سازند.</p>
 </div>
 </div>
@@ -203,7 +203,7 @@ tailwind.config={theme:{extend:{colors:{'solar-gold':'#F5A623','deep-navy':'#0A1
 </div>
 </div>
 <div class="border-t-4 border-solar-gold bg-pure-white rounded-2xl p-6 shadow-lg">
-<p class="text-sm font-bold text-solar-gold mb-1">حقیقت علمی</p>
+<p class="text-sm font-bold text-solar-gold mb-1">🔬 حقیقت علمی</p>
 <p class="text-deep-navy text-base leading-relaxed">یک باور غلط این است که سیستم هیبریدی همان دستگاه UPS است. واقعیت این است که UPS تنها یک باتری پشتیبان موقت است، در حالی که سیستم هیبریدی یک نیروگاه تولید مولد است که باتری‌های خود را با انرژی رایگان خورشید شارژ می‌کند.</p>
 </div>
 </div>
@@ -227,7 +227,7 @@ tailwind.config={theme:{extend:{colors:{'solar-gold':'#F5A623','deep-navy':'#0A1
 </table>
 </div>
 <div class="lg:col-span-4 glass-card p-5 border-s-4 border-solar-gold">
-<p class="text-sm font-bold text-solar-gold mb-1">تضمین کیفیت</p>
+<p class="text-sm font-bold text-solar-gold mb-1">🛡️ تضمین کیفیت</p>
 <p class="text-pure-white/90 text-base leading-relaxed">پایداری یک نیروگاه هیبریدی به کیفیت باتری‌ها و پنل‌های آن بستگی دارد. ما در هورا نور سهند صرفاً از پنل‌های مونوکریستال برندهای جهانی Jinko، Trina و LONGi همراه با باتری‌های دیپ‌سایکل ژل استاندارد استفاده می‌کنیم.</p>
 </div>
 </div>
@@ -258,12 +258,12 @@ tailwind.config={theme:{extend:{colors:{'solar-gold':'#F5A623','deep-navy':'#0A1
 <h2 class="font-vazirmatn font-extrabold text-2xl md:text-4xl text-pure-white">مناطق تحت پوشش <span class="text-solar-gold">هورا نور سهند</span></h2>
 <p class="text-pure-white/85 text-base md:text-lg leading-relaxed">سیستم‌های هیبریدی به دلیل پیچیدگی‌های تنظیمات نرم‌افزاری اینورتر و مانیتورینگ باتری‌ها، نیازمند پشتیبانی محلی و سریع هستند. دفتر مرکزی ما واقع در کرج، جاده ملارد (بعد از دانشگاه فرهنگیان)، به ما این امکان را می‌دهد تا در کمتر از چند ساعت، خدمات عیب‌یابی و سرویس دوره‌ای را برای ویلاهای لوکس در کردان، لواسان، مهرشهر، هشتگرد و همچنین سوله های صنعتی اشتهارد تامین کنیم. مجاورت ما با پروژه‌ها، برگ برنده شما در پایداری سیستم است.</p>
 <address class="not-italic bg-solar-gold text-deep-navy rounded-2xl p-6 font-bold space-y-2">
-<p class="text-lg">دفتر مرکزی: کرج، جاده ملارد، بعد از دانشگاه فرهنگیان</p>
-<p dir="ltr">026-36506485</p>
-<p dir="ltr">09125728170</p>
+<p class="text-lg">🏢 دفتر مرکزی: کرج، جاده ملارد، بعد از دانشگاه فرهنگیان</p>
+<p>📞 <span dir="ltr">026-36506485</span></p>
+<p>📱 <span dir="ltr">09125728170</span></p>
 </address>
 <div class="glass-card p-5 border-s-4 border-solar-gold">
-<p class="text-sm font-bold text-solar-gold mb-1">پوشش محلی</p>
+<p class="text-sm font-bold text-solar-gold mb-1">📍 پوشش محلی</p>
 <p class="text-pure-white/90 text-base leading-relaxed">تیم پشتیبانی سریع هورا نور سهند، با استقرار در کرج (جاده ملارد)، عملیات احداث و خدمات پس از فروش سیستم‌های هیبریدی را در کردان، مهرشهر، تهراندشت و شهرک‌های صنعتی ارائه می‌دهد.</p>
 </div>
 </div>
@@ -290,7 +290,7 @@ tailwind.config={theme:{extend:{colors:{'solar-gold':'#F5A623','deep-navy':'#0A1
 <h2 class="font-vazirmatn font-extrabold text-2xl md:text-4xl text-pure-white">سرمایه‌گذاری <span class="text-solar-gold">مطمئن</span> با بازگشت <span class="text-eco-green">۳ تا ۵ ساله</span></h2>
 <p class="text-pure-white/85 text-base md:text-lg leading-relaxed">وقتی هزینه از کار افتادن دستگاه‌های صنعتی گران‌قیمت یا فساد مواد غذایی در یخچال‌های ویلایی را در زمان قطعی برق محاسبه می‌کنید، متوجه خواهید شد که سیستم هیبریدی یک "هزینه" نیست، بلکه یک "بیمه تجهیزات" است. با حذف کامل هزینه‌های سوخت گازوئیل و روغن‌کاری دیزل ژنراتورها، بازگشت سرمایه سیستم‌های خورشیدی ما (با تکیه بر اطلاعات استخراج شده از پورتفولیوی ۴۰ پروژه اجرا شده) به شدت منطقی و بین ۳ الی ۵ سال است.</p>
 <div class="glass-card p-5 border-s-4 border-solar-gold">
-<p class="text-sm font-bold text-solar-gold mb-1">نتیجه‌گیری</p>
+<p class="text-sm font-bold text-solar-gold mb-1">📊 نتیجه‌گیری</p>
 <p class="text-pure-white/90 text-base leading-relaxed">نصب یک سیستم هیبریدی نه تنها جلوی ضررهای میلیاردی ناشی از توقف خطوط تولید و خرابی تجهیزات حساس را می‌گیرد، بلکه یک سرمایه‌گذاری مطمئن با بازگشت ۳ تا ۵ ساله است.</p>
 </div>
 <a href="https://arashsahraii71.github.io/horasolar/pricing/solar-calculator.html" class="inline-flex items-center gap-2 px-8 py-4 bg-solar-gold text-deep-navy font-bold rounded-2xl hover:bg-solar-gold/90 transition-colors" aria-label="محاسبه‌گر آنلاین سرمایه‌گذاری هیبریدی">محاسبه سرمایه‌گذاری</a>
