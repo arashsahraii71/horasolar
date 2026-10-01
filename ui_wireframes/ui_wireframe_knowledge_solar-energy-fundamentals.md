@@ -69,7 +69,7 @@
 
 - **Tailwind & Alpine Directives:**
   ```html
-  <header id="sec-01" class="relative min-h-screen flex items-center overflow-hidden" x-data="{ loaded: false }" x-init="loaded = true">
+  <article id="sec-01" class="relative min-h-screen flex items-center overflow-hidden" x-data="{ loaded: false }" x-init="loaded = true">
     <div class="absolute inset-0 bg-gradient-to-b from-deep-navy/80 via-deep-navy/50 to-deep-navy"></div>
     <div class="relative z-10 container mx-auto px-4 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center py-24">
       <div class="lg:col-span-7 text-start">
@@ -95,11 +95,11 @@
         </p>
       </aside>
     </div>
-  </header>
+  </article>
   ```
 
 - **Accessibility & ARIA:**
-  - `<header id="sec-01">` landmark.
+  - `<article id="sec-01">` wrapper.
   - 3D model has `aria-label` in Farsi.
   - CTA `role="button"` + `aria-label`.
   - GEO `<aside>` complementary role.
@@ -121,7 +121,7 @@
 
 - **Tailwind & Alpine Directives:**
   ```html
-  <article id="sec-02" class="py-20 md:py-32 bg-deep-navy" x-data="{ activeLayer: 0 }">
+  <section id="sec-02" class="py-20 md:py-32 bg-deep-navy" x-data="{ activeLayer: 0 }">
     <div class="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
       <div class="lg:col-span-6 lg:sticky lg:top-20" aria-label="نمودار تعاملی لایه‌های پنل خورشیدی" role="img">
         <div class="glass-card p-8 h-[400px] flex flex-col justify-center">
@@ -187,7 +187,7 @@
         </div>
       </div>
     </div>
-  </article>
+  </section>
   ```
 
 - **Accessibility & ARIA:**
@@ -416,7 +416,7 @@
 
 - **Tailwind & Alpine Directives:**
   ```html
-  <aside id="sec-06" class="py-20 md:py-32 bg-cream-warm" x-data="{ revealed: false }">
+  <section id="sec-06" class="py-20 md:py-32 bg-cream-warm" x-data="{ revealed: false }">
     <div class="container mx-auto px-4 max-w-4xl">
       <h2 class="font-vazirmatn font-extrabold text-2xl md:text-4xl text-deep-navy text-center mb-12">
         افسانه در برابر واقعیت: <span class="text-solar-gold">تولید برق در هوای ابری</span>
@@ -446,11 +446,11 @@
         </p>
       </div>
     </div>
-  </aside>
+  </section>
   ```
 
 - **Accessibility & ARIA:**
-  - `<aside id="sec-06">`.
+  - `<section id="sec-06">`.
   - `x-intersect` decorative.
   - Meaning via icon + text.
   - Contrast: dark text on light cards.

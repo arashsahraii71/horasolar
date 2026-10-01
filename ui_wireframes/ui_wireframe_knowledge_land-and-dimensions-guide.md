@@ -69,7 +69,7 @@
 
 - **Tailwind & Alpine Directives:**
   ```html
-  <header id="sec-01" class="relative min-h-screen flex items-center overflow-hidden" x-data="{ loaded: false }" x-init="loaded = true">
+  <article id="sec-01" class="relative min-h-screen flex items-center overflow-hidden" x-data="{ loaded: false }" x-init="loaded = true">
     <img src="/images/hero-space-planning.webp"
          alt="مقایسه چیدمان نیروگاه خورشیدی روی سقف سوله و روی زمین باز"
          class="absolute inset-0 w-full h-full object-cover"
@@ -101,11 +101,11 @@
         </p>
       </aside>
     </div>
-  </header>
+  </article>
   ```
 
 - **Accessibility & ARIA:**
-  - `<header id="sec-01">` landmark.
+  - `<article id="sec-01">` wrapper.
   - Hero `alt` in Farsi describing rooftop vs ground layout.
   - CTA `role="button"` + `aria-label`.
   - GEO `<aside>` complementary role.
@@ -466,7 +466,7 @@
 
 - **Tailwind & Alpine Directives:**
   ```html
-  <aside id="sec-07" class="py-20 md:py-32 bg-cream-warm" x-data="{ revealed: false }">
+  <section id="sec-07" class="py-20 md:py-32 bg-cream-warm" x-data="{ revealed: false }">
     <div class="container mx-auto px-4 max-w-4xl">
       <h2 class="font-vazirmatn font-extrabold text-2xl md:text-4xl text-deep-navy text-center mb-12">
         باورهای غلط بومی درباره <span class="text-solar-gold">جهت نصب پنل‌ها</span>
@@ -496,11 +496,11 @@
         </p>
       </div>
     </div>
-  </aside>
+  </section>
   ```
 
 - **Accessibility & ARIA:**
-  - `<aside id="sec-07">`.
+  - `<section id="sec-07">`.
   - `x-intersect` decorative.
   - Meaning via icon + text.
   - Contrast: dark text on light cards.

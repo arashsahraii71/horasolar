@@ -178,7 +178,7 @@
 
 - **Tailwind & Alpine Directives:**
   ```html
-  <section id="sec-03" class="py-20 md:py-32 bg-gradient-to-b from-deep-navy to-navy-mid" x-data="{ showDetails: false }">
+  <article id="sec-03" class="py-20 md:py-32 bg-gradient-to-b from-deep-navy to-navy-mid" x-data="{ showDetails: false }">
     <div class="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
       <div class="lg:col-span-7 glass-card rounded-e-3xl p-8 overflow-x-auto">
         <h3 class="font-bold text-xl text-pure-white mb-6 text-start">مقایسه هزینه‌های تجمعی ۵ ساله</h3>
@@ -221,7 +221,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </article>
   ```
 
 - **Accessibility & ARIA:**

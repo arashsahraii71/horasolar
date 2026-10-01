@@ -69,7 +69,7 @@
 
 - **Tailwind & Alpine Directives:**
   ```html
-  <header id="sec-01" class="relative min-h-screen flex items-center overflow-hidden" x-data="{ loaded: false }" x-init="loaded = true">
+  <article id="sec-01" class="relative min-h-screen flex items-center overflow-hidden" x-data="{ loaded: false }" x-init="loaded = true">
     <div class="absolute inset-0 bg-gradient-to-b from-deep-navy/80 via-deep-navy/50 to-deep-navy"></div>
     <div class="relative z-10 container mx-auto px-4 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center py-24">
       <!-- Generator Side -->
@@ -98,11 +98,11 @@
         </p>
       </div>
     </div>
-  </header>
+  </article>
   ```
 
 - **Accessibility & ARIA:**
-  - `<header id="sec-01">` landmark.
+  - `<article id="sec-01">` wrapper.
   - Color + text labels for meaning.
   - GEO `<aside>` complementary role.
 
@@ -431,7 +431,7 @@
 
 - **Tailwind & Alpine Directives:**
   ```html
-  <aside id="sec-07" class="py-20 md:py-32 bg-cream-warm" x-data="{ revealed: false }">
+  <section id="sec-07" class="py-20 md:py-32 bg-cream-warm" x-data="{ revealed: false }">
     <div class="container mx-auto px-4 max-w-4xl">
       <h2 class="font-vazirmatn font-extrabold text-2xl md:text-4xl text-deep-navy text-center mb-12">
         افسانه در برابر واقعیت: <span class="text-solar-gold">کارکرد در روزهای زمستانی</span>
@@ -461,11 +461,11 @@
         </p>
       </div>
     </div>
-  </aside>
+  </section>
   ```
 
 - **Accessibility & ARIA:**
-  - `<aside id="sec-07">`.
+  - `<section id="sec-07">`.
   - `x-intersect` decorative.
   - Meaning via icon + text.
   - Contrast: dark text on light cards.

@@ -185,7 +185,7 @@
 
 - **Tailwind & Alpine Directives:**
   ```html
-  <section id="sec-03" class="relative py-20 md:py-0 overflow-hidden">
+  <article id="sec-03" class="relative py-20 md:py-0 overflow-hidden">
     <div class="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-12 lg:min-h-[600px]">
       <!-- Penalty Side -->
       <div class="lg:col-span-6 relative flex items-center justify-center p-8 bg-navy-mid/90 overflow-hidden">
@@ -221,11 +221,11 @@
         {PRODUCTION-READY FARSI TEXT from dossier SEC_03}
       </p>
     </div>
-  </section>
+  </article>
   ```
 
 - **Accessibility & ARIA:**
-  - `<section id="sec-03">`.
+  - `<article id="sec-03">`.
   - Color + text labels for meaning.
   - GEO card `border-2 border-solar-gold`.
 
