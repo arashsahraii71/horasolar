@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>هورانور سهند | طراحی و اجرای نیروگاه خورشیدی در کرج و البرز</title>
+<meta name="description" content="شرکت برق خورشیدی هورا نور سهند، پیشرو در طراحی، نصب و اجرای نیروگاه خورشیدی خانگی، صنعتی و کشاورزی در کرج و استان البرز. بیش از ۸۵ پروژه موفق.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700;900&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<script>
+tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        'solar-gold': '#F5A623',
+        'solar-gold-light': '#FFD580',
+        'deep-navy': '#0A1929',
+        'midnight-blue': '#132F4C',
+        'trust-green': '#22C55E',
+        'danger-red': '#EF4444',
+        'pure-white': '#FAFCFF',
+        'soft-gray': '#F1F5F9',
+        'text-primary': '#E2E8F0',
+        'text-dark': '#1E293B',
+      },
+      fontFamily: {
+        vazir: ['Vazirmatn', 'sans-serif'],
+      },
+      animation: {
+        'pulse-glow': 'pulseGlow 2s ease-in-out infinite',
+        'ping-slow': 'ping 2s cubic-bezier(0, 0, 0.2, 1) infinite',
+      },
+      keyframes: {
+        pulseGlow: {
+          '0%, 100%': { boxShadow: '0 0 0 0 rgba(245,166,35,0.4)' },
+          '50%': { boxShadow: '0 0 0 12px rgba(245,166,35,0)' },
+        },
+      },
+    },
+  },
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "EnergyBusiness",
+      "@id": "https://horasahand.ir/#organization",
+      "name": "شرکت برق خورشیدی هورا نور سهند",
+      "alternateName": "Hora Nor Sahand",
+      "url": "https://horasahand.ir",
+      "logo": "https://horasahand.ir/logo.png",
+      "foundingDate": "2016",
+      "telephone": "+98-26-36506485",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "جاده ملارد، بعد از دانشگاه فرهنگیان، نرسیده به پل ارتش جنب فروشگاه بهداشتی ساختمانی سهند",
+        "addressLocality": "Karaj",
+        "addressRegion": "Alborz",
+        "addressCountry": "IR"
+      },
+      "contactPoint": [{
+        "@type": "ContactPoint",
+        "telephone": "+98-939-993-5298",
+        "contactType": "customer service"
+      }],
+      "sameAs": [
+        "https://t.me/horasolar",
+        "https://instagram.com/hora.solar.panel",
+        "https://ble.ir/horasolar",
+        "https://eitaa.com/horasolar",
+        "https://rubika.ir/horasolar"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://horasahand.ir/#website",
+      "url": "https://horasahand.ir",
+      "name": "هورانور سهند | طراحی و اجرای نیروگاه خورشیدی",
+      "publisher": {"@id": "https://horasahand.ir/#organization"}
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "شرایط فروش تضمینی برق به ساتبا در سال جدید چیست؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "سازمان ساتبا قراردادهای تضمینی ۲۰ ساله خرید برق با نرخ مصوب ارائه می‌دهد. نیروگاه‌های زیر ۲۰ کیلووات خانگی و نیروگاه‌های صنعتی با ظرفیت بالاتر می‌توانند از این قراردادها بهره‌مند شوند."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "آیا نیروگاه خورشیدی جریمه ماده ۱۶ صنایع را رفع می‌کند؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "بله. طبق ماده ۱۶ قانون جهش تولید دانش‌بنیان، صنایع موظفند ۱ تا ۵ درصد برق خود را از منابع تجدیدپذیر تامین کنند. نصب نیروگاه خورشیدی روی سقف سوله صنعتی، این الزام قانونی را برآورده و جریمه را حذف می‌کند."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "هزینه احداث نیروگاه خورشیدی برای ویلا در کردان چقدر است؟",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "هزینه بسته به ظرفیت مورد نیاز (معمولاً ۵ تا ۲۰ کیلووات برای ویلاهای کردان) متفاوت است. بازگشت سرمایه بین ۳ تا ۵ سال تخمین زده می‌شود. برای برآورد دقیق با شماره ۰۲۶-۳۶۵۰۶۴۸۵ تماس بگیرید."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+<style>
+  body { font-family: 'Vazirmatn', sans-serif; }
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
+  .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+</style>
+</head>
+<body class="bg-white font-vazir text-text-primary antialiased">
+
+<header class="fixed top-0 inset-x-0 z-50 bg-white backdrop-blur-xl border-b border-white/[0.12]" x-data="{ mobileOpen: false }">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-12 items-center h-20 gap-4">
+            <div class="col-span-8 lg:col-span-3 flex items-center">
+                <a href="https://horasolar.ir/index.html" class="flex items-center gap-3 group">
+                    <img src="img/logo.webp" alt="هورانور سهند" class="w-10 h-10 group-hover:scale-110 transition-transform">
+                    <div class="flex flex-col">
+                        <span class="text-lg font-black text-slate-900 leading-none">هورانور سهند</span>
+                        <span class="text-xs font-medium text-slate-400 tracking-widest uppercase">Hora Nor Sahand</span>
+                    </div>
+                </a>
+            </div>
+            <nav class="hidden lg:block col-span-6" aria-label="Main Navigation">
+                <ul class="flex items-center justify-center gap-8">
+                    <li>
+                        <a href="https://horasolar.ir/applications/residential-villa-appliances.html" class="text-sm font-bold text-slate-700 hover:text-solar-gold transition-colors flex items-center gap-1.5 group relative">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+                            خانگی و ویلایی
+                            <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-solar-gold absolute bottom-0 left-0"></span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://horasolar.ir/applications/industrial-shed-roofs.html" class="text-sm font-bold text-slate-700 hover:text-solar-gold transition-colors flex items-center gap-1.5">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                            صنعتی و سوله
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://horasolar.ir/applications/agricultural-water-pumps.html" class="text-sm font-bold text-slate-700 hover:text-solar-gold transition-colors flex items-center gap-1.5">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+                            کشاورزی
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://horasolar.ir/investment/satba-guaranteed-purchase.html" class="text-sm font-bold text-slate-700 hover:text-solar-gold transition-colors flex items-center gap-1.5">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+                            سرمایه‌گذاری
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="hidden lg:flex col-span-3 justify-end items-center gap-5">
+                <a href="tel:02636506485" class="text-sm font-bold text-slate-700 hover:text-slate-900 transition-colors" dir="ltr">
+                    ۰۲۶-۳۶۵۰۶۴۸۵
+                </a>
+                <a href="https://wa.me/989399935298" target="_blank" data-track="whatsapp_header" class="bg-solar-gold hover:bg-solar-gold-light text-deep-navy text-sm font-bold py-2.5 px-6 rounded-full shadow-lg shadow-solar-gold/30 transition-all hover:-translate-y-0.5 animate-pulse-glow flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.305-.885-.653-1.482-1.46-1.656-1.758-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    مشاوره رایگان
+                </a>
+            </div>
+            <div class="col-span-4 lg:hidden flex justify-end">
+                <button @click="mobileOpen = !mobileOpen" type="button" class="text-slate-800 p-2 focus:outline-none" aria-label="Toggle Menu">
+                    <svg x-show="!mobileOpen" class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                    <svg x-show="mobileOpen" x-cloak class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div x-show="mobileOpen" x-transition x-cloak class="lg:hidden fixed inset-0 top-16 bg-white z-[60]">
+        <ul class="flex flex-col p-6 space-y-4 bg-white">
+            <li>
+                <a href="https://horasolar.ir/applications/residential-villa-appliances.html" class="flex items-center gap-3 text-xl font-bold text-slate-900 py-4">
+                    <svg class="w-5 h-5 text-solar-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+                    خانگی و ویلایی
+                </a>
+            </li>
+            <li>
+                <a href="https://horasolar.ir/applications/industrial-shed-roofs.html" class="flex items-center gap-3 text-xl font-bold text-slate-900 py-4">
+                    <svg class="w-5 h-5 text-solar-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                    صنعتی و سوله
+                </a>
+            </li>
+            <li>
+                <a href="https://horasolar.ir/applications/agricultural-water-pumps.html" class="flex items-center gap-3 text-xl font-bold text-slate-900 py-4">
+                    <svg class="w-5 h-5 text-solar-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+                    کشاورزی
+                </a>
+            </li>
+            <li>
+                <a href="https://horasolar.ir/investment/satba-guaranteed-purchase.html" class="flex items-center gap-3 text-xl font-bold text-slate-900 py-4">
+                    <svg class="w-5 h-5 text-solar-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+                    سرمایه‌گذاری
+                </a>
+            </li>
+            <li class="pt-4 flex flex-col gap-3">
+                <a href="tel:02636506485" class="text-slate-700 font-bold text-center block bg-slate-100 py-3 rounded-lg" dir="ltr">۰۲۶-۳۶۵۰۶۴۸۵</a>
+                <a href="https://wa.me/989399935298" class="bg-solar-gold text-deep-navy font-bold text-center py-3 rounded-lg flex items-center justify-center gap-2 shadow-lg shadow-solar-gold/20">مشاوره در واتساپ</a>
+            </li>
+        </ul>
+    </div>
+</header>
+
+<main>
+
+<section class="relative min-h-screen flex items-center bg-deep-navy overflow-hidden pt-24 pb-12 lg:pt-0 lg:pb-0" x-data="{ step: 1, property: '', bill: 5000000, result: 0 }">
+  <div class="absolute inset-0 bg-gradient-to-bl from-deep-navy via-midnight-blue to-deep-navy"></div>
+  <img src="hero-solar-karaj.jpg" alt="نصب پنل خورشیدی در کرج و استان البرز توسط هورانور سهند" class="absolute inset-0 w-full h-full object-cover opacity-5" loading="eager">
+  <div class="relative max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 px-4 lg:px-8 items-center w-full">
+    <div class="col-span-1 lg:col-span-6 order-1">
+      <span class="inline-flex items-center gap-2 bg-solar-gold/10 text-solar-gold text-sm px-4 py-1.5 rounded-full border border-solar-gold/20 mb-6">پیشرو در انرژی خورشیدی البرز</span>
+      <h1 class="text-3xl lg:text-6xl font-black text-white leading-tight">پایان <span class="text-solar-gold">قطعی برق</span> در تابستان و زمستان</h1>
+      <p class="text-lg text-slate-400 mt-4 max-w-lg leading-relaxed">نیروگاه‌های خورشیدی هورانور سهند با بیش از ۸۵ پروژه موفق، برق مطمئن و پایدار شما را تضمین می‌کند.</p>
+      <div class="flex flex-wrap gap-4 mt-8">
+        <a href="https://wa.me/989399935298" class="bg-solar-gold text-deep-navy font-bold rounded-full px-8 py-3 hover:bg-solar-gold-light transition-all duration-300">مشاوره رایگان</a>
+        <a href="https://horasolar.ir/index.html#live-projects" class="border border-white/20 text-white rounded-full px-8 py-3 hover:bg-white/5 transition-all duration-300">نمونه پروژه‌ها</a>
+      </div>
+    </div>
+    <div class="col-span-1 lg:col-span-6 order-2">
+      <section aria-roledescription="calculator" class="backdrop-blur-xl bg-white/[0.06] border border-white/[0.1] rounded-3xl p-6 lg:p-8 shadow-[0_0_60px_rgba(245,166,35,0.1)]">
+        <div class="flex items-center justify-center gap-3 mb-6">
+          <span class="w-3 h-3 rounded-full transition-all" :class="step >= 1 ? 'bg-solar-gold' : 'border border-slate-500'"></span>
+          <span class="w-3 h-3 rounded-full transition-all" :class="step >= 2 ? 'bg-solar-gold' : 'border border-slate-500'"></span>
+          <span class="w-3 h-3 rounded-full transition-all" :class="step >= 3 ? 'bg-solar-gold' : 'border border-slate-500'"></span>
+        </div>
+        <div x-show="step === 1" x-transition>
+          <p class="text-white font-bold text-lg mb-4">نوع مصرف خود را مشخص کنید</p>
+          <div class="grid grid-cols-3 gap-3">
+            <button @click="property = 'villa'; step = 2" class="flex flex-col items-center justify-center p-4 rounded-2xl border-2 transition-all duration-300 cursor-pointer" :class="property === 'villa' ? 'border-solar-gold bg-solar-gold/10' : 'border-transparent hover:border-white/20'">
+              <svg class="w-8 h-8 text-solar-gold mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+              <span class="text-sm text-white">ویلا</span>
+            </button>
+            <button @click="property = 'factory'; step = 2" class="flex flex-col items-center justify-center p-4 rounded-2xl border-2 transition-all duration-300 cursor-pointer" :class="property === 'factory' ? 'border-solar-gold bg-solar-gold/10' : 'border-transparent hover:border-white/20'">
+              <svg class="w-8 h-8 text-solar-gold mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+              <span class="text-sm text-white">کارخانه</span>
+            </button>
+            <button @click="property = 'farm'; step = 2" class="flex flex-col items-center justify-center p-4 rounded-2xl border-2 transition-all duration-300 cursor-pointer" :class="property === 'farm' ? 'border-solar-gold bg-solar-gold/10' : 'border-transparent hover:border-white/20'">
+              <svg class="w-8 h-8 text-solar-gold mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+              <span class="text-sm text-white">مزرعه</span>
+            </button>
+          </div>
+        </div>
+        <div x-show="step === 2" x-transition x-cloak>
+          <p class="text-white font-bold text-lg mb-4">مبلغ قبض برق شما چقدر است؟</p>
+          <div class="text-center mb-4">
+            <span class="text-2xl font-black text-solar-gold" x-text="(bill / 10000000).toFixed(1) + ' میلیون تومان'"></span>
+          </div>
+          <input type="range" min="5000000" max="50000000" step="1000000" x-model="bill" class="w-full h-2 rounded-full appearance-none cursor-pointer bg-slate-700 accent-solar-gold" style="accent-color: #F5A623;">
+          <div class="flex justify-between text-xs text-slate-500 mt-2">
+            <span>۵۰۰ هزار</span>
+            <span>۵۰ میلیون</span>
+          </div>
+          <button @click="result = Math.max(1, Math.round(bill / 8000000)); step = 3" class="w-full mt-6 bg-solar-gold text-deep-navy font-bold rounded-full py-3 hover:bg-solar-gold-light transition-all duration-300">محاسبه توان مورد نیاز</button>
+        </div>
+        <div x-show="step === 3" x-transition x-cloak aria-live="polite">
+          <p class="text-white font-bold text-lg mb-4">توان مورد نیاز شما</p>
+          <div class="text-center py-6">
+            <span class="text-5xl font-black text-solar-gold" x-text="result"></span>
+            <span class="text-2xl text-white font-bold ms-2">کیلووات</span>
+          </div>
+          <a :href="'https://wa.me/989399935298?text=' + encodeURIComponent('سلام، می‌خواهم برای ظرفیت ' + result + ' کیلووات قیمت بگیرم')" class="block w-full text-center bg-solar-gold text-deep-navy font-bold rounded-full py-3 hover:bg-solar-gold-light transition-all duration-300">دریافت قیمت دقیق</a>
+          <button @click="step = 1; property = ''; bill = 5000000" class="w-full mt-3 text-slate-400 text-sm hover:text-white transition-colors">شروع مجدد</button>
+        </div>
+      </section>
+    </div>
+  </div>
+</section>
+
+<section class="bg-slate-800 py-10 lg:py-14 border-y border-slate-700/50">
+  <div class="hidden lg:grid grid-cols-4 gap-6 max-w-5xl mx-auto px-4">
+    <div class="flex flex-col items-center gap-3 bg-slate-900/60 border border-slate-700/50 rounded-2xl p-5 hover:border-solar-gold/30 hover:shadow-lg transition-all duration-300">
+      <div class="w-16 h-16 rounded-2xl bg-solar-gold/10 border border-solar-gold/20 flex items-center justify-center">
+        <svg class="w-8 h-8 text-solar-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+      </div>
+      <span class="text-xs text-slate-300 text-center leading-relaxed">تایید شده توسط <abbr title="سازمان انرژی‌های تجدیدپذیر و بهره‌وری انرژی برق">ساتبا</abbr></span>
+    </div>
+    <div class="flex flex-col items-center gap-3 bg-slate-900/60 border border-slate-700/50 rounded-2xl p-5 hover:border-sky-400/30 hover:shadow-lg transition-all duration-300">
+      <div class="w-16 h-16 rounded-2xl bg-sky-400/10 border border-sky-400/20 flex items-center justify-center">
+        <svg class="w-8 h-8 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+      </div>
+      <span class="text-xs text-slate-300 text-center leading-relaxed">مطابق با استانداردهای <abbr title="وزارت نیرو جمهوری اسلامی ایران">وزارت نیرو</abbr></span>
+    </div>
+    <div class="flex flex-col items-center gap-3 bg-slate-900/60 border border-slate-700/50 rounded-2xl p-5 hover:border-yellow-400/30 hover:shadow-lg transition-all duration-300">
+      <div class="w-16 h-16 rounded-2xl bg-yellow-400/10 border border-yellow-400/20 flex items-center justify-center">
+        <svg class="w-8 h-8 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+      </div>
+      <span class="text-xs text-slate-300 text-center leading-relaxed">مورد تایید <abbr title="شرکت توزیع نیروی برق استان البرز">توزیع برق البرز</abbr></span>
+    </div>
+    <div class="flex flex-col items-center gap-3 bg-slate-900/60 border border-slate-700/50 rounded-2xl p-5 hover:border-trust-green/30 hover:shadow-lg transition-all duration-300">
+      <div class="w-16 h-16 rounded-2xl bg-trust-green/10 border border-trust-green/20 flex items-center justify-center">
+        <svg class="w-8 h-8 text-trust-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+      </div>
+      <span class="text-xs text-slate-300 text-center leading-relaxed">دارای نماد اعتماد الکترونیک و مجوز نظام مهندسی</span>
+    </div>
+  </div>
+  <div class="lg:hidden grid grid-cols-2 gap-3 px-4">
+    <div class="flex flex-col items-center gap-2 bg-slate-900/60 border border-slate-700/50 rounded-2xl p-4">
+      <div class="w-12 h-12 rounded-xl bg-solar-gold/10 border border-solar-gold/20 flex items-center justify-center"><svg class="w-6 h-6 text-solar-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div>
+      <span class="text-[11px] text-slate-300 text-center leading-relaxed">تایید شده توسط <abbr title="سازمان انرژی‌های تجدیدپذیر و بهره‌وری انرژی برق">ساتبا</abbr></span>
+    </div>
+    <div class="flex flex-col items-center gap-2 bg-slate-900/60 border border-slate-700/50 rounded-2xl p-4">
+      <div class="w-12 h-12 rounded-xl bg-sky-400/10 border border-sky-400/20 flex items-center justify-center"><svg class="w-6 h-6 text-sky-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg></div>
+      <span class="text-[11px] text-slate-300 text-center leading-relaxed">مطابق با استانداردهای <abbr title="وزارت نیرو جمهوری اسلامی ایران">وزارت نیرو</abbr></span>
+    </div>
+    <div class="flex flex-col items-center gap-2 bg-slate-900/60 border border-slate-700/50 rounded-2xl p-4">
+      <div class="w-12 h-12 rounded-xl bg-yellow-400/10 border border-yellow-400/20 flex items-center justify-center"><svg class="w-6 h-6 text-yellow-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div>
+      <span class="text-[11px] text-slate-300 text-center leading-relaxed">مورد تایید <abbr title="شرکت توزیع نیروی برق استان البرز">توزیع برق البرز</abbr></span>
+    </div>
+    <div class="flex flex-col items-center gap-2 bg-slate-900/60 border border-slate-700/50 rounded-2xl p-4">
+      <div class="w-12 h-12 rounded-xl bg-trust-green/10 border border-trust-green/20 flex items-center justify-center"><svg class="w-6 h-6 text-trust-green" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg></div>
+      <span class="text-[11px] text-slate-300 text-center leading-relaxed">نماد اعتماد الکترونیک</span>
+    </div>
+  </div>
+</section>
+
+<section class="relative overflow-hidden">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 min-h-[600px]">
+    <div class="col-span-1 lg:col-span-6 bg-slate-950 p-8 lg:p-12 flex flex-col justify-center">
+      <span class="text-danger-red text-sm font-bold uppercase tracking-wide mb-3">چرا خورشیدی؟</span>
+      <h2 class="text-3xl lg:text-4xl font-black text-white mb-8">تهدیدی که نادیده می‌گیرید</h2>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        <article class="lg:col-span-2 bg-red-950/50 border border-red-500/20 rounded-2xl p-6 hover:border-red-500/40 hover:bg-red-950/70 transition-all duration-300">
+          <svg class="w-8 h-8 text-danger-red mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"/></svg>
+          <h3 class="text-white font-bold mb-2">جریمه ماده ۱۶ جهش تولید</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">طبق ماده ۱۶ قانون جهش تولید دانش‌بنیان، صنایع موظفند ۱ تا ۵ درصد برق خود را از منابع تجدیدپذیر تامین کنند. قطعی مکرر برق صنایع و عدم رعایت این قانون منجر به جریمه‌های سنگین می‌شود.</p>
+        </article>
+        <article class="bg-red-950/50 border border-red-500/20 rounded-2xl p-6 hover:border-red-500/40 hover:bg-red-950/70 transition-all duration-300">
+          <svg class="w-8 h-8 text-danger-red mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.536 8.464a5 5 0 010 7.072m2.828-9.9a9 9 0 010 12.728M5.586 15H4a1 1 0 01-1-1v-4a1 1 0 011-1h1.586l4.707-4.707C10.923 3.663 12 4.109 12 5v14c0 .891-1.077 1.337-1.707.707L5.586 15z"/></svg>
+          <h3 class="text-white font-bold mb-2">صدای آزاردهنده ژنراتور</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">هزینه بالای گازوئیل و صدای آزاردهنده ژنراتور در ویلاهای کردان و مناطق مسکونی.</p>
+        </article>
+        <article class="bg-red-950/50 border border-red-500/20 rounded-2xl p-6 hover:border-red-500/40 hover:bg-red-950/70 transition-all duration-300">
+          <svg class="w-8 h-8 text-danger-red mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          <h3 class="text-white font-bold mb-2">قطعی برق و توقف خط تولید</h3>
+          <p class="text-slate-400 text-sm leading-relaxed">قطعی مکرر برق صنایع منجر به توقف خط تولید و خسارت مالی سنگین می‌شود.</p>
+        </article>
+      </div>
+    </div>
+    <div class="col-span-1 lg:col-span-6 bg-pure-white p-8 lg:p-12 flex flex-col justify-center">
+      <span class="text-trust-green text-sm font-bold mb-3">راه‌حل هورانور سهند</span>
+      <h2 class="text-3xl lg:text-4xl font-black text-text-dark mb-8">انرژی پایدار، سود تضمینی</h2>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        <article class="lg:col-span-2 bg-green-50 border border-green-200 rounded-2xl p-6 hover:border-green-400 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+          <svg class="w-8 h-8 text-trust-green mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+          <h3 class="text-text-dark font-bold mb-2">برق مستقل و بدون قطعی</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">سیستم خورشیدی آفگرید با باتری، برق ۲۴ ساعته بدون وابستگی به شبکه. کاهش هزینه قبض برق تا ۱۰۰ درصد.</p>
+        </article>
+        <article class="bg-amber-50 border border-amber-200 rounded-2xl p-6 hover:border-amber-400 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+          <svg class="w-8 h-8 text-solar-gold mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          <h3 class="text-text-dark font-bold mb-2">بازگشت سرمایه ۳-۵ سال</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">خرید تضمینی برق توسط ساتبا و درآمد پایدار خورشیدی.</p>
+        </article>
+        <article class="bg-blue-50 border border-sky-200 rounded-2xl p-6 hover:border-sky-400 hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+          <svg class="w-8 h-8 text-sky-600 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+          <h3 class="text-text-dark font-bold mb-2">رفع کامل جریمه ماده ۱۶</h3>
+          <p class="text-slate-600 text-sm leading-relaxed">تامین برق استخراج و صنایع از انرژی خورشیدی، الزام قانونی را برآورده می‌کند.</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-deep-navy py-8 lg:py-12">
+  <div class="text-center mb-4 lg:mb-6 px-4">
+    <span class="text-solar-gold text-sm tracking-widest uppercase">خدمات ما</span>
+    <h2 class="text-2xl lg:text-4xl font-black text-white mt-3">چهار ستون تخصص هورانور سهند</h2>
+  </div>
+  <div class="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-3 px-4 lg:px-8">
+    <a href="https://horasolar.ir/applications/residential-villa-appliances.html" class="group relative overflow-hidden rounded-3xl h-[220px] lg:h-[280px] cursor-pointer block">
+      <div class="absolute inset-0 bg-cover bg-center brightness-[0.3] group-hover:brightness-50 transition-all duration-500" style="background-image:url('solar-panel-villa-kordan-offgrid.jpg')"></div>
+      <div class="absolute bottom-0 inset-x-0 p-4 z-10">
+        <svg class="w-10 h-10 text-white mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+        <h3 class="text-lg font-bold text-white">خانگی و ویلایی</h3>
+        <p class="text-xs text-slate-300 mt-1">سیستم‌های خورشیدی آفگرید</p>
+      </div>
+      <div class="absolute inset-0 flex flex-col justify-end p-4 z-20 backdrop-blur-2xl bg-deep-navy/85 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+        <ul class="text-xs text-slate-200 space-y-1 mb-3">
+          <li>سیستم آفگرید</li>
+          <li>باتری خورشیدی ویلا</li>
+          <li>تامین برق ویلای کردان</li>
+        </ul>
+        <span class="text-solar-gold font-bold">بیشتر بدانید ←</span>
+      </div>
+    </a>
+    <a href="https://horasolar.ir/applications/industrial-shed-roofs.html" class="group relative overflow-hidden rounded-3xl h-[220px] lg:h-[280px] cursor-pointer block">
+      <div class="absolute inset-0 bg-cover bg-center brightness-[0.3] group-hover:brightness-50 transition-all duration-500" style="background-image:url('industrial-solar-power-plant-eshtehard.jpg')"></div>
+      <div class="absolute bottom-0 inset-x-0 p-4 z-10">
+        <svg class="w-10 h-10 text-white mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+        <h3 class="text-lg font-bold text-white">صنعتی و سوله</h3>
+        <p class="text-xs text-slate-300 mt-1">نیروگاه آنگرید و هیبرید</p>
+      </div>
+      <div class="absolute inset-0 flex flex-col justify-end p-4 z-20 backdrop-blur-2xl bg-deep-navy/85 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+        <ul class="text-xs text-slate-200 space-y-1 mb-3">
+          <li>نیروگاه آنگرید سقف سوله</li>
+          <li>رفع جریمه ماده ۱۶</li>
+          <li>کاهش هزینه برق صنعتی</li>
+        </ul>
+        <span class="text-solar-gold font-bold">بیشتر بدانید ←</span>
+      </div>
+    </a>
+    <a href="https://horasolar.ir/applications/agricultural-water-pumps.html" class="group relative overflow-hidden rounded-3xl h-[220px] lg:h-[280px] cursor-pointer block">
+      <div class="absolute inset-0 bg-cover bg-center brightness-[0.3] group-hover:brightness-50 transition-all duration-500" style="background-image:url('solar-water-pump-agricultural-hashtgerd.jpg')"></div>
+      <div class="absolute bottom-0 inset-x-0 p-4 z-10">
+        <svg class="w-10 h-10 text-white mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+        <h3 class="text-lg font-bold text-white">کشاورزی</h3>
+        <p class="text-xs text-slate-300 mt-1">پمپ آب خورشیدی</p>
+      </div>
+      <div class="absolute inset-0 flex flex-col justify-end p-4 z-20 backdrop-blur-2xl bg-deep-navy/85 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+        <ul class="text-xs text-slate-200 space-y-1 mb-3">
+          <li>پمپ آب خورشیدی</li>
+          <li>برق چاه کشاورزی</li>
+          <li>آبیاری بدون شبکه</li>
+        </ul>
+        <span class="text-solar-gold font-bold">بیشتر بدانید ←</span>
+      </div>
+    </a>
+    <a href="https://horasolar.ir/investment/satba-guaranteed-purchase.html" class="group relative overflow-hidden rounded-3xl h-[220px] lg:h-[280px] cursor-pointer block">
+      <div class="absolute inset-0 bg-cover bg-center brightness-[0.3] group-hover:brightness-50 transition-all duration-500" style="background-image:url('satba-solar-investment-power-plant.jpg')"></div>
+      <div class="absolute bottom-0 inset-x-0 p-4 z-10">
+        <svg class="w-10 h-10 text-white mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
+        <h3 class="text-lg font-bold text-white">سرمایه‌گذاری ساتبا</h3>
+        <p class="text-xs text-slate-300 mt-1">فروش تضمینی برق</p>
+      </div>
+      <div class="absolute inset-0 flex flex-col justify-end p-4 z-20 backdrop-blur-2xl bg-deep-navy/85 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
+        <ul class="text-xs text-slate-200 space-y-1 mb-3">
+          <li>فروش تضمینی برق</li>
+          <li>قرارداد ۲۰ ساله ساتبا</li>
+          <li>درآمد پایدار خورشیدی</li>
+        </ul>
+        <span class="text-solar-gold font-bold">بیشتر بدانید ←</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<section class="bg-slate-50 py-16 lg:py-28">
+  <div class="text-center mb-12 px-4">
+    <span class="text-solar-gold text-sm tracking-widest uppercase">داده‌های عملیاتی</span>
+    <h2 class="text-3xl lg:text-5xl font-black text-text-dark mt-3">هاب داده خورشیدی استان البرز</h2>
+  </div>
+  <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 lg:grid-rows-2 gap-5 px-4 lg:px-8">
+    <div class="lg:col-span-5 lg:row-span-2 bg-white rounded-3xl p-8 shadow-sm border border-slate-100 flex flex-col justify-center">
+      <p class="text-7xl lg:text-8xl font-black text-deep-navy tabular-nums">+<data value="85">۸۵</data></p>
+      <p class="text-xl font-bold text-text-dark mt-4">پروژه موفق اجرا شده</p>
+      <p class="text-slate-500 mt-2">بیش از <data value="85">۸۵</data> پروژه موفق در البرز</p>
+    </div>
+    <div class="lg:col-span-4 bg-white rounded-3xl p-8 shadow-sm border border-slate-100 flex flex-col justify-center">
+      <p class="text-5xl font-black text-solar-gold tabular-nums"><data value="250">۲۵۰</data></p>
+      <p class="text-lg font-bold text-text-dark mt-3">روز آفتابی در سال</p>
+      <p class="text-slate-500 mt-1">پتانسیل <data value="250">۲۵۰</data> روز آفتابی البرز</p>
+      <div class="mt-4 w-full h-3 bg-slate-200 rounded-full overflow-hidden">
+        <div class="h-full bg-solar-gold rounded-full" style="width: 68%"></div>
+      </div>
+    </div>
+    <div class="lg:col-span-3 bg-white rounded-3xl p-8 shadow-sm border border-slate-100 flex flex-col justify-center">
+      <p class="text-4xl font-black text-trust-green tabular-nums"><data value="4">۳ تا ۵</data></p>
+      <p class="text-lg font-bold text-text-dark mt-3">سال بازگشت سرمایه</p>
+      <p class="text-slate-500 mt-1">بازگشت سرمایه <data value="4">۳ تا ۵</data> سال</p>
+    </div>
+    <div class="lg:col-span-7 bg-white rounded-3xl p-8 shadow-sm border border-slate-100">
+      <p class="text-2xl font-black text-deep-navy">ظرفیت نصب از <data value="1">۱</data> کیلووات تا <data value="10000">۱۰</data> مگاوات</p>
+      <p class="text-slate-500 mt-2">از سقف ویلا تا نیروگاه صنعتی</p>
+      <div class="mt-4 flex items-center gap-4">
+        <span class="text-xs text-slate-400">۱ kW</span>
+        <div class="flex-1 h-3 bg-slate-200 rounded-full overflow-hidden">
+          <div class="h-full bg-gradient-to-l from-solar-gold to-trust-green rounded-full w-full"></div>
+        </div>
+        <span class="text-xs text-slate-400">۱۰ MW</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="live-projects" class="bg-deep-navy py-16 lg:py-28">
+  <div class="text-center mb-12 px-4">
+    <span class="text-solar-gold text-sm tracking-widest uppercase">عملیات زنده</span>
+    <h2 class="text-3xl lg:text-5xl font-black text-white mt-3">رادار پروژه‌های فعال</h2>
+  </div>
+  <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 px-4 lg:px-8">
+    <div class="col-span-1 lg:col-span-7 relative h-[300px] lg:h-[500px] rounded-3xl overflow-hidden bg-midnight-blue border border-white/[0.06]">
+      <div class="absolute inset-0 flex items-center justify-center">
+        <svg class="w-full h-full opacity-20" viewBox="0 0 400 300" fill="none">
+          <path d="M50 200 Q100 150 150 180 T250 160 T350 190" stroke="#F5A623" stroke-width="1" fill="none" opacity="0.5"/>
+          <path d="M30 250 Q80 200 180 220 T300 200 T380 230" stroke="#F5A623" stroke-width="0.5" fill="none" opacity="0.3"/>
+        </svg>
+      </div>
+      <div class="absolute top-[30%] start-[25%]">
+        <span class="absolute w-4 h-4 rounded-full bg-danger-red animate-ping"></span>
+        <span class="absolute w-3 h-3 rounded-full bg-danger-red"></span>
+        <span class="absolute top-5 start-0 text-xs text-slate-300 whitespace-nowrap">کرج</span>
+      </div>
+      <div class="absolute top-[45%] start-[55%]">
+        <span class="absolute w-4 h-4 rounded-full bg-trust-green animate-ping"></span>
+        <span class="absolute w-3 h-3 rounded-full bg-trust-green"></span>
+        <span class="absolute top-5 start-0 text-xs text-slate-300 whitespace-nowrap">اشتهارد</span>
+      </div>
+      <div class="absolute top-[60%] start-[35%]">
+        <span class="absolute w-4 h-4 rounded-full bg-trust-green animate-ping"></span>
+        <span class="absolute w-3 h-3 rounded-full bg-trust-green"></span>
+        <span class="absolute top-5 start-0 text-xs text-slate-300 whitespace-nowrap">هشتگرد</span>
+      </div>
+      <div class="absolute top-[20%] start-[70%]">
+        <span class="absolute w-4 h-4 rounded-full bg-danger-red animate-ping"></span>
+        <span class="absolute w-3 h-3 rounded-full bg-danger-red"></span>
+        <span class="absolute top-5 start-0 text-xs text-slate-300 whitespace-nowrap">کردان</span>
+      </div>
+    </div>
+    <div class="col-span-1 lg:col-span-5 flex flex-col gap-3 max-h-[500px] overflow-hidden" aria-live="polite">
+      <div class="bg-white/[0.04] border border-white/[0.06] rounded-xl p-4">
+        <div class="flex items-center gap-2 mb-1">
+          <span class="w-2 h-2 rounded-full bg-danger-red"></span>
+          <span class="text-xs text-danger-red font-bold">در حال اجرا</span>
+          <span class="text-xs text-slate-500 ms-auto"><time datetime="2026-09-21">امروز</time></span>
+        </div>
+        <p class="text-sm text-slate-400">نصب پنل ۵۰ کیلوواتی در شهرک صنعتی اشتهارد</p>
+      </div>
+      <div class="bg-white/[0.04] border border-white/[0.06] rounded-xl p-4">
+        <div class="flex items-center gap-2 mb-1">
+          <span class="w-2 h-2 rounded-full bg-trust-green"></span>
+          <span class="text-xs text-trust-green font-bold">تکمیل شده</span>
+          <span class="text-xs text-slate-500 ms-auto"><time datetime="2026-09-18">هفته گذشته</time></span>
+        </div>
+        <p class="text-sm text-slate-400">راه‌اندازی پمپ آب خورشیدی در هشتگرد</p>
+      </div>
+      <div class="bg-white/[0.04] border border-white/[0.06] rounded-xl p-4">
+        <div class="flex items-center gap-2 mb-1">
+          <span class="w-2 h-2 rounded-full bg-danger-red"></span>
+          <span class="text-xs text-danger-red font-bold">در حال اجرا</span>
+          <span class="text-xs text-slate-500 ms-auto"><time datetime="2026-09-20">دیروز</time></span>
+        </div>
+        <p class="text-sm text-slate-400">نصب سیستم ۱۰ کیلوواتی آفگرید در ویلای کردان</p>
+      </div>
+      <div class="bg-white/[0.04] border border-white/[0.06] rounded-xl p-4">
+        <div class="flex items-center gap-2 mb-1">
+          <span class="w-2 h-2 rounded-full bg-trust-green"></span>
+          <span class="text-xs text-trust-green font-bold">تکمیل شده</span>
+          <span class="text-xs text-slate-500 ms-auto"><time datetime="2026-09-15">هفته گذشته</time></span>
+        </div>
+        <p class="text-sm text-slate-400">نگهداری و تعمیرات سیستم ۲۰ کیلوواتی در مهرشهر</p>
+      </div>
+      <div class="bg-white/[0.04] border border-white/[0.06] rounded-xl p-4">
+        <div class="flex items-center gap-2 mb-1">
+          <span class="w-2 h-2 rounded-full bg-trust-green"></span>
+          <span class="text-xs text-trust-green font-bold">تکمیل شده</span>
+          <span class="text-xs text-slate-500 ms-auto"><time datetime="2026-09-10">دو هفته پیش</time></span>
+        </div>
+        <p class="text-sm text-slate-400">اجرای نیروگاه ۲۰۰ کیلوواتی سقف سوله در سیمین‌دشت</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="bg-white py-16 lg:py-28">
+  <div class="text-center mb-12 px-4">
+    <span class="text-solar-gold text-sm tracking-widest uppercase">حوزه فعالیت</span>
+    <h2 class="text-3xl lg:text-5xl font-black text-text-dark mt-3">نقشه پوشش خورشیدی هورانور سهند</h2>
+  </div>
+  <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 px-4 lg:px-8">
+    <div class="col-span-1 lg:col-span-6">
+      <h3 class="text-xl font-bold text-amber-800 mb-4 flex items-center gap-2">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+        مناطق ویلایی و مسکونی
+      </h3>
+      <p class="text-slate-600 mb-6 text-sm lg:text-base">برای ویلاهای کردان، مهرشهر و لواسان، <a href="https://horasolar.ir/pricing/residential-commercial-packages.html" class="text-primary hover:text-amber-500 font-bold underline decoration-primary/30 underline-offset-4 transition-colors">بسته‌های قیمتی خانگی و تجاری</a> متناسب با مصرف ۵ تا ۲۰ کیلوواتی ارائه می‌شود.</p>
+      <div class="grid grid-cols-2 gap-3 lg:gap-4">
+        <a href="https://horasolar.ir/locations/alborz-province.html" class="bg-amber-50/50 border border-amber-100 rounded-2xl p-5 hover:border-amber-300 hover:-translate-y-1 hover:shadow-md transition-all duration-300 block">
+          <span class="font-bold text-text-dark">کردان</span>
+          <p class="text-sm text-slate-500 mt-1">برق خورشیدی ویلای لوکس</p>
+        </a>
+        <a href="https://horasolar.ir/locations/alborz-province.html" class="bg-amber-50/50 border border-amber-100 rounded-2xl p-5 hover:border-amber-300 hover:-translate-y-1 hover:shadow-md transition-all duration-300 block">
+          <span class="font-bold text-text-dark">مهرشهر</span>
+          <p class="text-sm text-slate-500 mt-1">سیستم خورشیدی خانگی</p>
+        </a>
+        <a href="https://horasolar.ir/locations/tehran-province.html" class="bg-amber-50/50 border border-amber-100 rounded-2xl p-5 hover:border-amber-300 hover:-translate-y-1 hover:shadow-md transition-all duration-300 block">
+          <span class="font-bold text-text-dark">لواسان</span>
+          <p class="text-sm text-slate-500 mt-1">آفگرید ویلایی</p>
+        </a>
+        <a href="https://horasolar.ir/locations/alborz-province.html" class="bg-amber-50/50 border border-amber-100 rounded-2xl p-5 hover:border-amber-300 hover:-translate-y-1 hover:shadow-md transition-all duration-300 block">
+          <span class="font-bold text-text-dark">هشتگرد</span>
+          <p class="text-sm text-slate-500 mt-1">پمپ آب خورشیدی</p>
+        </a>
+        <a href="https://horasolar.ir/locations/alborz-province.html" class="bg-amber-50/50 border border-amber-100 rounded-2xl p-5 hover:border-amber-300 hover:-translate-y-1 hover:shadow-md transition-all duration-300 block">
+          <span class="font-bold text-text-dark">بهارستان</span>
+          <p class="text-sm text-slate-500 mt-1">برق اضطراری خانگی</p>
+        </a>
+        <a href="https://horasolar.ir/locations/alborz-province.html" class="bg-amber-50/50 border border-amber-100 rounded-2xl p-5 hover:border-amber-300 hover:-translate-y-1 hover:shadow-md transition-all duration-300 block">
+          <span class="font-bold text-text-dark">کرج</span>
+          <p class="text-sm text-slate-500 mt-1">مرکز عملیات</p>
+        </a>
+      </div>
+    </div>
+    <div class="col-span-1 lg:col-span-6">
+      <h3 class="text-xl font-bold text-slate-700 mb-4 flex items-center gap-2">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+        مناطق صنعتی و تولیدی
+      </h3>
+      <div class="grid grid-cols-2 gap-3 lg:gap-4">
+        <a href="https://horasolar.ir/locations/alborz-province.html" class="bg-slate-100 border border-slate-200 rounded-2xl p-5 hover:border-slate-400 hover:-translate-y-1 hover:shadow-md transition-all duration-300 block">
+          <span class="font-bold text-text-dark">شهرک صنعتی اشتهارد</span>
+          <p class="text-sm text-slate-500 mt-1">نیروگاه ۲۰۰ کیلووات سقف سوله</p>
+        </a>
+        <a href="https://horasolar.ir/locations/alborz-province.html" class="bg-slate-100 border border-slate-200 rounded-2xl p-5 hover:border-slate-400 hover:-translate-y-1 hover:shadow-md transition-all duration-300 block">
+          <span class="font-bold text-text-dark">سیمین‌دشت</span>
+          <p class="text-sm text-slate-500 mt-1">نیروگاه صنعتی آنگرید</p>
+        </a>
+        <a href="https://horasolar.ir/locations/alborz-province.html" class="bg-slate-100 border border-slate-200 rounded-2xl p-5 hover:border-slate-400 hover:-translate-y-1 hover:shadow-md transition-all duration-300 block">
+          <span class="font-bold text-text-dark">کرج</span>
+          <p class="text-sm text-slate-500 mt-1">نیروگاه هیبرید کارگاهی</p>
+        </a>
+        <a href="https://horasolar.ir/locations/alborz-province.html" class="bg-slate-100 border border-slate-200 rounded-2xl p-5 hover:border-slate-400 hover:-translate-y-1 hover:shadow-md transition-all duration-300 block">
+          <span class="font-bold text-text-dark">شهرک صنعتی هشتگرد</span>
+          <p class="text-sm text-slate-500 mt-1">رفع جریمه ماده ۱۶</p>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="flex flex-wrap gap-2 mt-12 justify-center px-4">
+    <span class="inline-flex px-3 py-1.5 bg-slate-100 text-slate-600 text-sm rounded-full">تهران</span>
+    <span class="inline-flex px-3 py-1.5 bg-slate-100 text-slate-600 text-sm rounded-full">قزوین</span>
+    <span class="inline-flex px-3 py-1.5 bg-slate-100 text-slate-600 text-sm rounded-full">بابل</span>
+    <span class="inline-flex px-3 py-1.5 bg-slate-100 text-slate-600 text-sm rounded-full">یزد</span>
+    <span class="inline-flex px-3 py-1.5 bg-slate-100 text-slate-600 text-sm rounded-full">اصفهان</span>
+    <span class="inline-flex px-3 py-1.5 bg-slate-100 text-slate-600 text-sm rounded-full">رشت</span>
+    <span class="inline-flex px-3 py-1.5 bg-slate-100 text-slate-600 text-sm rounded-full">ساری</span>
+    <span class="inline-flex px-3 py-1.5 bg-slate-100 text-slate-600 text-sm rounded-full">گرگان</span>
+  </div>
+</section>
+
+<section class="bg-slate-950 py-12 lg:py-24">
+  <div class="text-center mb-10 px-4">
+    <span class="text-solar-gold text-sm tracking-widest uppercase">تجهیزات Tier-1</span>
+    <h2 class="text-2xl lg:text-4xl font-black text-white mt-3">زنجیره تامین جهانی هورانور سهند</h2>
+    <p class="text-slate-400 mt-3">استفاده از تجهیزات Tier-1 جهانی</p>
+  </div>
+  <ul class="sr-only">
+    <li>تجهیزات <strong>Trina Solar</strong> (ترینا)</li>
+    <li>تجهیزات <strong>JinkoSolar</strong> (جینکو)</li>
+    <li>تجهیزات <strong>LONGi</strong> (لنگی)</li>
+    <li>تجهیزات <strong>JA Solar</strong> (جی ای)</li>
+    <li>تجهیزات <strong>Vmax</strong> (وی مکس)</li>
+    <li>تجهیزات <strong>Mana</strong> (مانا)</li>
+    <li>تجهیزات <strong>Taban</strong> (تابان)</li>
+  </ul>
+  <div class="max-w-6xl mx-auto grid grid-cols-3 lg:grid-cols-7 gap-3 lg:gap-6 px-4 lg:px-8">
+    <div class="bg-white/[0.03] border border-white/[0.06] rounded-2xl p-4 lg:p-6 flex items-center justify-center aspect-[3/2] transition-all duration-300 hover:shadow-[0_0_20px_rgba(245,166,35,0.1)] hover:border-solar-gold/20">
+      <span class="text-white font-bold text-sm lg:text-base opacity-50 hover:opacity-100 transition-opacity">Trina Solar</span>
+    </div>
+    <div class="bg-white/[0.03] border border-white/[0.06] rounded-2xl p-4 lg:p-6 flex items-center justify-center aspect-[3/2] transition-all duration-300 hover:shadow-[0_0_20px_rgba(245,166,35,0.1)] hover:border-solar-gold/20">
+      <span class="text-white font-bold text-sm lg:text-base opacity-50 hover:opacity-100 transition-opacity">JinkoSolar</span>
+    </div>
+    <div class="bg-white/[0.03] border border-white/[0.06] rounded-2xl p-4 lg:p-6 flex items-center justify-center aspect-[3/2] transition-all duration-300 hover:shadow-[0_0_20px_rgba(245,166,35,0.1)] hover:border-solar-gold/20">
+      <span class="text-white font-bold text-sm lg:text-base opacity-50 hover:opacity-100 transition-opacity">LONGi</span>
+    </div>
+    <div class="bg-white/[0.03] border border-white/[0.06] rounded-2xl p-4 lg:p-6 flex items-center justify-center aspect-[3/2] transition-all duration-300 hover:shadow-[0_0_20px_rgba(245,166,35,0.1)] hover:border-solar-gold/20">
+      <span class="text-white font-bold text-sm lg:text-base opacity-50 hover:opacity-100 transition-opacity">JA Solar</span>
+    </div>
+    <div class="bg-white/[0.03] border border-white/[0.06] rounded-2xl p-4 lg:p-6 flex items-center justify-center aspect-[3/2] transition-all duration-300 hover:shadow-[0_0_20px_rgba(245,166,35,0.1)] hover:border-solar-gold/20">
+      <span class="text-white font-bold text-sm lg:text-base opacity-50 hover:opacity-100 transition-opacity">Vmax</span>
+    </div>
+    <div class="bg-white/[0.03] border border-white/[0.06] rounded-2xl p-4 lg:p-6 flex items-center justify-center aspect-[3/2] transition-all duration-300 hover:shadow-[0_0_20px_rgba(245,166,35,0.1)] hover:border-solar-gold/20">
+      <span class="text-white font-bold text-sm lg:text-base opacity-50 hover:opacity-100 transition-opacity">Mana</span>
+    </div>
+    <div class="bg-white/[0.03] border border-white/[0.06] rounded-2xl p-4 lg:p-6 flex items-center justify-center aspect-[3/2] transition-all duration-300 hover:shadow-[0_0_20px_rgba(245,166,35,0.1)] hover:border-solar-gold/20">
+      <span class="text-white font-bold text-sm lg:text-base opacity-50 hover:opacity-100 transition-opacity">Taban</span>
+    </div>
+  </div>
+</section>
+
+<section class="bg-slate-50 py-16 lg:py-28">
+  <div class="text-center mb-12 px-4">
+    <span class="text-solar-gold text-sm tracking-widest uppercase">سوالات متداول</span>
+    <h2 class="text-3xl lg:text-5xl font-black text-text-dark mt-3">پاسخ‌های تخصصی به سوالات شما</h2>
+  </div>
+  <div class="max-w-3xl mx-auto px-4">
+    <details class="border-b border-slate-200 group">
+      <summary class="w-full flex items-center justify-between py-5 text-start cursor-pointer list-none">
+        <span class="text-base lg:text-lg font-semibold text-slate-800 group-hover:text-solar-gold transition-colors">شرایط فروش تضمینی برق به ساتبا در سال جدید چیست؟</span>
+        <svg class="w-6 h-6 text-slate-400 transition-transform duration-300 group-open:rotate-45 shrink-0 ms-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+      </summary>
+      <div class="pb-4 text-slate-600 leading-relaxed text-sm lg:text-base">
+        <p>سازمان <strong class="text-text-dark">ساتبا</strong> قراردادهای <strong class="text-text-dark"><a href="https://horasolar.ir/investment/satba-guaranteed-purchase.html" class="text-primary hover:text-amber-500 font-bold underline decoration-primary/30 underline-offset-4 transition-colors">تضمینی ۲۰ ساله خرید برق</a></strong> با نرخ مصوب ارائه می‌دهد. نیروگاه‌های زیر ۲۰ کیلووات خانگی و نیروگاه‌های صنعتی با ظرفیت بالاتر می‌توانند از این قراردادها بهره‌مند شوند. <strong class="text-text-dark">خرید تضمینی برق</strong> توسط ساتبا، درآمد پایدار و بدون ریسک برای سرمایه‌گذاران ایجاد می‌کند.</p>
+      </div>
+    </details>
+    <details class="border-b border-slate-200 group">
+      <summary class="w-full flex items-center justify-between py-5 text-start cursor-pointer list-none">
+        <span class="text-base lg:text-lg font-semibold text-slate-800 group-hover:text-solar-gold transition-colors">آیا نیروگاه خورشیدی جریمه ماده ۱۶ صنایع را رفع می‌کند؟</span>
+        <svg class="w-6 h-6 text-slate-400 transition-transform duration-300 group-open:rotate-45 shrink-0 ms-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+      </summary>
+      <div class="pb-4 text-slate-600 leading-relaxed text-sm lg:text-base">
+        <p>بله. طبق <strong class="text-text-dark">ماده ۱۶ قانون جهش تولید دانش‌بنیان</strong>، صنایع موظفند ۱ تا ۵ درصد برق خود را از منابع تجدیدپذیر تامین کنند. نصب <a href="https://horasolar.ir/applications/industrial-shed-roofs.html" class="text-primary hover:text-amber-500 font-bold underline decoration-primary/30 underline-offset-4 transition-colors">نیروگاه خورشیدی روی سقف سوله صنعتی</a>، این الزام قانونی را برآورده و جریمه را حذف می‌کند. <strong class="text-text-dark">کاهش هزینه قبض برق</strong> نیز از مزایای جانبی است.</p>
+      </div>
+    </details>
+    <details class="border-b border-slate-200 group">
+      <summary class="w-full flex items-center justify-between py-5 text-start cursor-pointer list-none">
+        <span class="text-base lg:text-lg font-semibold text-slate-800 group-hover:text-solar-gold transition-colors">هزینه احداث نیروگاه خورشیدی برای ویلا در کردان چقدر است؟</span>
+        <svg class="w-6 h-6 text-slate-400 transition-transform duration-300 group-open:rotate-45 shrink-0 ms-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
+      </summary>
+      <div class="pb-4 text-slate-600 leading-relaxed text-sm lg:text-base">
+        <p>هزینه بسته به ظرفیت مورد نیاز (معمولاً <strong class="text-text-dark">۵ تا ۲۰ کیلووات</strong> برای ویلاهای کردان) متفاوت است. بازگشت سرمایه بین <strong class="text-text-dark">۳ تا ۵ سال</strong> تخمین زده می‌شود. برای برآورد دقیق <a href="https://horasolar.ir/applications/residential-villa-appliances.html" class="text-primary hover:text-amber-500 font-bold underline decoration-primary/30 underline-offset-4 transition-colors">سیستم‌های خورشیدی آفگرید</a> با شماره <a href="tel:+982636506485" class="text-solar-gold font-bold">۰۲۶-۳۶۵۰۶۴۸۵</a> تماس بگیرید.</p>
+      </div>
+    </details>
+  </div>
+</section>
+
+</main>
+
+<footer class="bg-deep-navy border-t border-white/[0.06]">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 pt-12 pb-6 lg:pt-20 lg:pb-10 px-4 lg:px-8">
+    <div class="lg:col-span-4">
+      <div class="flex items-center gap-3 mb-4">
+        <svg class="w-12 h-12 text-solar-gold" fill="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+        <div>
+          <span class="block text-lg font-black text-white">هورانور سهند</span>
+          <span class="block text-xs text-slate-400 tracking-widest uppercase">Hora Nor Sahand</span>
+        </div>
+      </div>
+      <address itemprop="address" itemscope itemtype="https://schema.org/PostalAddress" class="not-italic text-sm text-slate-400 leading-relaxed mt-4">
+        <span itemprop="addressLocality">کرج</span>، <span itemprop="streetAddress">جاده ملارد، بعد از دانشگاه فرهنگیان، نرسیده به پل ارتش جنب فروشگاه بهداشتی ساختمانی سهند، شرکت برق خورشیدی هورا نور سهند</span>
+      </address>
+      <div class="mt-4 space-y-1">
+        <a href="tel:+982636506485" itemprop="telephone" class="block text-slate-300 hover:text-solar-gold transition-colors text-sm">۰۲۶-۳۶۵۰۶۴۸۵</a>
+        <a href="tel:+989125728170" itemprop="telephone" class="block text-slate-300 hover:text-solar-gold transition-colors text-sm">۰۹۱۲۵۷۲۸۱۷۰</a>
+        <a href="tel:+989122641473" itemprop="telephone" class="block text-slate-300 hover:text-solar-gold transition-colors text-sm">۰۹۱۲۲۶۴۱۴۷۳</a>
+        <a href="tel:+989124641442" itemprop="telephone" class="block text-slate-300 hover:text-solar-gold transition-colors text-sm">۰۹۱۲۴۶۴۱۴۴۲</a>
+      </div>
+      <p class="text-xs text-slate-500 mt-4">تاسیس: ۱۳۹۵</p>
+    </div>
+    <div class="lg:col-span-2">
+      <h4 class="text-white font-bold mb-4">خدمات</h4>
+      <a href="https://horasolar.ir/applications/residential-villa-appliances.html" class="block text-sm text-slate-400 hover:text-solar-gold py-1.5 transition-colors">خانگی و ویلایی</a>
+      <a href="https://horasolar.ir/applications/industrial-shed-roofs.html" class="block text-sm text-slate-400 hover:text-solar-gold py-1.5 transition-colors">صنعتی و سوله</a>
+      <a href="https://horasolar.ir/applications/agricultural-water-pumps.html" class="block text-sm text-slate-400 hover:text-solar-gold py-1.5 transition-colors">کشاورزی</a>
+      <a href="https://horasolar.ir/investment/satba-guaranteed-purchase.html" class="block text-sm text-slate-400 hover:text-solar-gold py-1.5 transition-colors">سرمایه‌گذاری ساتبا</a>
+    </div>
+    <div class="lg:col-span-3">
+      <h4 class="text-white font-bold mb-4">منابع</h4>
+      <a href="https://horasolar.ir/index.html#about" class="block text-sm text-slate-400 hover:text-solar-gold py-1.5 transition-colors">درباره ما</a>
+      <a href="https://horasolar.ir/index.html#blog" class="block text-sm text-slate-400 hover:text-solar-gold py-1.5 transition-colors">بلاگ</a>
+      <a href="https://horasolar.ir/index.html#live-projects" class="block text-sm text-slate-400 hover:text-solar-gold py-1.5 transition-colors">نمونه پروژه‌ها</a>
+      <a href="https://horasolar.ir/index.html#contact" class="block text-sm text-slate-400 hover:text-solar-gold py-1.5 transition-colors">تماس با ما</a>
+      <a href="https://horasolar.ir/index.html#faq" class="block text-sm text-slate-400 hover:text-solar-gold py-1.5 transition-colors">سوالات متداول</a>
+    </div>
+    <div class="lg:col-span-3">
+      <h4 class="text-white font-bold mb-4">ارتباط با ما</h4>
+      <div class="grid grid-cols-6 lg:grid-cols-3 gap-3">
+        <a href="https://t.me/horasolar" class="w-10 h-10 rounded-xl bg-white/[0.05] border border-white/[0.06] flex items-center justify-center transition-all hover:bg-solar-gold/20 hover:border-solar-gold/30" aria-label="تلگرام">
+          <svg class="w-5 h-5 text-slate-300" fill="currentColor" viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
+        </a>
+        <a href="https://instagram.com/hora.solar.panel" class="w-10 h-10 rounded-xl bg-white/[0.05] border border-white/[0.06] flex items-center justify-center transition-all hover:bg-solar-gold/20 hover:border-solar-gold/30" aria-label="اینستاگرام">
+          <svg class="w-5 h-5 text-slate-300" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        </a>
+        <a href="https://wa.me/989399935298" class="w-10 h-10 rounded-xl bg-white/[0.05] border border-white/[0.06] flex items-center justify-center transition-all hover:bg-solar-gold/20 hover:border-solar-gold/30" aria-label="واتساپ">
+          <svg class="w-5 h-5 text-slate-300" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+        <a href="https://ble.ir/horasolar" class="w-10 h-10 rounded-xl bg-white/[0.05] border border-white/[0.06] flex items-center justify-center transition-all hover:bg-solar-gold/20 hover:border-solar-gold/30" aria-label="بله">
+          <span class="text-slate-300 text-xs font-bold">بله</span>
+        </a>
+        <a href="https://eitaa.com/horasolar" class="w-10 h-10 rounded-xl bg-white/[0.05] border border-white/[0.06] flex items-center justify-center transition-all hover:bg-solar-gold/20 hover:border-solar-gold/30" aria-label="ایتا">
+          <span class="text-slate-300 text-xs font-bold">ایتا</span>
+        </a>
+        <a href="https://rubika.ir/horasolar" class="w-10 h-10 rounded-xl bg-white/[0.05] border border-white/[0.06] flex items-center justify-center transition-all hover:bg-solar-gold/20 hover:border-solar-gold/30" aria-label="روبیکا">
+          <span class="text-slate-300 text-xs font-bold">روبیکا</span>
+        </a>
+      </div>
+      <div class="flex gap-4 mt-6">
+        <div class="h-14 w-14 bg-white/[0.05] border border-white/[0.06] rounded-xl flex items-center justify-center">
+          <span class="text-xs text-slate-500">نماد</span>
+        </div>
+        <div class="h-14 w-14 bg-white/[0.05] border border-white/[0.06] rounded-xl flex items-center justify-center">
+          <span class="text-xs text-slate-500">ساتبا</span>
+        </div>
+        <div class="h-14 w-14 bg-white/[0.05] border border-white/[0.06] rounded-xl flex items-center justify-center">
+          <span class="text-xs text-slate-500">نظام مهندسی</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="border-t border-white/[0.06] mt-8 lg:mt-12 pt-6 px-4">
+    <p class="text-xs text-slate-600 text-center">تمامی حقوق محفوظ است. شرکت هورا نور سهند | ۱۳۹۵ - ۱۴۰۴</p>
+  </div>
+</footer>
+
+</body>
+</html>
+[VERIFIED_UI_END_OF_FILE]
