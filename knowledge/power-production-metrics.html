@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>هر پنل خورشیدی چقدر برق تولید می‌کند؟ (جدول وات و آمپر) | هورا نور سهند</title>
+<meta name="description" content="محاسبه دقیق میزان تولید برق هر پنل خورشیدی (وات، ولت، آمپر). یک پنل چند لامپ یا کولر را روشن می‌کند؟ جدول محاسبه تخصصی هورا نور سهند برای ولتاژ و آمپراژ.">
+<link rel="canonical" href="https://horasolar.ir/knowledge/power-production-metrics">
+<script src="https://cdn.tailwindcss.com"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700;800;900&display=swap" rel="stylesheet">
+<style>
+body{font-family:'Vazirmatn',sans-serif}
+.glass-card{background:rgba(255,255,255,0.08);backdrop-filter:blur(16px) saturate(180%);-webkit-backdrop-filter:blur(16px) saturate(180%);border:1px solid rgba(255,255,255,0.18);border-radius:1.5rem}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms!important;animation-iteration-count:1!important;transition-duration:0.01ms!important;scroll-behavior:auto!important}}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","name":"هر پنل خورشیدی چقدر برق تولید می‌کند؟ (جدول وات و آمپر) | هورا نور سهند","description":"محاسبه دقیق میزان تولید برق هر پنل خورشیدی (وات، ولت، آمپر).","url":"https://horasolar.ir/knowledge/power-production-metrics","inLanguage":"fa"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"هورا نور سهند","url":"https://horasolar.ir","telephone":"+982636506485","address":{"@type":"PostalAddress","addressLocality":"کرج","addressRegion":"البرز","addressCountry":"IR"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"پنل خورشیدی ۱۲ ولت است یا ۲۴ ولت؟","acceptedAnswer":{"@type":"Answer","text":"پنل‌های کوچک (زیر ۲۰۰ وات) معمولاً ولتاژ ۱۲ یا ۱۸ ولت دارند، اما پنل‌های نیروگاهی مدرن (مانند برندهای Jinko و Trina) ولتاژی بین ۴۰ تا ۵۰ ولت (DC) تولید می‌کنند."}},{"@type":"Question","name":"آیا می‌توان برق تولید شده توسط پنل را مستقیماً استفاده کرد؟","acceptedAnswer":{"@type":"Answer","text":"خیر، برای استفاده در وسایل خانگی، ولتاژ متغیر DC پنل باید توسط دستگاهی به نام اینورتر (Inverter) به ولتاژ ثابت ۲۲۰ ولت متناوب (AC) تبدیل شود."}},{"@type":"Question","name":"چگونه بفهمیم چند عدد پنل نیاز داریم؟","acceptedAnswer":{"@type":"Answer","text":"ابتدا باید مجموع مصرف لوازم برقی خود را به وات‌ساعت محاسبه کنید و سپس با استفاده از میزان تابش منطقه، تعداد پنل و سایز باتری توسط دپارتمان مهندسی هورا نور سهند برآورد می‌گردد."}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","name":"هر پنل خورشیدی چقدر برق تولید می‌کند؟","author":{"@type":"Organization","name":"هورا نور سهند"},"publisher":{"@type":"Organization","name":"هورا نور سهند"}}
+</script>
+</head>
+<body class="bg-[#0A1929] text-white antialiased">
+
+<header id="sec-01" class="relative min-h-screen flex items-center overflow-hidden" x-data="{ loaded: false }" x-init="loaded = true">
+<div class="absolute inset-0 bg-gradient-to-b from-[#0A1929]/80 via-[#0A1929]/50 to-[#0A1929]"></div>
+<div class="relative z-10 container mx-auto px-4 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center py-24">
+<div class="lg:col-span-7 text-start">
+<span class="inline-flex items-center gap-2 px-4 py-1.5 bg-[#F5A623]/10 text-[#F5A623] text-sm font-bold rounded-full border border-[#F5A623]/20 mb-6">مرجع محاسبه تولید برق</span>
+<h1 class="font-black text-4xl md:text-6xl leading-tight text-white mb-6">هر پنل خورشیدی <span class="text-[#F5A623]">چقدر برق تولید می‌کند؟</span></h1>
+<p class="text-lg md:text-xl text-white/90 max-w-2xl leading-relaxed">یکی از مهم‌ترین دغدغه‌های کارفرمایان هنگام مواجهه با قطعی‌های مکرر برق تابستان، این است که ظرفیت واقعی سیستم‌های خورشیدی چقدر است. توان خروجی پنل‌ها با واحد "وات" (Watt) سنجیده می‌شود. امروزه در پروژه‌های EPC شرکت هورا نور سهند، از ماژول‌های پرتوان با ظرفیت ۵۵۰ تا ۷۱۰ وات استفاده می‌شود. با این حال، تولید واقعی روزانه به فاکتورهایی نظیر ساعات تابش مفید (Peak Sun Hours)، زاویه نصب، و راندمان اینورتر بستگی دارد.</p>
+<div class="glass-card p-6 border-s-4 border-[#F5A623] mt-6">
+<p class="text-sm font-bold text-[#F5A623] mb-2">فرمول محاسبه روزانه</p>
+<p class="text-xl font-black text-[#F5A623] font-mono mb-2">P(kWh/day) = P(W) × PSH × 0.85</p>
+<p class="text-white/80 text-sm mt-2">وات پنل × ساعات آفتابی مفید × ضریب راندمن = تولید روزانه (kWh)</p>
+</div>
+<a href="#sec-02" class="inline-flex items-center gap-2 mt-8 px-8 py-4 bg-[#F5A623] text-[#0A1929] font-bold rounded-2xl hover:bg-[#F5A623]/90 transition-colors focus:outline-none focus:ring-2 focus:ring-[#F5A623]" role="button" aria-label="مطالعه پارامترهای الکتریکی">مطالعه پارامترهای الکتریکی<svg class="w-5 h-5 rotate-180" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg></a>
+</div>
+<aside class="lg:col-span-4 lg:col-start-9 lg:sticky lg:top-24 glass-card p-6 border-s-4 border-[#F5A623]">
+<p class="text-sm font-bold text-[#F5A623] mb-2">خلاصه کلیدی</p>
+<p class="text-base text-white/90 leading-relaxed">میزان برق تولیدی یک پنل خورشیدی مستقیماً به توان نامی آن (بین ۴۰۰ تا ۷۰۰ وات) و میزان تابش منطقه بستگی دارد. به طور متوسط، یک پنل ۶۰۰ واتی در استانی مانند البرز روزانه حدود ۳ کیلووات ساعت (kWh) برق خالص تولید می‌کند.</p>
+</aside>
+</div>
+</header>
+
+<section id="sec-02" class="py-20 md:py-32 bg-[#0A1929]">
+<div class="container mx-auto px-4">
+<h2 class="font-extrabold text-2xl md:text-4xl text-white text-center mb-10">درک تفاوت <span class="text-[#F5A623]">وات</span>، <span class="text-[#F5A623]">ولت</span> و <span class="text-[#F5A623]">آمپر</span></h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+<div class="glass-card p-8 rounded-2xl text-center transition-all hover:shadow-xl hover:border-[#F5A623]/50 border border-[#F5A623]/20"><div class="text-5xl mb-4">⚡</div><h3 class="font-bold text-xl text-[#F5A623] mb-3">ولتاژ (Volt) — فشار</h3><p class="text-white/80 text-base leading-relaxed">نیرویی که الکترون‌ها را در مدار به حرکت درمی‌آورد. معادل "فشار آب" در لوله.</p></div>
+<div class="glass-card p-8 rounded-2xl text-center transition-all hover:shadow-xl hover:border-[#F5A623]/50 border border-[#F5A623]/20"><div class="text-5xl mb-4">💧</div><h3 class="font-bold text-xl text-[#F5A623] mb-3">آمپر (Ampere) — جریان</h3><p class="text-white/80 text-base leading-relaxed">مقدار الکترون‌هایی که در واحد زمان از مدار عبور می‌کنند. معادل "دبی آب" در لوله.</p></div>
+<div class="glass-card p-8 rounded-2xl text-center transition-all hover:shadow-xl hover:border-[#F5A623]/50 border border-[#F5A623]/20"><div class="text-5xl mb-4">⚡</div><h3 class="font-bold text-xl text-[#F5A623] mb-3">وات (Watt) — توان</h3><p class="text-white/80 text-base leading-relaxed">حاصل‌ضرب ولتاژ در آمپر (W = V × A). توان نهایی برای انجام کار.</p></div>
+</div>
+<div class="glass-card p-6 border-s-4 border-[#F5A623] max-w-3xl mx-auto mt-12">
+<p class="text-sm font-bold text-[#F5A623] mb-1">🔬 اصل کلیدی</p>
+<p class="text-white/90 text-base leading-relaxed">ولتاژ (Volt) نشان‌دهنده فشار جریان، آمپر (Ampere) نشان‌دهنده حجم جریان الکتریکی و وات (Watt) حاصل‌ضرب این دو و نشان‌دهنده توان نهایی پنل خورشیدی است (W = V × A).</p>
+</div>
+</div>
+</section>
+
+<section id="sec-03" class="py-20 md:py-32 bg-[#0A1929]">
+<div class="container mx-auto px-4 max-w-3xl">
+<h2 class="font-extrabold text-2xl md:text-4xl text-white text-center mb-10">یک پنل خورشیدی <span class="text-[#F5A623]">چند آمپر</span> برق تولید می‌کند؟</h2>
+<div class="glass-card p-6 overflow-x-auto">
+<table class="w-full min-w-[500px] text-sm" role="table" aria-label="جدول آمپر تولیدی پنل‌های رده‌یک">
+<thead><tr class="bg-[#1E3A5F] text-[#F5A623]"><th scope="col" class="p-4 text-start rounded-s-lg">پنل</th><th scope="col" class="p-4 text-start">توان (W)</th><th scope="col" class="p-4 text-start">Vmp (V)</th><th scope="col" class="p-4 text-start rounded-e-lg">Imp (A)</th></tr></thead>
+<tbody>
+<tr class="bg-[#0A1929]/60"><td class="p-4 font-bold">Trina 550W</td><td class="p-3">550W</td><td class="p-3">41.6V</td><td class="p-3 text-[#F5A623] font-bold">13.2A</td></tr>
+<tr class="bg-[#1E3A5F]/40"><td class="p-4 font-bold">Jinko 620W</td><td class="p-3">620W</td><td class="p-3">43.2V</td><td class="p-3 text-[#F5A623] font-bold">14.3A</td></tr>
+<tr class="bg-[#0A1929]/60"><td class="p-4 font-bold">LONGi 710W</td><td class="p-3">710W</td><td class="p-3">44.5V</td><td class="p-3 text-[#F5A623] font-bold">15.9A</td></tr>
+</tbody>
+</table>
+</div>
+<div class="glass-card p-5 border-s-4 border-[#F5A623] mt-8 max-w-2xl mx-auto">
+<p class="text-sm font-bold text-[#F5A623] mb-1">📊 قاعده کلی</p>
+<p class="text-white/90 text-base leading-relaxed">یک پنل خورشیدی مونوکریستال ۵۵۰ واتی استاندارد در شرایط ایده‌آل آزمایشگاهی (STC)، ولتاژی در حدود ۴۱ ولت و جریانی معادل ۱۳ الی ۱۳.۵ آمپر (DC) تولید می‌کند.</p>
+</div>
+</div>
+</section>
+
+<section id="sec-04" class="py-20 md:py-32 bg-[#0A1929]">
+<div class="container mx-auto px-4 max-w-5xl">
+<h2 class="font-extrabold text-2xl md:text-4xl text-white text-center mb-10">جدول تخصصی <span class="text-[#F5A623]">توان، ولت و آمپر</span> مدل‌های پرکاربرد</h2>
+<div class="glass-card p-6 overflow-x-auto">
+<table class="w-full min-w-[700px] text-sm" role="table" aria-label="جدول تخصصی مشخصات پنل‌های رده‌یک">
+<thead><tr class="bg-[#1E3A5F] text-[#F5A623]"><th scope="col" class="p-4 text-start rounded-s-lg">برند و مدل</th><th scope="col" class="p-4 text-start">توان نامی (Pmax)</th><th scope="col" class="p-4 text-start">Vmp (V)</th><th scope="col" class="p-4 text-start">Imp (A)</th><th scope="col" class="p-4 text-start rounded-e-lg">راندمان ماژول</th></tr></thead>
+<tbody>
+<tr class="bg-[#0A1929]/60"><td class="p-4 font-bold">Trina Solar</td><td class="p-4">550W</td><td class="p-4">41.6V</td><td class="p-4 text-[#F5A623] font-bold">13.2A</td><td class="p-4 text-[#2ECC71] font-bold">21.0%</td></tr>
+<tr class="bg-[#1E3A5F]/40"><td class="p-4 font-bold">JinkoSolar</td><td class="p-4">620W</td><td class="p-4">43.2V</td><td class="p-4 text-[#F5A623] font-bold">14.3A</td><td class="p-4 text-[#2ECC71] font-bold">22.1%</td></tr>
+<tr class="bg-[#0A1929]/60"><td class="p-4 font-bold">LONGi</td><td class="p-4">710W</td><td class="p-4">44.5V</td><td class="p-4 text-[#F5A623] font-bold">15.9A</td><td class="p-4 text-[#2ECC71] font-bold">22.8%</td></tr>
+</tbody>
+</table>
+</div>
+<div class="glass-card p-5 border-s-4 border-[#F5A623] mt-8 max-w-3xl mx-auto">
+<p class="text-sm font-bold text-[#F5A623] mb-1">📋 نکته مهم</p>
+<p class="text-white/90 text-base leading-relaxed">جدول زیر مشخصات دقیق الکتریکی پنل‌های خورشیدی رده اول جهان (مانند Jinko و Trina) را که در پروژه‌های صنعتی و ویلایی هورا نور سهند استفاده می‌شوند، نشان می‌دهد.</p>
+</div>
+</div>
+</section>
+
+<section id="sec-05" class="py-20 md:py-32 bg-[#0A1929]">
+<div class="container mx-auto px-4 max-w-3xl text-center">
+<h2 class="font-extrabold text-2xl md:text-4xl text-white mb-8">هر متر مربع پنل خورشیدی <span class="text-[#F5A623]">چقدر برق</span> تولید می‌کند؟</h2>
+<div class="glass-card p-8 border-s-4 border-[#F5A623] mb-10">
+<span class="inline-flex items-center gap-2 bg-[#2ECC71] text-[#0A1929] text-sm font-bold rounded-full px-3 py-1 mb-4">Space Calculator</span>
+<p class="text-white/90 text-lg font-bold mb-2">۱ kW توان = حدود ۵ متر مربع سقف</p>
+<p class="text-white/80 text-base leading-relaxed max-w-xl mx-auto">پنل‌های مدرن با ابعادی در حدود ۲.۵ متر مربع، توانایی تولید بالغ بر ۵۵۰ تا ۶۰۰ وات را دارند.</p>
+</div>
+<div class="text-start max-w-2xl mx-auto mt-8">
+<p class="text-white/85 text-base md:text-lg leading-relaxed">بسیاری از صاحبان سوله در شهرک‌های صنعتی نظیر شمس‌آباد، برای فرار از جریمه‌های قطعی ماده ۱۶، نیاز به محاسبه فضای سقف خود دارند. پنل‌های مدرن با ابعادی در حدود ۲.۵ متر مربع، توانایی تولید بالغ بر ۵۵۰ تا ۶۰۰ وات را دارند. این یعنی راندمان سطحی بسیار بالا. هورا نور سهند با بهره‌گیری از این ماژول‌های پرتراکم، می‌تواند ظرفیت بیشتری از نیروگاه را در سقف‌های محدود کارخانجات نصب کرده و بازگشت سرمایه ۳ تا ۵ ساله را تضمین نماید.</p>
+<div class="glass-card p-5 border-s-4 border-[#F5A623] mt-8">
+<p class="text-sm font-bold text-[#F5A623] mb-1">📐 محاسبه فضا</p>
+<p class="text-white/90 text-base leading-relaxed">با توجه به راندمان ۲۱ تا ۲۲ درصدی پنل‌های مونوکریستال امروزی، هر متر مربع از یک پنل خورشیدی توانایی تولید حدود ۲۰۰ تا ۲۲۰ وات برق در ساعت را دارد.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="sec-06" class="py-20 md:py-32 bg-[#0A1929]">
+<div class="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+<div class="lg:col-span-6 lg:sticky lg:top-20" aria-label="نمودار تولید روزانه بر حسب کیلووات در البرز" role="img">
+<div class="glass-card p-8 h-[400px] flex flex-col justify-center">
+<h3 class="font-bold text-xl text-white mb-6 text-start">تولید روزانه در استان البرز (هر کیلووات ظرفیت)</h3>
+<div class="relative h-[300px] flex items-center justify-center">
+<svg viewBox="0 0 400 300" class="w-full h-auto" role="img" aria-label="نمودار تولید روزانه بر حسب کیلووات در البرز">
+<path d="M50,250 Q200,50 350,250" stroke="#F5A623" stroke-width="3" fill="none" stroke-linecap="round"/>
+<text x="200" y="150" text-anchor="middle" fill="#2ECC71" font-size="24" font-weight="bold">۵.۵ kWh/kW/روز</text>
+<circle cx="150" cy="200" r="8" fill="#F5A623"/>
+</svg>
+</div>
+</div>
+</div>
+<div class="lg:col-span-6 space-y-6 text-start">
+<h2 class="font-extrabold text-2xl md:text-4xl text-white">تاثیر اقلیم و تابش بر <span class="text-[#F5A623]">تولید واقعی</span></h2>
+<p class="text-white/85 text-base md:text-lg leading-relaxed">توان درج شده روی لیبل پنل‌ها، مربوط به شرایط استاندارد آزمایشگاهی (STC) با تابش 1000 وات بر متر مربع است. اما در دنیای واقعی چه رخ می‌دهد؟ بر اساس دیتاهای استخراج شده از بیش از ۴۰ پروژه موفق نصب شده توسط تیم هورا نور سهند، استان البرز یکی از بهترین نقاط تابشی است. یک پکیج ۵ کیلوواتی خانگی در کرج یا کردان، در روزهای آفتابی تابستان می‌تواند تا ۲۷ کیلووات ساعت در روز برق واقعی و قابل استفاده تولید کند که برای یک ویلای مجهز بسیار ایده‌آل است.</p>
+<div class="glass-card p-5 border-s-4 border-[#2ECC71] bg-[#2ECC71]/5">
+<p class="text-sm font-bold text-[#2ECC71] mb-1">☀️ مزیت اقلیمی البرز</p>
+<p class="text-white/90 text-base leading-relaxed">تولید برق خورشیدی در مناطق مختلف متفاوت است؛ بر اساس داده‌های تله‌متری پروژه‌های هورا نور سهند، منطقه کرج و استان البرز با داشتن ۲۵۰ روز آفتابی، پتانسیل تولید روزانه ۵.۵ کیلووات ساعت به ازای هر کیلووات ظرفیت نصب شده را دارد.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="sec-07" class="py-20 md:py-32 bg-[#0A1929]">
+<div class="container mx-auto px-4 max-w-3xl text-center">
+<h2 class="font-extrabold text-2xl md:text-4xl text-white mb-8">یک پنل خورشیدی <span class="text-[#F5A623]">چند لامپ</span> را روشن می‌کند؟</h2>
+<p class="text-white/85 text-base md:text-lg leading-relaxed mb-10 max-w-2xl mx-auto">برای درک بهتر توان تولیدی، بیایید آن را با مصرف روزمره مقایسه کنیم. فرض کنید یک ویلا در لواسان دارید و از قطعی مکرر برق و سر و صدای ژنراتور کلافه شده‌اید. یک سیستم تک پنل ۶۰۰ واتی با یک باتری ۱۰۰ آمپر، روزانه حدود ۳۰۰۰ وات‌ساعت برق ذخیره می‌کند. این مقدار برای روشن کردن ۱۰ عدد لامپ LED (۱۰ وات) به مدت ۱۰ ساعت، به علاوه شارژ لپ‌تاپ و تماشای تلویزیون برای چند ساعت کاملاً کفایت می‌کند.</p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="glass-card p-6 border-s-4 border-[#F5A623] flex flex-col items-center text-center"><span class="text-5xl mb-3">💡</span><h3 class="font-bold text-xl text-white mb-2">۴۰ لامپ LED (۱۰ وات)</h3><p class="text-white/70 text-sm">۸ ساعت روشنایی شبانه</p></div>
+<div class="glass-card p-6 border-s-4 border-[#F5A623] flex flex-col items-center text-center"><span class="text-5xl mb-3">📺</span><h3 class="font-bold text-xl text-white mb-2">۱ تلویزیون + ۱ یخچال</h3><p class="text-white/70 text-sm">چند ساعت استفاده</p></div>
+<div class="glass-card p-6 border-s-4 border-[#F5A623] flex flex-col items-center text-center"><span class="text-5xl mb-3">⚡</span><h3 class="font-bold text-xl text-white mb-2">شارژ لپ‌تاپ + موبایل</h3><p class="text-white/70 text-sm">استفاده روزانه</p></div>
+</div>
+</div>
+</section>
+
+<section id="sec-08" class="py-20 md:py-32 bg-[#0A1929]">
+<div class="container mx-auto px-4 max-w-3xl">
+<div class="bg-[#E74C3C]/10 border-2 border-[#E74C3C] rounded-2xl p-8 mb-10" role="alert" aria-live="polite">
+<div class="flex items-start gap-4">
+<span class="text-4xl">⚠️</span>
+<div>
+<h3 class="text-[#E74C3C] font-bold text-xl mb-2">هشدار فنی: کولر گازی نیاز به پکیج ۵+ کیلووات دارد</h3>
+<p class="text-white/80 text-base md:text-lg leading-relaxed">سنگین‌ترین بار مصرفی در ویلاها هنگام قطعی برق، تجهیزات سرمایشی است. کولرهای گازی در لحظه استارت (Surge) و در طول کارکرد، آمپر بسیار بالایی می‌کشند. شما نمی‌توانید یک کولر را صرفاً با یک یا دو پنل روشن کنید. دپارتمان مهندسی هورا نور سهند با طراحی دقیق پکیج‌های آفگرید ۵ تا ۱۰ کیلوواتی مجهز به اینورترهای سانورتر قدرتمند، امکان روشن کردن چندین کولر گازی را در ویلاهای بدون برق یا درگیر قطعی تابستانه فراهم می‌کند.</p>
+</div>
+</div>
+</div>
+<div class="glass-card p-5 border-s-4 border-[#E74C3C] bg-[#E74C3C]/5">
+<p class="text-sm font-bold text-[#E74C3C] mb-1">⚠️ هشدار فنی</p>
+<p class="text-white/90 text-base leading-relaxed">برای تامین برق یک کولر گازی ۲۴۰۰۰ (با مصرف حدودی ۲.۵ کیلووات در ساعت)، به یک پکیج خورشیدی حداقل ۵ کیلوواتی شامل ۸ تا ۱۰ عدد پنل خورشیدی ۵۵۰ واتی و یک بانک باتری قدرتمند نیاز است.</p>
+</div>
+</div>
+</section>
+
+<aside id="sec-09" class="py-20 md:py-32 bg-[#FFF4E0]" x-data="{ revealed: false }">
+<div class="container mx-auto px-4 max-w-4xl">
+<h2 class="font-extrabold text-2xl md:text-4xl text-[#0A1929] text-center mb-12">افت توان حرارتی: <span class="text-[#F5A623]">افسانه در برابر واقعیت</span></h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8" x-intersect.once="revealed = true">
+<div class="rounded-2xl p-6 bg-[#E74C3C]/10 border border-[#E74C3C]/30 transition-all duration-700" :class="revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'">
+<span class="text-3xl">❌</span><h3 class="font-bold text-[#0A1929] text-lg mt-3">افسانه</h3>
+<p class="text-[#0A1929]/80 mt-2 text-base leading-relaxed">هرچه هوا گرم‌تر باشد و آفتاب سوزان‌تر بتابد، پنل خورشیدی برق بیشتری تولید می‌کند.</p>
+</div>
+<div class="rounded-2xl p-6 bg-[#2ECC71]/10 border border-[#2ECC71]/30 transition-all duration-700 delay-200" :class="revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'">
+<span class="text-3xl">✅</span><h3 class="font-bold text-[#0A1929] text-lg mt-3">واقعیت مهندسی</h3>
+<p class="text-[#0A1929]/80 mt-2 text-base leading-relaxed">پنل‌های خورشیدی فتوولتائیک با "نور" کار می‌کنند، نه با "حرارت". در واقع، با افزایش دمای سلول‌های سیلیکونی به بالای ۲۵ درجه سانتی‌گراد، ولتاژ پنل دچار افت می‌شود (ضریب افت دمایی). به همین دلیل، یک ظهر خنک زمستانی در صورت تابش مستقیم آفتاب، راندمان بالاتری نسبت به ظهر داغ تابستان دارد. ما در هورا نور سهند با ایجاد فاصله استاندارد استراکچر از سطح بام، تهویه طبیعی زیر پنل‌ها را فراهم کرده و این افت توان را مهار می‌کنیم.</p>
+</div>
+</div>
+<div class="border-t-4 border-[#F5A623] bg-white rounded-2xl p-6 shadow-lg">
+<p class="text-sm font-bold text-[#F5A623] mb-1">🔬 حقیقت علمی</p>
+<p class="text-[#0A1929] text-base leading-relaxed">پنل‌های خورشیدی در هوای سرد و آفتابی بالاترین راندمان خود را دارند؛ برخلاف تصور رایج، گرمای شدید هوا موجب افت مقداری از ولتاژ پنل شده و راندمان را کمی کاهش می‌دهد.</p>
+</div>
+</div>
+</aside>
+
+<section id="sec-10" class="py-20 md:py-32 bg-[#0A1929]">
+<div class="container mx-auto px-4 max-w-3xl text-start">
+<div class="flex flex-wrap items-center gap-3 mb-6">
+<h2 class="font-extrabold text-2xl md:text-4xl text-white">ارتباط توان تولیدی با <span class="text-[#F5A623]">قرارداد ساتبا</span></h2>
+<span class="bg-[#F5A623] text-[#0A1929] text-xs font-bold rounded-full px-3 py-1">درآمدزایی</span>
+</div>
+<p class="text-white/85 text-base md:text-lg leading-relaxed mb-8">(آپدیت قراردادهای دولتی): دانستن توان دقیق تولیدی سیستم تنها برای مصارف شخصی نیست. در پروژه‌های سرمایه‌گذاری متصل به شبکه، برق تولیدی پنل‌های شما توسط کنتورهای دوطرفه اندازه‌گیری شده و به شبکه تزریق می‌شود. هر یک کیلووات ساعت تولید اضافه، مستقیماً توسط دولت خریداری می‌گردد. برای اطلاع از آخرین نرخ‌نامه‌ها و فرمول‌های خرید تضمینی برق، می‌توانید به وبسایت <a href="https://www.satba.gov.ir/" rel="external noopener" target="_blank" class="text-[#F5A623] underline hover:text-[#F5A623]/80 focus:outline-none focus:ring-2 focus:ring-[#F5A623]">سازمان انرژی‌های تجدیدپذیر و بهره‌وری انرژی برق (ساتبا)</a> مراجعه کنید. بازگشت سرمایه در این روش بسیار مطمئن است.</p>
+<div class="glass-card p-5 border-s-4 border-[#F5A623]">
+<div class="flex items-start gap-3">
+<span class="text-2xl mt-1">💰</span>
+<div>
+<p class="text-sm font-bold text-[#F5A623] mb-1">💰 فرمول درآمد</p>
+<p class="text-white/90 text-base leading-relaxed">تولید هر کیلووات ساعت (kWh) برق در نیروگاه‌های متصل به شبکه (On-Grid)، بر اساس نرخ‌های مصوب وزارت نیرو محاسبه شده و مستقیماً به درآمد ماهیانه تضمین‌شده تبدیل می‌گردد.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="sec-11" class="py-20 md:py-32 bg-[#1E3A5F]" x-data="{ openFaq: null }">
+<div class="container mx-auto px-4 max-w-3xl">
+<h2 class="font-extrabold text-2xl md:text-4xl text-white text-center mb-4">سوالات متداول <span class="text-[#F5A623]">تولید برق پنل‌ها</span></h2>
+<div class="bg-[#FFF4E0]/5 rounded-xl p-4 mb-10 border border-[#F5A623]/20 text-center"><p class="text-white/80 text-sm">متداول‌ترین سوالات درباره ولتاژ سیستم خورشیدی، توان نامی و نحوه محاسبه تعداد پنل‌های مورد نیاز.</p></div>
+<div class="space-y-4">
+<details class="glass-card overflow-hidden group" :class="openFaq === 1 ? 'border-s-4 border-[#F5A623]' : 'border-s-4 border-white/10'" x-data @toggle="openFaq = openFaq === 1 ? null : 1">
+<summary class="cursor-pointer py-5 px-6 flex items-center justify-between text-start focus:outline-none focus:ring-2 focus:ring-[#F5A623]" role="button" aria-expanded="false" :aria-expanded="openFaq === 1 ? 'true' : 'false'">
+<span class="font-bold text-lg" :class="openFaq === 1 ? 'text-[#F5A623]' : 'text-white'">پنل خورشیدی ۱۲ ولت است یا ۲۴ ولت؟</span>
+<svg class="w-5 h-5 text-[#F5A623] transition-transform" :class="openFaq === 1 ? 'rotate-180' : ''" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+</summary>
+<div class="px-6 pb-5 text-white/80 text-base leading-relaxed">پنل‌های کوچک (زیر ۲۰۰ وات) معمولاً ولتاژ ۱۲ یا ۱۸ ولت دارند، اما پنل‌های نیروگاهی مدرن (مانند برندهای Jinko و Trina) ولتاژی بین ۴۰ تا ۵۰ ولت (DC) تولید می‌کنند.</div>
+</details>
+<details class="glass-card overflow-hidden group" :class="openFaq === 2 ? 'border-s-4 border-[#F5A623]' : 'border-s-4 border-white/10'" x-data @toggle="openFaq = openFaq === 2 ? null : 2">
+<summary class="cursor-pointer py-5 px-6 flex items-center justify-between text-start focus:outline-none focus:ring-2 focus:ring-[#F5A623]" role="button" aria-expanded="false" :aria-expanded="openFaq === 2 ? 'true' : 'false'">
+<span class="font-bold text-lg" :class="openFaq === 2 ? 'text-[#F5A623]' : 'text-white'">آیا می‌توان برق تولید شده توسط پنل را مستقیماً استفاده کرد؟</span>
+<svg class="w-5 h-5 text-[#F5A623] transition-transform" :class="openFaq === 2 ? 'rotate-180' : ''" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+</summary>
+<div class="px-6 pb-5 text-white/80 text-base leading-relaxed">خیر، برای استفاده در وسایل خانگی، ولتاژ متغیر DC پنل باید توسط دستگاهی به نام اینورتر (Inverter) به ولتاژ ثابت ۲۲۰ ولت متناوب (AC) تبدیل شود.</div>
+</details>
+<details class="glass-card overflow-hidden group" :class="openFaq === 3 ? 'border-s-4 border-[#F5A623]' : 'border-s-4 border-white/10'" x-data @toggle="openFaq = openFaq === 3 ? null : 3">
+<summary class="cursor-pointer py-5 px-6 flex items-center justify-between text-start focus:outline-none focus:ring-2 focus:ring-[#F5A623]" role="button" aria-expanded="false" :aria-expanded="openFaq === 3 ? 'true' : 'false'">
+<span class="font-bold text-lg" :class="openFaq === 3 ? 'text-[#F5A623]' : 'text-white'">چگونه بفهمیم چند عدد پنل نیاز داریم؟</span>
+<svg class="w-5 h-5 text-[#F5A623] transition-transform" :class="openFaq === 3 ? 'rotate-180' : ''" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+</summary>
+<div class="px-6 pb-5 text-white/80 text-base leading-relaxed">ابتدا باید مجموع مصرف لوازم برقی خود را به وات‌ساعت محاسبه کنید و سپس با استفاده از میزان تابش منطقه، تعداد پنل و سایز باتری توسط دپارتمان مهندسی هورا نور سهند برآورد می‌گردد.</div>
+</details>
+</div>
+</div>
+</section>
+
+</body>
+</html>
+[VERIFIED_UI_END_OF_FILE]

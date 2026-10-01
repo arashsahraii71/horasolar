@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>پنل خورشیدی چیست و چگونه کار می‌کند؟ (راهنمای جامع + ساختار) | هورا نور سهند</title>
+<meta name="description" content="آشنایی کامل با سیستم‌های فتوولتائیک، نحوه عملکرد، تفاوت برق AC/DC و روش‌های ذخیره انرژی. جامع‌ترین راهنمای مهندسی پنل خورشیدی از هورا نور سهند.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700;800;900&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<script>
+tailwind.config={theme:{extend:{colors:{'solar-gold':'#F5A623','deep-navy':'#0A1929','pure-white':'#FFFFFF','navy-mid':'#1E3A5F','cream-warm':'#FFF4E0','eco-green':'#2ECC71','alert-red':'#E74C3C'},fontFamily:{vazirmatn:['Vazirmatn','sans-serif']}}}}
+</script>
+<style>
+.glass-card{background:rgba(255,255,255,0.08);backdrop-filter:blur(16px) saturate(180%);-webkit-backdrop-filter:blur(16px) saturate(180%);border:1px solid rgba(255,255,255,0.18);border-radius:1.5rem}
+@media(prefers-reduced-motion:reduce){*{animation-duration:0.01ms!important;animation-iteration-count:1!important;transition-duration:0.01ms!important}}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid #F5A623;outline-offset:2px;border-radius:0.25rem}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"پنل خورشیدی چیست و چگونه کار می‌کند؟ (راهنمای جامع + ساختار) | هورا نور سهند","description":"آشنایی کامل با سیستم‌های فتوولتائیک، نحوه عملکرد، تفاوت برق AC/DC و روش‌های ذخیره انرژی. جامع‌ترین راهنمای مهندسی پنل خورشیدی از هورا نور سهند.","url":"https://horasahand.ir/knowledge/solar-energy-fundamentals","inLanguage":"fa"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"هورا نور سهند","url":"https://horasahand.ir","logo":"https://horasahand.ir/images/logo.png"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"پنل خورشیدی چیست و چگونه کار می‌کند؟","author":{"@type":"Organization","name":"هورا نور سهند"},"publisher":{"@type":"Organization","name":"هورا نور سهند"},"inLanguage":"fa"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"آیا پنل خورشیدی در طول شب نیز کار می‌کند؟","acceptedAnswer":{"@type":"Answer","text":"خیر، فرآیند فتوولتائیک نیازمند نور خورشید است. برای استفاده از برق در شب، شما به یک بانک باتری یا استفاده از شبکه سراسری نیاز دارید."}},{"@type":"Question","name":"آیا شستشوی پنل‌های خورشیدی الزامی است؟","acceptedAnswer":{"@type":"Answer","text":"بله. نشستن گرد و غبار شدید روی سطح پنل می‌تواند تا ۱۵ درصد از راندمان تولید را کاهش دهد."}},{"@type":"Question","name":"آیا سیستم‌های خورشیدی خطر برق‌گرفتگی دارند؟","acceptedAnswer":{"@type":"Answer","text":"در صورت اجرای صحیح و اصولی کابل‌کشی و استفاده از تجهیزات حفاظتی استاندارد توسط یک پیمانکار مجاز مانند هورا نور سهند، سیستم کاملاً ایمن است."}}],"inLanguage":"fa"}</script>
+</head>
+<body class="bg-deep-navy text-pure-white font-vazirmatn antialiased" dir="rtl" lang="fa">
+
+<header id="sec-01" class="relative min-h-screen flex items-center overflow-hidden" x-data="{ loaded: false }" x-init="loaded = true">
+<div class="absolute inset-0 bg-gradient-to-b from-deep-navy/80 via-deep-navy/50 to-deep-navy"></div>
+<div class="relative z-10 container mx-auto px-4 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center py-24">
+<div class="lg:col-span-7 text-start">
+<span class="inline-flex items-center gap-2 px-4 py-1.5 bg-solar-gold/10 text-solar-gold text-sm font-bold rounded-full border border-solar-gold/20 mb-6">دانشنامه فتوولتائیک | مرجع مهندسی</span>
+<h1 class="font-vazirmatn font-black text-4xl md:text-6xl leading-tight text-pure-white mb-6">پنل خورشیدی <span class="text-solar-gold">(سیستم فتوولتائیک)</span> چیست؟</h1>
+<p class="text-lg md:text-xl text-pure-white/90 max-w-2xl leading-relaxed">پنل خورشیدی یا ماژول فتوولتائیک (Photovoltaic Module)، قلب تپنده هر نیروگاه تجدیدپذیر است. این تجهیزات با جذب فوتون‌های ساطع شده از نور خورشید و تحریک الکترون‌ها در سلول‌های سیلیکونی، انرژی خورشیدی را به نیروی برق تبدیل می‌کنند. شرکت هورا نور سهند در طراحی و اجرای پروژه‌های خود، از باکیفیت‌ترین ماژول‌های مونوکریستال برندهای Tier-1 نظیر Jinko و Trina استفاده می‌کند تا بالاترین میزان جذب و تبدیل انرژی را حتی در روزهای ابری تضمین نماید.</p>
+<a href="#sec-11" class="inline-flex items-center gap-2 mt-8 px-8 py-4 bg-solar-gold text-deep-navy font-bold rounded-2xl hover:bg-solar-gold/90 transition-colors" role="button" aria-label="مطالعه جزئیات ساختار پنل خورشیدی">مطالعه ساختار پنل <svg class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"/></svg></a>
+</div>
+<aside class="lg:col-span-4 lg:col-start-9 lg:sticky lg:top-24 glass-card p-6 border-s-4 border-solar-gold">
+<p class="text-sm font-bold text-solar-gold mb-2">خلاصه کلیدی</p>
+<p class="text-base text-pure-white/90 leading-relaxed">پنل خورشیدی یک صفحه مهندسی‌شده متشکل از سلول‌های نیمه‌هادی (عمدتاً سیلیکون) است که نور خورشید را از طریق "اثر فتوولتائیک" مستقیماً به جریان الکتریکی مستقیم (DC) تبدیل می‌کند.</p>
+</aside>
+</div>
+</header>
+
+<article id="sec-02" class="py-20 md:py-32 bg-deep-navy" x-data="{ activeLayer: -1 }">
+<div class="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+<div class="lg:col-span-6 lg:sticky lg:top-20" aria-label="نمودار تعاملی لایه‌های پنل خورشیدی" role="img">
+<div class="glass-card p-8 h-[400px] flex flex-col justify-center">
+<h3 class="font-bold text-xl text-pure-white mb-6 text-start">سازماندهی لایه‌های پنل خورشیدی</h3>
+<div class="relative w-full h-[300px] flex items-center justify-center">
+<svg viewBox="0 0 400 300" class="w-full h-auto" role="img" aria-label="نمودار لایه‌های پنل خورشیدی">
+<rect x="50" y="30" width="300" height="20" rx="2" fill="#FFFFFF" opacity="0.2" stroke="#F5A623" stroke-width="1" @mouseenter="activeLayer = 0" @mouseleave="activeLayer = -1"/>
+<rect x="50" y="50" width="300" height="15" rx="1" fill="#F5A623" opacity="0.3" @mouseenter="activeLayer = 1" @mouseleave="activeLayer = -1"/>
+<rect x="50" y="65" width="300" height="120" rx="2" fill="#F5A623" opacity="0.8" @mouseenter="activeLayer = 2" @mouseleave="activeLayer = -1"/>
+<rect x="50" y="185" width="300" height="15" rx="1" fill="#F5A623" opacity="0.3" @mouseenter="activeLayer = 3" @mouseleave="activeLayer = -1"/>
+<rect x="50" y="200" width="300" height="20" rx="1" fill="#FFFFFF" opacity="0.2" @mouseenter="activeLayer = 4" @mouseleave="activeLayer = -1"/>
+<rect x="40" y="20" width="320" height="200" rx="5" fill="none" stroke="#F5A623" stroke-width="3" @mouseenter="activeLayer = 5" @mouseleave="activeLayer = -1"/>
+</svg>
+<div class="flex flex-wrap justify-center gap-2 mt-4 text-xs">
+<span class="flex items-center gap-1"><span class="w-4 h-1 rounded bg-pure-white/30"></span> شیشه</span>
+<span class="flex items-center gap-1"><span class="w-4 h-1 rounded bg-solar-gold/30"></span> EVA</span>
+<span class="flex items-center gap-1"><span class="w-4 h-1 rounded bg-solar-gold"></span> سلول‌ها</span>
+<span class="flex items-center gap-1"><span class="w-4 h-1 rounded bg-solar-gold/30"></span> EVA</span>
+<span class="flex items-center gap-1"><span class="w-4 h-1 rounded bg-pure-white/30"></span> بک‌شیت</span>
+<span class="flex items-center gap-1"><span class="w-4 h-1 rounded bg-navy-mid"></span> فریم</span>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-6 space-y-4 text-start">
+<h2 class="font-vazirmatn font-extrabold text-2xl md:text-4xl text-pure-white">پنل خورشیدی از <span class="text-solar-gold">چه چیزی</span> ساخته شده است؟</h2>
+<p class="text-pure-white/85 text-base md:text-lg leading-relaxed">برای درک عملکرد یک سیستم خورشیدی، ابتدا باید مواد تشکیل‌دهنده آن را بشناسیم. پنل‌ها از لایه‌های متعددی تشکیل شده‌اند که مهم‌ترین آن‌ها لایه نیمه‌هادی از جنس سیلیکون است. روی این سلول‌ها با یک لایه شیشه حرارت‌دیده (Tempered Glass) ضد انعکاس پوشانده می‌شود تا ضمن محافظت در برابر تگرگ و ضربه، حداکثر نور عبور کند. فریم آلومینیومی نیز ضمن ایجاد استحکام، امکان نصب ایمن روی استراکچرهای استاندارد را فراهم می‌آورد.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="glass-card p-4 border-s-2 border-solar-gold/30 cursor-pointer hover:border-solar-gold" x-data="{ active: false }" @click="active = !active" :class="{ 'ring-2 ring-solar-gold': active }">
+<h3 class="font-bold text-lg text-solar-gold mb-2">شیشه حرارتی ضدانعکاس</h3>
+<p class="text-pure-white/80 text-sm" x-show="active">شیشه سکوریت آنتی‌رفلکت، عبور >۹۵٪ نور</p>
+</div>
+<div class="glass-card p-4 border-s-2 border-solar-gold/30 cursor-pointer hover:border-solar-gold" x-data="{ active: false }" @click="active = !active" :class="{ 'ring-2 ring-solar-gold': active }">
+<h3 class="font-bold text-lg text-solar-gold mb-2">فریم آلومینیومی گالوانیزه</h3>
+<p class="text-pure-white/80 text-sm" x-show="active">استحکام ساختاری + نصب آسان</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+
+<section id="sec-03" class="py-20 md:py-32 bg-deep-navy">
+<div class="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+<div class="lg:col-span-6 lg:sticky lg:top-20" aria-label="انمیشن اثر فتوولتائیک: فوتون تا الکترون" role="img">
+<div class="glass-card p-8 h-[400px] flex flex-col justify-center">
+<h3 class="font-bold text-xl text-pure-white mb-6 text-start">اثر فتوولتائیک: فوتون تا الکترون</h3>
+<div class="relative w-full h-[300px] flex items-center justify-center">
+<svg viewBox="0 0 400 300" class="w-full h-auto" role="img" aria-label="انمیشن اثر فتوولتائیک">
+<rect x="50" y="50" width="300" height="80" rx="5" fill="#2ECC71" opacity="0.3"/>
+<text x="200" y="85" text-anchor="middle" fill="#2ECC71" font-size="14" font-family="Vazirmatn" font-weight="bold">N-type (الکترون اضافه)</text>
+<rect x="50" y="130" width="300" height="80" rx="5" fill="#E74C3C" opacity="0.3"/>
+<text x="200" y="210" text-anchor="middle" fill="#E74C3C" font-size="14" font-family="Vazirmatn" font-weight="bold">P-type (حفره اضافه)</text>
+<rect x="50" y="170" width="300" height="20" rx="2" fill="#F5A623" opacity="0.5"/>
+<text x="200" y="185" text-anchor="middle" fill="#F5A623" font-size="12" font-family="Vazirmatn" font-weight="bold">منطقه فراغ (P-N Junction)</text>
+<circle cx="200" cy="20" r="6" fill="#F5A623"><animateMotion path="M200,20 Q200,100 200,180" dur="2s" repeatCount="indefinite"/></circle>
+<circle cx="200" cy="100" r="4" fill="#2ECC71"><animateMotion path="M200,100 L200,180" dur="1.5s" repeatCount="indefinite" fill="freeze"/></circle>
+</svg>
+</div>
+</div>
+</div>
+<div class="lg:col-span-6 space-y-6 text-start">
+<h2 class="font-vazirmatn font-extrabold text-2xl md:text-4xl text-pure-white">اثر فتوولتائیک: پنل خورشیدی <span class="text-solar-gold">دقیقاً چگونه کار می‌کند؟</span></h2>
+<p class="text-pure-white/85 text-base md:text-lg leading-relaxed">فرآیند تولید برق بسیار شگفت‌انگیز است. هنگامی که نور خورشید به سلول‌های سیلیکونی نوع N و P برخورد می‌کند، یک میدان الکتریکی در محل پیوند ایجاد می‌شود. فوتون‌های نوری انرژی کافی برای آزادسازی الکترون‌ها را فراهم کرده و آن‌ها را به سمت مدار خارجی هدایت می‌کنند. این حرکت الکترون‌ها، همان جریان الکتریکی است. این سیستم کاملاً بی‌صدا است و دقیقاً به همین دلیل است که برای ویلاهای مناطقی چون لواسانات و کردان، بهترین جایگزین دیزل ژنراتورهای پر سر و صدا محسوب می‌شود.</p>
+<div class="glass-card p-5 border-s-4 border-solar-gold bg-cream-warm/5">
+<p class="text-sm font-bold text-solar-gold mb-1">اثر فتوولتائیک</p>
+<p class="text-pure-white/90 text-base leading-relaxed">با برخورد ذرات نور (فوتون‌ها) به لایه سیلیکونی، الکترون‌ها از مدار خود خارج شده و با حرکت در یک مسیر مشخص، جریان الکتریکی مستقیم (DC) تولید می‌کنند که به این پدیده اثر فتوولتائیک می‌گویند.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="sec-04" class="py-20 md:py-32 bg-deep-navy">
+<div class="container mx-auto px-4 max-w-3xl text-start">
+<h2 class="font-vazirmatn font-extrabold text-2xl md:text-4xl text-pure-white text-center mb-10">خروجی پنل خورشیدی <span class="text-solar-gold">AC است یا DC؟</span></h2>
+<div class="glass-card p-6 overflow-x-auto mb-10">
+<table class="w-full min-w-[500px] text-sm" role="table" aria-label="مقایسه خروجی DC پنل در برابر AC خانگی">
+<thead><tr class="bg-navy-mid text-solar-gold"><th scope="col" class="p-4 text-start rounded-s-lg">مشخصه</th><th scope="col" class="p-4 text-start">خروجی پنل (DC)</th><th scope="col" class="p-4 text-start rounded-e-lg">خروجی خانه/شبکه (AC)</th></tr></thead>
+<tbody>
+<tr class="bg-deep-navy/60"><td class="p-3">نوع جریان</td><td class="p-3 text-solar-gold font-bold">مستقیم (DC)</td><td class="p-3 text-eco-green font-bold">متناوب (AC)</td></tr>
+<tr class="bg-navy-mid/40"><td class="p-3">ولتاژ</td><td class="p-3">متغیر (بسته به نور)</td><td class="p-3">۲۲۰ ولت ثابت</td></tr>
+<tr class="bg-deep-navy/60"><td class="p-3">مصرف‌کننده</td><td class="p-3">باتری، سیستم‌های DC</td><td class="p-3">وسایل منزل، شبکه برق</td></tr>
+<tr class="bg-navy-mid/40"><td class="p-3">تبدیل</td><td class="p-3 text-alert-red font-bold">نیاز به اینورتر</td><td class="p-3 text-eco-green font-bold">مستقیم قابل استفاده</td></tr>
+</tbody>
+</table>
+</div>
+<div class="flex items-center justify-center gap-4 mb-8" aria-label="نقش اینورتر در تبدیل DC به AC">
+<div class="glass-card p-4 border border-alert-red/30 text-center"><span class="text-alert-red font-bold text-lg">DC</span><p class="text-pure-white/70 text-sm mt-1">خروجی پنل</p></div>
+<svg class="w-16 h-16 text-solar-gold" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v16m8-8H4"/></svg>
+<div class="glass-card p-4 border border-solar-gold/30 text-center"><span class="text-solar-gold font-bold text-lg">اینورتر</span><p class="text-pure-white/70 text-sm mt-1">مبدل DC→AC</p></div>
+<svg class="w-16 h-16 text-eco-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 4v16m8-8H4"/></svg>
+<div class="glass-card p-4 border border-eco-green/30 text-center"><span class="text-eco-green font-bold text-lg">AC</span><p class="text-pure-white/70 text-sm mt-1">ورودی خانه/شبکه</p></div>
+</div>
+<div class="glass-card p-5 border-s-4 border-solar-gold bg-cream-warm/5">
+<p class="text-sm font-bold text-solar-gold mb-1">نکته کلیدی</p>
+<p class="text-pure-white/90 text-base leading-relaxed">پنل‌های خورشیدی به طور ذاتی برق جریان مستقیم (DC) تولید می‌کنند؛ اما چون وسایل منزل و شبکه برق با جریان متناوب (AC) کار می‌کنند، از دستگاهی به نام اینورتر (Inverter) برای این تبدیل استفاده می‌شود.</p>
+</div>
+</div>
+</section>
+
+<section id="sec-05" class="py-20 md:py-32 bg-deep-navy">
+<div class="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<div class="lg:col-span-6" aria-label="نمودار ذخیره‌سازی در باتری (Off-Grid)" role="img">
+<div class="glass-card p-8 h-[400px] flex flex-col justify-center">
+<h3 class="font-bold text-xl text-pure-white mb-6 text-start">ذخیره‌سازی در باتری (Off-Grid)</h3>
+<div class="relative w-[250px] h-[250px] mx-auto mb-6">
+<svg viewBox="0 0 200 200" class="w-full h-auto" role="img" aria-label="نمودار شارژ باتری">
+<rect x="20" y="20" width="160" height="140" rx="5" fill="none" stroke="#F5A623" stroke-width="3"/>
+<rect x="80" y="0" width="40" height="20" rx="2" fill="#F5A623"/>
+<rect x="23" y="140" width="154" height="1" rx="2" fill="#2ECC71"><animate attributeName="y" from="140" to="60" dur="2s" fill="freeze"/><animate attributeName="height" from="1" to="80" dur="2s" fill="freeze"/></rect>
+</svg>
+<div class="flex justify-center gap-4 mt-4 text-xs"><span class="text-eco-green font-bold">شارژ (۷۰٪)</span><span class="text-solar-gold font-bold">آماده مصرف</span></div>
+</div>
+<h3 class="font-bold text-xl text-pure-white mb-3 text-start">Off-Grid: باتری فیزیکی</h3>
+<p class="text-pure-white/80 text-base leading-relaxed">در سیستم‌های آفگرید، برق مازاد در باتری‌های دیپ‌سایکل (ژل/لیتیوم) ذخیره می‌شود تا در شب یا روزهای ابری مصرف شود.</p>
+</div>
+</div>
+<div class="lg:col-span-6 space-y-6 text-start">
+<h2 class="font-vazirmatn font-extrabold text-2xl md:text-4xl text-pure-white">ذخیره‌سازی برق: <span class="text-solar-gold">باتری</span> یا <span class="text-eco-green">شبکه</span>؟</h2>
+<p class="text-pure-white/85 text-base md:text-lg leading-relaxed">ذخیره‌سازی برق یکی از کلیدی‌ترین بخش‌ها در رفع مشکل قطعی برق است. اگر سیستم شما مستقل از شبکه (Off-Grid) باشد، ماژول‌های کنترلر شارژ (MPPT)، انرژی را در باتری‌های دیپ سایکل ذخیره می‌کنند تا در طول شب یا روزهای ابری از آن استفاده کنید. این راهکار برای چاه‌های کشاورزی فاقد برق یا ویلاهای دورافتاده حیاتی است. اما اگر سیستم متصل به شبکه (On-Grid) باشد، نیازی به باتری نیست؛ برق تولیدی مستقیماً به شبکه تزریق شده و از طریق قرارداد خرید تضمینی ساتبا، برای شما درآمدزایی می‌کند.</p>
+<div class="glass-card p-5 border-s-4 border-solar-gold bg-cream-warm/5">
+<p class="text-sm font-bold text-solar-gold mb-1">مدل ذخیره‌سازی</p>
+<p class="text-pure-white/90 text-base leading-relaxed">در سیستم‌های آفگرید، برق مازاد در بانک باتری‌های مخصوص دیپ سایکل (ژل یا لیتیوم) ذخیره می‌شود، اما در سیستم‌های آنگرید، شبکه برق سراسری نقش ذخیره‌ساز یا باتری مجازی را ایفا می‌کند.</p>
+</div>
+</div>
+</div>
+</section>
+
+<aside id="sec-06" class="py-20 md:py-32 bg-cream-warm" x-data="{ revealed: false }">
+<div class="container mx-auto px-4 max-w-4xl">
+<h2 class="font-vazirmatn font-extrabold text-2xl md:text-4xl text-deep-navy text-center mb-12">افسانه در برابر واقعیت: <span class="text-solar-gold">تولید برق در هوای ابری</span></h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8" x-intersect.once="revealed = true">
+<div class="rounded-2xl p-6 bg-alert-red/10 border border-alert-red/30 transition-all duration-700" :class="revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'">
+<span class="text-3xl">❌</span>
+<h3 class="font-bold text-deep-navy text-lg mt-3">افسانه</h3>
+<p class="text-deep-navy/80 mt-2 text-base leading-relaxed">سیستم‌های خورشیدی فقط در روزهای کاملاً آفتابی کار می‌کنند و در روزهای ابری هیچ برقی تولید نمی‌شود.</p>
+</div>
+<div class="rounded-2xl p-6 bg-eco-green/10 border border-eco-green/30 transition-all duration-700 delay-200" :class="revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'">
+<span class="text-3xl">✅</span>
+<h3 class="font-bold text-deep-navy text-lg mt-3">واقعیت مهندسی</h3>
+<p class="text-deep-navy/80 mt-2 text-base leading-relaxed">پنل‌های مدرن Tier-1 به ویژه انواع مونوکریستال که توسط هورا نور سهند نصب می‌شوند، حساسیت بالایی به طیف‌های نوری دارند و حتی در روزهای ابری و بارانی با دریافت اشعه غیرمستقیم، برق تولید می‌کنند. البته استان البرز و شهر کرج با میانگین ۲۵۰ روز آفتابی در سال، یکی از ایده‌آل‌ترین مناطق ایران برای احداث نیروگاه است.</p>
+</div>
+</div>
+<div class="border-t-4 border-solar-gold bg-pure-white rounded-2xl p-6 shadow-lg">
+<p class="text-sm font-bold text-solar-gold mb-1">حقیقت علمی</p>
+<p class="text-deep-navy text-base leading-relaxed">اگرچه راندمان پنل‌های خورشیدی در هوای کاملاً ابری کاهش می‌یابد، اما تولید برق هرگز متوقف نمی‌شود؛ پنل‌ها می‌توانند از نور پراکنده محیط نیز الکتریسیته تولید کنند.</p>
+</div>
+</div>
+</aside>
+
+<section id="sec-07" class="py-20 md:py-32 bg-deep-navy">
+<div class="container mx-auto px-4 max-w-3xl text-start">
+<h2 class="font-vazirmatn font-extrabold text-2xl md:text-4xl text-pure-white text-center mb-10">چرا صنایع باید به <span class="text-solar-gold">سیستم‌های فتوولتائیک</span> روی بیاورند؟</h2>
+<div class="bg-solar-gold/10 border border-solar-gold/20 rounded-2xl p-8 mb-8">
+<span class="inline-flex items-center gap-2 bg-eco-green text-deep-navy text-sm font-bold rounded-full px-3 py-1 mb-4">ROI ۳-۵ ساله</span>
+<h3 class="font-bold text-xl text-pure-white mb-4 text-start">چرا صنایع باید به فتوولتائیک روی بیاورند؟</h3>
+<p class="text-pure-white/85 text-base md:text-lg leading-relaxed">امروزه پنل‌های خورشیدی تنها یک انتخاب محیط‌زیستی نیستند، بلکه یک ضرورت اقتصادی برای صنایع محسوب می‌شوند. با توجه به ماده ۱۶ قانون جهش تولید دانش‌بنیان، کارخانجاتی که مستقر در شهرک‌های صنعتی (مانند اشتهارد و سیمین‌دشت) هستند، در صورت عدم تامین بخشی از برق خود از منابع تجدیدپذیر، با افزایش تصاعدی قبوض برق مواجه خواهند شد. هورا نور سهند با اجرای پروژه‌های مگاواتی، بازگشت سرمایه ۳ تا ۵ ساله را برای این صنایع رقم زده است.</p>
+</div>
+<div class="glass-card p-5 border-s-4 border-solar-gold bg-eco-green/5">
+<p class="text-sm font-bold text-eco-green mb-1">منطق اقتصادی</p>
+<p class="text-pure-white/90 text-base leading-relaxed">کارخانجات با احداث نیروگاه خورشیدی، علاوه بر تامین برق پایدار در روزهای قطعی برق تابستان، خود را از پرداخت جرایم سنگین ماده ۱۶ قانون جهش تولید معاف می‌کنند.</p>
+</div>
+</div>
+</section>
+
+<section id="sec-08" class="py-20 md:py-32 bg-deep-navy">
+<div class="container mx-auto px-4 max-w-4xl">
+<h2 class="font-vazirmatn font-extrabold text-2xl md:text-4xl text-pure-white text-center mb-10">انواع پنل‌های خورشیدی <span class="text-solar-gold">موجود در بازار</span></h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="glass-card p-6 border border-alert-red/30 bg-alert-red/10 rounded-2xl transition-all hover:shadow-xl" aria-label="پنل‌های پلی‌کریستال">
+<span class="text-4xl mb-4">❌</span>
+<h3 class="font-bold text-alert-red text-xl mb-3">پلی‌کریستال (منسوخ)</h3>
+<ul class="space-y-2 text-pure-white/70 text-sm">
+<li class="flex items-center gap-2"><span class="text-alert-red">✗</span> راندمان پایین (< ۱۷٪)</li>
+<li class="flex items-center gap-2"><span class="text-alert-red">✗</span> ظرفیت کمتر در گرما</li>
+<li class="flex items-center gap-2"><span class="text-alert-red">✗</span> منسوخ در پروژه‌های مدرن</li>
+</ul>
+</div>
+<div class="glass-card p-6 border border-solar-gold/30 bg-solar-gold/10 rounded-2xl transition-all hover:shadow-xl hover:border-solar-gold/50" aria-label="پنل‌های مونوکریستال">
+<span class="text-4xl mb-4">✅</span>
+<h3 class="font-bold text-solar-gold text-xl mb-3">مونوکریستال (استاندارد مدرن)</h3>
+<ul class="space-y-2 text-pure-white/80 text-sm">
+<li class="flex items-center gap-2"><span class="text-solar-gold">✓</span> راندمان بالا (> ۲۱٪)</li>
+<li class="flex items-center gap-2"><span class="text-solar-gold">✓</span> عملکرد عالی در گرما</li>
+<li class="flex items-center gap-2"><span class="text-solar-gold">✓</span> استاندارد پروژه‌های مدرن</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<section id="sec-09" class="py-20 md:py-32 bg-deep-navy">
+<div class="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+<div class="lg:col-span-7 lg:sticky lg:top-20" aria-label="نمودار خطی افت توان ۲۵ ساله" role="img">
+<div class="glass-card p-8 h-[400px] flex flex-col justify-center">
+<h3 class="font-bold text-xl text-pure-white mb-6 text-start">طول عمر و افت راندمان (۲۵ سال)</h3>
+<div class="relative h-[300px] flex items-center justify-center">
+<svg viewBox="0 0 600 300" class="w-full h-full" role="img" aria-label="نمودار خطی افت توان ۲۵ ساله">
+<line x1="50" y1="250" x2="550" y2="250" stroke="#FFFFFF" stroke-width="1"/>
+<line x1="50" y1="250" x2="50" y2="20" stroke="#FFFFFF" stroke-width="1"/>
+<path d="M50,250 Q150,240 300,230 T550,210" stroke="#2ECC71" stroke-width="3" fill="none"/>
+<path d="M50,250 Q150,200 300,100 T550,20" stroke="#E74C3C" stroke-width="3" fill="none"/>
+</svg>
+<div class="flex justify-center gap-6 mt-4 text-sm">
+<span class="flex items-center gap-2"><span class="w-8 h-1 rounded bg-eco-green"></span> Tier-1: < 0.5%/سال</span>
+<span class="flex items-center gap-2"><span class="w-8 h-1 rounded bg-alert-red"></span> Tier-3: > 1%/سال</span>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 space-y-6 text-start">
+<h2 class="font-vazirmatn font-extrabold text-2xl md:text-4xl text-pure-white">طول عمر و <span class="text-eco-green">افت راندمان</span> سیستم‌های خورشیدی</h2>
+<p class="text-pure-white/85 text-base md:text-lg leading-relaxed">سرمایه‌گذاری روی انرژی خورشیدی یک سرمایه‌گذاری بلندمدت است. برخلاف موتوربرق‌ها که نیاز به تعمیرات مداوم دارند، نیروگاه‌های فتوولتائیک فاقد قطعات متحرک بوده و استهلاک بسیار پایینی دارند. کارخانجات تولیدکننده Tier-1، حفظ حداقل ۸۰ درصد راندمان اولیه را پس از ۲۵ سال کارکرد تضمین می‌کنند. این پایداری استثنایی دلیل اصلی توجیه‌پذیری بالای قراردادهای ۲۰ ساله خرید تضمینی ساتبا است.</p>
+<div class="glass-card p-5 border-s-4 border-solar-gold bg-eco-green/5">
+<p class="text-sm font-bold text-eco-green mb-1">تضمین ۲۵ ساله</p>
+<p class="text-pure-white/90 text-base leading-relaxed">پنل‌های خورشیدی استاندارد دارای طول عمر مفید بالای ۲۵ سال هستند و افت راندمان سالانه آن‌ها در پنل‌های رده اول (مانند LONGi) کمتر از ۰.۵ درصد در سال است.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="sec-10" class="py-16 md:py-24 bg-deep-navy">
+<div class="container mx-auto px-4 max-w-3xl text-start">
+<div class="flex flex-wrap items-center gap-3 mb-6">
+<h2 class="font-vazirmatn font-extrabold text-2xl md:text-4xl text-pure-white">آپدیت‌های جهانی و آینده تکنولوژی فتوولتائیک</h2>
+<span class="bg-solar-gold text-deep-navy text-xs font-bold rounded-full px-3 py-1">آپدیت تکنولوژی</span>
+</div>
+<p class="text-pure-white/85 text-base md:text-lg leading-relaxed mb-8">(آپدیت تکنولوژی جهانی): فناوری فتوولتائیک با سرعت چشمگیری در حال توسعه است. عبور از تکنولوژی PERC به سمت سلول‌های TOPCon نوع N و مدول‌های Heterojunction، مرزهای راندمان را جابجا کرده است. هورا نور سهند در تامین تجهیزات خود، همواره به‌روزترین تکنولوژی‌ها را لحاظ می‌کند تا کارفرمایان از حداکثر راندمان بهره‌مند شوند. برای مشاهده استانداردهای مرجع جهانی می‌توانید به <a href="https://www.energy.gov/" rel="external noopener" target="_blank" class="text-solar-gold underline hover:text-solar-gold/80">دپارتمان انرژی ایالات متحده (DOE)</a> مراجعه فرمایید.</p>
+<div class="glass-card p-5 border-s-4 border-solar-gold">
+<div class="flex items-start gap-3">
+<span class="text-2xl mt-1">🔬</span>
+<div>
+<p class="text-sm font-bold text-solar-gold mb-1">تکنولوژی N-Type TOPCon</p>
+<p class="text-pure-white/90 text-base leading-relaxed">جدیدترین تکنولوژی‌های فتوولتائیک شامل سلول‌های N-Type و HJT است که با کاهش چشمگیر ضریب افت حرارتی، تولید انرژی را افزایش داده است.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="sec-11" class="py-20 md:py-32 bg-navy-mid" x-data="{ openFaq: null }">
+<div class="container mx-auto px-4 max-w-3xl">
+<h2 class="font-vazirmatn font-extrabold text-2xl md:text-4xl text-pure-white text-center mb-4">سوالات متداول <span class="text-solar-gold">نحوه کار سیستم‌های خورشیدی</span></h2>
+<div class="bg-cream-warm/5 rounded-xl p-4 mb-10 border border-solar-gold/20 text-center">
+<p class="text-pure-white/80 text-sm">پاسخ به ابهامات کاربران درباره کارکرد پنل‌های خورشیدی در شب و خطرات برق‌گرفتگی.</p>
+</div>
+<div class="space-y-4">
+<details class="glass-card overflow-hidden group" :class="openFaq === 1 ? 'border-s-4 border-solar-gold' : 'border-s-4 border-pure-white/10'" x-data @toggle="openFaq = openFaq === 1 ? null : 1">
+<summary class="cursor-pointer py-5 px-6 flex items-center justify-between text-start" role="button" aria-expanded="false" :aria-expanded="openFaq === 1 ? 'true' : 'false'">
+<span class="font-bold text-lg" :class="openFaq === 1 ? 'text-solar-gold' : 'text-pure-white'">آیا پنل خورشیدی در طول شب نیز کار می‌کند؟</span>
+<svg class="w-5 h-5 text-solar-gold transition-transform" :class="openFaq === 1 ? 'rotate-180' : ''" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+</summary>
+<div class="px-6 pb-5 text-pure-white/80 text-base leading-relaxed">خیر، فرآیند فتوولتائیک نیازمند نور خورشید است. برای استفاده از برق در شب، شما به یک بانک باتری یا استفاده از شبکه سراسری نیاز دارید.</div>
+</details>
+<details class="glass-card overflow-hidden group" :class="openFaq === 2 ? 'border-s-4 border-solar-gold' : 'border-s-4 border-pure-white/10'" x-data @toggle="openFaq = openFaq === 2 ? null : 2">
+<summary class="cursor-pointer py-5 px-6 flex items-center justify-between text-start" role="button" aria-expanded="false" :aria-expanded="openFaq === 2 ? 'true' : 'false'">
+<span class="font-bold text-lg" :class="openFaq === 2 ? 'text-solar-gold' : 'text-pure-white'">آیا شستشوی پنل‌های خورشیدی الزامی است؟</span>
+<svg class="w-5 h-5 text-solar-gold transition-transform" :class="openFaq === 2 ? 'rotate-180' : ''" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+</summary>
+<div class="px-6 pb-5 text-pure-white/80 text-base leading-relaxed">بله. نشستن گرد و غبار شدید روی سطح پنل می‌تواند تا ۱۵ درصد از راندمان تولید را کاهش دهد.</div>
+</details>
+<details class="glass-card overflow-hidden group" :class="openFaq === 3 ? 'border-s-4 border-solar-gold' : 'border-s-4 border-pure-white/10'" x-data @toggle="openFaq = openFaq === 3 ? null : 3">
+<summary class="cursor-pointer py-5 px-6 flex items-center justify-between text-start" role="button" aria-expanded="false" :aria-expanded="openFaq === 3 ? 'true' : 'false'">
+<span class="font-bold text-lg" :class="openFaq === 3 ? 'text-solar-gold' : 'text-pure-white'">آیا سیستم‌های خورشیدی خطر برق‌گرفتگی دارند؟</span>
+<svg class="w-5 h-5 text-solar-gold transition-transform" :class="openFaq === 3 ? 'rotate-180' : ''" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
+</summary>
+<div class="px-6 pb-5 text-pure-white/80 text-base leading-relaxed">در صورت اجرای صحیح و اصولی کابل‌کشی و استفاده از تجهیزات حفاظتی استاندارد توسط یک پیمانکار مجاز مانند هورا نور سهند، سیستم کاملاً ایمن است.</div>
+</details>
+</div>
+</div>
+</section>
+
+</body>
+</html>
+[VERIFIED_UI_END_OF_FILE]

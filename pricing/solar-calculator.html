@@ -1,0 +1,301 @@
+﻿<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>محاسبه‌گر آنلاین برق خورشیدی | فرمول ظرفیت | هورا نور سهند</title>
+<meta name="description" content="با ابزار دقیق محاسبه‌گر برق خورشیدی هورا نور سهند، تعداد پنل‌ها، ظرفیت اینورتر و باتری مورد نیاز ویلا یا سوله خود را با فرمول‌های مهندسی به دست آورید.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700;800;900&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<script>
+tailwind.config={theme:{extend:{colors:{'solar-gold':'#F5A623','deep-navy':'#0A1929','pure-white':'#FFFFFF','navy-mid':'#1E3A5F','cream-warm':'#FFF4E0','eco-green':'#2ECC71','alert-red':'#E74C3C'},fontFamily:{vazirmatn:['Vazirmatn','sans-serif']}}}}
+</script>
+<style>
+.glass-card{background:rgba(255,255,255,0.08);backdrop-filter:blur(16px) saturate(180%);-webkit-backdrop-filter:blur(16px) saturate(180%);border:1px solid rgba(255,255,255,0.18);border-radius:1.5rem}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms!important;animation-iteration-count:1!important;transition-duration:0.01ms!important}}
+*:focus-visible{outline:2px solid #F5A623;outline-offset:2px;border-radius:0.5rem}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"محاسبه‌گر آنلاین برق خورشیدی | فرمول ظرفیت | هورا نور سهند","description":"با ابزار دقیق محاسبه‌گر برق خورشیدی هورا نور سهند، تعداد پنل‌ها، ظرفیت اینورتر و باتری مورد نیاز ویلا یا سوله خود را با فرمول‌های مهندسی به دست آورید.","url":"https://horasolar.ir/pricing/solar-calculator","inLanguage":"fa"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"هورا نور سهند","url":"https://horasolar.ir","telephone":"+982636506485","address":{"@type":"PostalAddress","addressLocality":"کرج","addressRegion":"البرز","addressCountry":"IR"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"تفاوت \"وات\" و \"وات-ساعت\" در محاسبه برق خورشیدی چیست؟","acceptedAnswer":{"@type":"Answer","text":"\"وات\" (Watt) نشان‌دهنده توانی است که یک دستگاه برای روشن شدن نیاز دارد (مثل لامپ ۱۰ وات). اما \"وات-ساعت\" (Wh) نشان‌دهنده مقدار انرژی مصرفی در طول زمان است. اگر همان لامپ را ۱۰ ساعت روشن بگذارید، مصرف شما ۱۰۰ وات‌ساعت خواهد بود. محاسبات باتری و پنل همیشه بر اساس وات‌ساعت انجام می‌شود."}},{"@type":"Question","name":"آیا توان استارت (Surge) یخچال را باید در ماشین‌حساب وارد کنم؟","acceptedAnswer":{"@type":"Answer","text":"بله، اینورتر شما باید بتواند شوک اولیه موتورها را تحمل کند. به طور معمول توان استارت یخچال و پمپ آب ۳ تا ۵ برابر توان نامی آن‌هاست. محاسبه‌گر پیشرفته ما در پس‌زمینه این ضریب هجومی را به صورت خودکار برای موتورهای القایی لحاظ می‌کند."}}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"SoftwareApplication","name":"محاسبه‌گر آنلاین برق خورشیدی هورا نور سهند","operatingSystem":"Web Browser","applicationCategory":"UtilityApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"IRR"},"description":"ابزار مهندسی محاسبه ظرفیت سیستم خورشیدی بر اساس توان مصرفی و ساعات آفتابی"}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","serviceType":"محاسبه‌گر آنلاین برق خورشیدی","provider":{"@type":"Organization","name":"هورا نور سهند"},"areaServed":{"@type":"State","name":"استان البرز"}}</script>
+</head>
+<body class="bg-deep-navy text-pure-white font-vazirmatn antialiased" dir="rtl" lang="fa">
+
+<header id="sec-01" class="relative min-h-screen flex items-center overflow-hidden bg-deep-navy py-16 md:py-24" x-data="{requiredKw:'0',panelCount:'0',batteryAh:'0',inverterKw:'0',estimatedCost:'0',psh:'5.0',systemType:'offgrid',appliances:{ac:{qty:0,hours:8,watts:1500},fridge:{qty:1,hours:24,watts:150},lights:{qty:10,hours:5,watts:10},tv:{qty:1,hours:4,watts:100},pump:{qty:0,hours:2,watts:750}},calculate(){let totalWh=0;for(let k in this.appliances){totalWh+=this.appliances[k].qty*this.appliances[k].hours*this.appliances[k].watts}let withLoss=totalWh*1.3;let kw=(withLoss/(parseFloat(this.psh)*1000)).toFixed(1);this.requiredKw=kw;this.panelCount=Math.ceil(kw/0.55);if(this.systemType==='ongrid'){this.batteryAh='—';this.inverterKw=kw}else{this.batteryAh=Math.ceil((totalWh*1.3)/(48*0.5));this.inverterKw=(Math.ceil(parseFloat(kw)*1.2))}this.estimatedCost=(parseFloat(kw)*45).toFixed(0)}}">
+<div class="absolute inset-0 opacity-5" style="background-image:url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cpath d=&quot;M0 0h60v60H0z&quot; fill=&quot;none&quot; stroke=&quot;%23F5A623&quot; stroke-width=&quot;0.5&quot;/%3E%3C/svg%3E');background-size:60px 60px"></div>
+<div class="relative z-10 container mx-auto px-4 grid grid-cols-1 lg:grid-cols-12 gap-8 py-12">
+<div class="lg:col-span-7 space-y-6">
+<div class="text-start">
+<span class="inline-flex items-center gap-2 px-4 py-1.5 bg-solar-gold/10 text-solar-gold text-sm font-bold rounded-full border border-solar-gold/20 mb-4">ابزار مهندسی محاسبه‌گر آنلاین</span>
+<h1 class="font-vazirmatn font-black text-4xl md:text-5xl leading-tight text-pure-white mb-4">محاسبه‌گر آنلاین <span class="text-solar-gold">ظرفیت و هزینه</span> سیستم برق خورشیدی</h1>
+<p class="text-lg md:text-xl text-pure-white/80 max-w-2xl leading-relaxed mb-6">گام اول در احداث یک نیروگاه خورشیدی (چه خانگی و چه مگاواتی)، ظرفیت‌سنجی دقیق است. حدس و گمان در مهندسی انرژی جایی ندارد. تیم فنی هورا نور سهند برای شفاف‌سازی و تسهیل تصمیم‌گیری سرمایه‌گذاران، پلتفرم محاسبه‌گر آنلاین ظرفیت خورشیدی را توسعه داده است. در این بخش، شما می‌توانید بدون نیاز به دانش تخصصی برق، لیستی از مصرف‌کننده‌های خود (یخچال، کولر گازی، لامپ و ماشین‌آلات) را وارد کرده و در کسری از ثانیه، برآورد مهندسی از توان کیلووات (kW) مورد نیاز، تعداد پنل‌های Tier-1 و سایز اینورتر را استخراج کنید. این ابزار دقیق‌ترین نقطه شروع برای برآورد هزینه‌های نهایی پروژه شماست.</p>
+</div>
+<div class="glass-card p-6 md:p-8 space-y-6">
+<h3 class="font-bold text-xl text-pure-white mb-4">مشخصات مصرف‌کننده‌ها</h3>
+<div class="space-y-4">
+<template x-for="(app, key) in appliances" :key="key">
+<div class="glass-card p-4 rounded-xl border border-white/10">
+<div class="flex items-center justify-between mb-3">
+<label class="font-bold text-lg text-pure-white" :for="key" x-text="key === 'ac' ? 'کولر گازی (اسپلیت)' : key === 'fridge' ? 'یخچال / فریز' : key === 'lights' ? 'روشنایی (LED)' : key === 'tv' ? 'تلویزیون / لپ‌تاپ' : 'پمپ آب / پمپ استخر'"></label>
+<span class="text-solar-gold font-bold" x-text="appliances[key].watts + ' W'"></span>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<label class="text-sm text-pure-white/70 block mb-1" :for="'qty-'+key">تعداد</label>
+<input type="number" min="0" max="20" step="1" :id="'qty-'+key" x-model.number="appliances[key].qty" class="w-full px-4 py-2 bg-deep-navy/50 border border-white/10 rounded-xl text-pure-white focus:border-solar-gold focus:outline-none">
+</div>
+<div>
+<label class="text-sm text-pure-white/70 block mb-1" :for="'hrs-'+key">ساعات کارکرد روزانه</label>
+<input type="number" min="0" max="24" step="0.5" :id="'hrs-'+key" x-model.number="appliances[key].hours" class="w-full px-4 py-2 bg-deep-navy/50 border border-white/10 rounded-xl text-pure-white focus:border-solar-gold focus:outline-none">
+</div>
+</div>
+</div>
+</template>
+</div>
+<div class="pt-4 border-t border-white/10">
+<label class="text-sm text-pure-white/70 block mb-1" for="psh-select">ساعات آفتابی مفید (PSH) منطقه شما</label>
+<select id="psh-select" x-model="psh" class="w-full px-4 py-2 bg-deep-navy/50 border border-white/10 rounded-xl text-pure-white focus:border-solar-gold focus:outline-none appearance-none">
+<option value="4.5">منطقه ابری (PSH 4.5)</option>
+<option value="5.0" selected>منطقه البرز/تهران (PSH 5.0)</option>
+<option value="5.5">منطقه جنوبی ایران (PSH 5.5)</option>
+<option value="4.0">مناطق شمالی/مرتفع (PSH 4.0)</option>
+</select>
+</div>
+<div class="pt-4 border-t border-white/10">
+<label class="text-sm text-pure-white/70 block mb-1">معماری سیستم</label>
+<div class="flex flex-wrap gap-4">
+<label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="systemType" value="offgrid" x-model="systemType" class="w-5 h-5 accent-solar-gold"><span class="text-pure-white">آفگرید (Off-Grid) — با باتری</span></label>
+<label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="systemType" value="ongrid" x-model="systemType" class="w-5 h-5 accent-solar-gold"><span class="text-pure-white">آنگرید (On-Grid) — متصل به شبکه</span></label>
+<label class="flex items-center gap-2 cursor-pointer"><input type="radio" name="systemType" value="hybrid" x-model="systemType" class="w-5 h-5 accent-solar-gold"><span class="text-pure-white">هیبریدی (Hybrid) — ترکیبی</span></label>
+</div>
+</div>
+<button @click="calculate()" class="w-full md:w-auto px-8 py-4 bg-solar-gold text-deep-navy font-bold rounded-2xl hover:bg-solar-gold/90 transition-colors text-lg" aria-label="محاسبه ظرفیت و هزینه">محاسبه ظرفیت و هزینه</button>
+</div>
+</div>
+<div class="lg:col-span-5 space-y-6">
+<aside class="lg:sticky lg:top-24 glass-card p-6 border-s-4 border-solar-gold space-y-6" aria-label="خروجی محاسبه لحظه‌ای" aria-live="polite">
+<h3 class="font-bold text-xl text-pure-white text-start mb-4">خروجی محاسبه لحظه‌ای</h3>
+<div class="glass-card p-4 border-s-4 border-solar-gold space-y-3">
+<div class="flex justify-between items-center"><span class="text-pure-white/80">توان مورد نیاز</span><span class="text-2xl font-black text-solar-gold" x-text="requiredKw + ' kW'"></span></div>
+<div class="flex justify-between items-center"><span class="text-pure-white/80">تعداد پنل‌های پیشنهادی</span><span class="text-xl font-bold text-solar-gold" x-text="panelCount + ' عدد'"></span></div>
+<div class="flex justify-between items-center"><span class="text-pure-white/80">ظرفیت باتری پیشنهادی</span><span class="text-xl font-bold text-solar-gold" x-text="batteryAh + ' Ah'"></span></div>
+<div class="flex justify-between items-center"><span class="text-pure-white/80">سایز اینورتر پیشنهادی</span><span class="text-xl font-bold text-solar-gold" x-text="inverterKw + ' kW'"></span></div>
+<div class="flex justify-between items-center pt-4 border-t border-white/10"><span class="text-pure-white/80">برآورد هزینه تقریبی</span><span class="text-2xl font-black text-eco-green" x-text="estimatedCost + ' میلیون تومان'"></span></div>
+</div>
+<div class="glass-card p-5 border-s-4 border-solar-gold">
+<p class="text-sm font-bold text-solar-gold mb-1">نکته کلیدی</p>
+<p class="text-pure-white/90 text-base leading-relaxed">محاسبه‌گر آنلاین برق خورشیدی، یک ابزار مهندسی هوشمند است که با دریافت مجموع توان وسایل برقی (بر حسب وات) و ساعات کارکرد آن‌ها در شبانه‌روز، تعداد دقیق پنل‌ها، ظرفیت باتری‌ها و سایز اینورتر مورد نیاز را تخمین می‌زند.</p>
+</div>
+</aside>
+</div>
+</div>
+</header>
+
+<article id="sec-02" class="py-20 md:py-32 bg-deep-navy">
+<div class="container mx-auto px-4 max-w-3xl text-start">
+<h2 class="font-vazirmatn font-extrabold text-2xl md:text-4xl text-pure-white text-center mb-10">فرمول <span class="text-solar-gold">محاسبه برق خورشیدی</span> (مبانی ریاضی و فیزیک)</h2>
+<div class="glass-card p-8 rounded-2xl mb-10 text-center" role="math" aria-label="فرمول پایه محاسبه آرایه پنل خورشیدی: توان آرایه برابر است با مصرف روزانه ضربدر ضریب تلفات تقسیم بر ساعات آفتابی مفید">
+<p class="text-pure-white/70 text-sm mb-4 text-start">فرمول پایه محاسبه آرایه پنل خورشیدی</p>
+<div class="text-2xl md:text-3xl font-black text-pure-white leading-relaxed" dir="ltr">P_array = (E_daily × 1.3) ÷ PSH</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8 text-start">
+<div class="glass-card p-4 border-s-4 border-solar-gold"><span class="text-solar-gold font-bold text-lg">E_daily</span><p class="text-pure-white/80 mt-1 text-sm">مصرف روزانه (وات-ساعت)</p></div>
+<div class="glass-card p-4 border-s-4 border-alert-red"><span class="text-alert-red font-bold text-lg">L_factor</span><p class="text-pure-white/80 mt-1 text-sm">ضریب تلفات (۱.۲–۱.۳)</p></div>
+<div class="glass-card p-4 border-s-4 border-eco-green"><span class="text-eco-green font-bold text-lg">PSH</span><p class="text-pure-white/80 mt-1 text-sm">ساعات آفتابی مفید (Peak Sun Hours)</p></div>
+</div>
+</div>
+<div class="text-start space-y-6">
+<h3 class="font-bold text-xl text-pure-white mb-4">تفاوت <span class="text-solar-gold">وات</span> و <span class="text-eco-green">وات-ساعت</span></h3>
+<p class="text-pure-white/85 text-base md:text-lg leading-relaxed">برای درک بهتر خروجی این محاسبه‌گر، آشنایی با فرمول محاسبه سیستم خورشیدی ضروری است. مهندسین انرژی از مقیاس "وات-ساعت" (Watt-hour) استفاده می‌کنند. اگر شما یک تلویزیون ۱۰۰ واتی را ۵ ساعت در روز روشن کنید، مصرف شما ۵۰۰ وات‌ساعت است. مجموع وات‌ساعت‌های تمام وسایل خانه، "بار مصرفی کل" نامیده می‌شود. از آنجا که پنل‌ها، اینورترها و کابل‌کشی‌ها دارای تلفات حرارتی و مقاومتی (System Losses) هستند، ما همیشه در فرمول‌های خود یک "ضریب اطمینان" (Safety Factor) بین ۲۰ تا ۳۰ درصد به بار مصرفی کل اضافه می‌کنیم تا در روزهای ابری یا زمان استارت موتورهای قوی، سیستم دچار افت ولتاژ نشود.</p>
+<div class="glass-card p-6 border-s-4 border-solar-gold bg-cream-warm/5">
+<p class="text-sm font-bold text-solar-gold mb-1">نکته کلیدی برای موتورهای جستجو</p>
+<p class="text-pure-white/90 text-base leading-relaxed">فرمول پایه برای محاسبه پنل خورشیدی عبارت است از: مجموع توان مصرفی (وات-ساعت) تقسیم بر ساعات آفتابی مفید (PSH)، به علاوه ضریب تلفات سیستم (حداقل ۲۰ تا ۳۰ درصد).</p>
+</div>
+</div>
+</div>
+</article>
+
+<section id="sec-03" class="py-20 md:py-32 bg-deep-navy">
+<div class="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+<div class="lg:col-span-6 lg:sticky lg:top-20" aria-label="نمودار قوس خورشید و PSH منطقه البرز" role="img">
+<div class="relative h-[500px] bg-navy-mid/50 rounded-2xl overflow-hidden flex items-center justify-center">
+<div class="text-center space-y-4">
+<div class="text-8xl">☀️</div>
+<p class="text-solar-gold font-black text-3xl">۵.۵ PSH</p>
+<p class="text-pure-white/70 text-sm">میانگین ساعات آفتابی مفید منطقه البرز</p>
+<div class="flex justify-center gap-3 mt-4">
+<span class="bg-eco-green text-deep-navy text-xs font-bold px-3 py-1 rounded-full">کرج</span>
+<span class="bg-eco-green text-deep-navy text-xs font-bold px-3 py-1 rounded-full">مهرشهر</span>
+<span class="bg-eco-green text-deep-navy text-xs font-bold px-3 py-1 rounded-full">کردان</span>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-6 space-y-6 text-start">
+<h2 class="font-vazirmatn font-extrabold text-2xl md:text-4xl text-pure-white">متغیر اقلیمی: تاثیر <span class="text-solar-gold">تابش منطقه البرز</span> بر محاسبات</h2>
+<p class="text-pure-white/85 text-base md:text-lg leading-relaxed">یکی از پارامترهای پنهان در جدول محاسبه برق خورشیدی، موقعیت جغرافیایی پروژه است. ابزار آنلاین ما به صورت پیش‌فرض کالیبراسیون اقلیمی استان‌های مرکزی ایران (البرز، تهران، قزوین) را در نظر می‌گیرد. بر اساس داده‌های هواشناسی استخراج‌شده از پورتفولیوی پروژه‌های هورا نور سهند و راهنمای <a href="https://horasolar.ir/knowledge/land-and-dimensions-guide.html" class="text-solar-gold hover:text-amber-500 font-bold underline decoration-solar-gold/30 underline-offset-4 transition-colors" title="فضای مورد نیاز برای احداث نیروگاه خورشیدی بر اساس متراژ">فضای مورد نیاز برای احداث</a>، منطقه کرج و البرز دارای میانگین ۲۵۰ روز آفتابی پربازده در سال است. این یعنی میانگین PSH (ساعات تابش پیک) در این مناطق بین ۴.۵ تا ۵.۵ ساعت در روز متغیر است. این ویژگی طبیعی، باعث می‌شود با تعداد پنل کمتری بتوانید انرژی بیشتری ذخیره کنید و هزینه نهایی احداث کاهش یابد.</p>
+<div class="glass-card p-5 border-s-4 border-eco-green bg-eco-green/5">
+<p class="text-sm font-bold text-eco-green mb-1">مزیت اقلیمی البرز</p>
+<p class="text-pure-white/90 text-base leading-relaxed">ساعات آفتابی مفید (Peak Sun Hours) در محاسبات، به معنای ساعات تابش ۱۰۰۰ وات بر متر مربع است. استان البرز با داشتن حدود ۲۵۰ روز آفتابی باکیفیت در سال، ضریب تولید بسیار بالایی در فرمول‌های خورشیدی دارد.</p>
+</div>
+</div>
+</div>
+</section>
+
+<aside id="sec-04" class="py-20 md:py-32 bg-cream-warm" x-data="{ revealed: true }">
+<div class="container mx-auto px-4 max-w-4xl">
+<h2 class="font-vazirmatn font-extrabold text-2xl md:text-4xl text-deep-navy text-center mb-12">باورهای غلط در <span class="text-solar-gold">محاسبه سایز سیستم</span></h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+<div class="rounded-2xl p-6 bg-alert-red/10 border border-alert-red/30">
+<span class="text-3xl">❌</span>
+<h3 class="font-bold text-deep-navy text-lg mt-3">باور غلط</h3>
+<p class="text-deep-navy/80 mt-2 text-base leading-relaxed">اگر دستگاه ۱۰۰۰ وات دارید، یک پنل ۱۰۰۰ واتی برای آن کافی است.</p>
+</div>
+<div class="rounded-2xl p-6 bg-eco-green/10 border border-eco-green/30">
+<span class="text-3xl">✅</span>
+<h3 class="font-bold text-deep-navy text-lg mt-3">واقعیت محاسباتی</h3>
+<p class="text-deep-navy/80 mt-2 text-base leading-relaxed">بزرگترین اشتباه محاسباتی افراد مبتدی این است که سایز پنل را برابر با مصرف لحظه‌ای در نظر می‌گیرند. اگر شما در طول روز ۱۰۰۰ وات مصرف دارید و در شب نیز ۱۰۰۰ وات مصرف دارید، یک پنل ۱۰۰۰ واتی در طول روز فقط می‌تواند مصرف لحظه‌ای شما را تامین کند و هیچ انرژی مازادی برای شارژ باتری‌ها باقی نمی‌ماند! بنابراین، سیستم محاسبه‌گر هورا نور سهند با یک الگوریتم دوگانه طراحی شده است: ظرفیت پنل‌ها باید به قدری باشد که در چند ساعت طلایی آفتاب، هم بار لحظه‌ای خانه را روشن نگه دارد و هم باتری‌ها را برای مصارف شبانه کاملاً فول‌شارژ کند.</p>
+</div>
+</div>
+<div class="border-t-4 border-solar-gold bg-pure-white rounded-2xl p-6 shadow-lg">
+<p class="text-sm font-bold text-solar-gold mb-1">خطای محاسباتی رایج</p>
+<p class="text-deep-navy text-base leading-relaxed">تصور غلطی وجود دارد که اگر دستگاه شما ۱۰۰۰ وات است، تنها به یک پنل ۱۰۰۰ واتی نیاز دارید. واقعیت این است که برای تامین برق همان دستگاه در طول شب، باید پنل‌های بیشتری نصب کنید تا هم دستگاه کار کند و هم باتری‌ها برای شب شارژ شوند.</p>
+</div>
+</div>
+</aside>
+
+<section id="sec-05" class="py-20 md:py-32 bg-deep-navy">
+<div class="container mx-auto px-4 max-w-3xl text-center">
+<h2 class="font-vazirmatn font-extrabold text-2xl md:text-4xl text-pure-white mb-8">محاسبه ظرفیت <span class="text-solar-gold">باتری</span> (عمق دشارژ <span class="text-eco-green">DoD</span>)</h2>
+<div class="relative w-[200px] h-[300px] mx-auto mb-10" role="img" aria-label="نمودار عمق دشارژ باتری: منطقه سبز امن ۰ تا ۵۰ درصد">
+<svg viewBox="0 0 100 200" class="w-full h-full">
+<rect x="10" y="10" width="80" height="160" rx="5" fill="none" stroke="#F5A623" stroke-width="3"/>
+<rect x="40" y="0" width="20" height="10" rx="2" fill="#F5A623"/>
+<rect x="13" y="90" width="74" height="77" rx="2" fill="#2ECC71" opacity="0.8"/>
+<rect x="13" y="50" width="74" height="40" rx="2" fill="#F5A623" opacity="0.5"/>
+<rect x="13" y="13" width="74" height="37" rx="2" fill="#E74C3C" opacity="0.3"/>
+</svg>
+<div class="flex justify-between mt-4 text-xs">
+<span class="text-eco-green font-bold">امن (۰-۵۰٪ DoD)</span>
+<span class="text-solar-gold font-bold">هشدار (۵۰-۸۰٪)</span>
+<span class="text-alert-red font-bold">خطر (۸۰-۱۰۰٪)</span>
+</div>
+</div>
+<h3 class="font-bold text-xl text-pure-white mb-4">عمق دشارژ (DoD) و عمر باتری</h3>
+<p class="text-pure-white/85 text-base md:text-lg leading-relaxed text-center mb-8">محاسبه ظرفیت باتری ذخیره‌ساز، حساس‌ترین بخش جدول تولید برق خورشیدی است. یک اصل مهندسی غیرقابل‌انکار در باتری‌های سرب‌اسید و ژل (Deep Cycle) این است که اگر آن‌ها را تا ۱۰۰ درصد تخلیه (دشارژ) کنید، عمر آن‌ها به شدت کاهش می‌یابد. محاسبات هوشمند ابزار ما، فاکتور عمق دشارژ (Depth of Discharge) را روی ۵۰٪ قفل می‌کند. یعنی اگر شما برای شب به ۲۴۰۰ وات‌ساعت انرژی نیاز دارید، ماشین‌حساب به شما پیشنهاد خرید بانکی با ظرفیت حداقل ۴۸۰۰ وات‌ساعت را می‌دهد. این حاشیه امنیت، تضمین می‌کند که باتری‌های شما به جای ۲ سال، بیش از ۵ تا ۷ سال عمر مفید داشته باشند.</p>
+<div class="glass-card p-5 border-s-4 border-solar-gold text-start">
+<p class="text-sm font-bold text-solar-gold mb-1">اصل مهندسی</p>
+<p class="text-pure-white/90 text-base leading-relaxed">در محاسبه بانک باتری خورشیدی، مفهومی به نام عمق دشارژ (DoD) وجود دارد. باتری‌های ژل را نباید بیش از ۵۰ درصد خالی کرد، بنابراین ظرفیت باتری خریداری شده باید دو برابر نیاز واقعی مصرف شبانه باشد.</p>
+</div>
+</div>
+</section>
+
+<section id="sec-06" class="py-16 md:py-24 bg-deep-navy">
+<div class="container mx-auto px-4 max-w-3xl text-start">
+<div class="flex flex-wrap items-center gap-3 mb-6">
+<h2 class="font-vazirmatn font-extrabold text-2xl md:text-4xl text-pure-white">استانداردهای وزارت نیرو در برآورد ظرفیت</h2>
+<span class="bg-solar-gold text-deep-navy text-xs font-bold rounded-full px-3 py-1">بروزرسانی ۱۴۰۳</span>
+</div>
+<p class="text-pure-white/85 text-base md:text-lg leading-relaxed mb-8">کدهای طراحی و ضرایب تلفات (Loss Factors) که در پس‌زمینه این محاسبه‌گر عمل می‌کنند، به صورت رندوم انتخاب نشده‌اند. تیم مهندسی ما این ابزار را بر اساس آخرین دستورالعمل‌ها و ضرایب بازدهی <a href="https://satba.gov.ir" rel="external noopener" target="_blank" class="text-solar-gold underline hover:text-solar-gold/80">سازمان ساتبا</a> (سازمان انرژی‌های تجدیدپذیر ایران) در سال ۱۴۰۳ به‌روزرسانی کرده است. این تطابق باعث می‌شود خروجی این ماشین‌حساب، قابلیت تبدیل شدن به یک طرح توجیهی اولیه برای ارائه به نهادهای دولتی جهت اخذ وام یا مجوزهای <a href="https://horasolar.ir/pricing/industrial-power-plants.html" class="text-solar-gold hover:text-amber-500 font-bold underline decoration-solar-gold/30 underline-offset-4 transition-colors" title="نیروگاه‌های تجاری و صنعتی ۵۰ کیلووات به بالا">نیروگاه‌های تجاری ۵۰ کیلووات به بالا</a> را داشته باشد.</p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
+<div class="glass-card p-5 border-s-4 border-solar-gold flex flex-col items-center text-center"><span class="text-3xl mb-2">⚡</span><h4 class="font-bold text-pure-white text-lg"><a href="https://satba.gov.ir" rel="external noopener" target="_blank" class="text-solar-gold underline hover:text-solar-gold/80">سازمان ساتبا</a></h4><p class="text-pure-white/60 text-sm">قرارداد ۲۰ ساله</p></div>
+<div class="glass-card p-5 border-s-4 border-solar-gold flex flex-col items-center text-center"><span class="text-3xl mb-2">⚡</span><h4 class="font-bold text-pure-white text-lg"><a href="https://moe.gov.ir" rel="external noopener" target="_blank" class="text-solar-gold underline hover:text-solar-gold/80">وزارت نیرو</a></h4><p class="text-pure-white/60 text-sm">آیین‌نامه Grid Code</p></div>
+<div class="glass-card p-5 border-s-4 border-solar-gold flex flex-col items-center text-center"><span class="text-3xl mb-2">📜</span><h4 class="font-bold text-pure-white text-lg">اینماد / ساماندهی</h4><p class="text-pure-white/60 text-sm">تأیید تجارت الکترونیک</p></div>
+</div>
+</div>
+</section>
+
+<section id="sec-07" class="py-16 md:py-24 bg-deep-navy">
+<div class="container mx-auto px-4 max-w-3xl text-start">
+<h2 class="font-vazirmatn font-extrabold text-2xl md:text-4xl text-pure-white mb-6">استخراج لیست <span class="text-solar-gold">قیمت</span> پس از تعیین ظرفیت</h2>
+<div class="glass-card p-8 border-b-4 border-solar-gold space-y-6">
+<p class="text-pure-white/85 text-base md:text-lg leading-relaxed">هدف نهایی از محاسبه سیستم، رسیدن به یک برآورد مالی (Budgeting) دقیق است. وقتی ماشین‌حساب عدد نهایی (مثلاً ۵ کیلووات آفگرید یا ۲۰ کیلووات آنگرید) را به شما نشان داد، گام بعدی بررسی قیمت قطعات Tier-1 است. ما برای سهولت کار شما، <a href="../pricing/pricing_residential-commercial-packages.html" class="text-solar-gold hover:text-amber-500 font-bold underline decoration-solar-gold/30 underline-offset-4 transition-colors" title="پکیج‌های برق خورشیدی خانگی ۱ تا ۲۰ کیلووات">پکیج‌های خانگی ۱ تا ۲۰ کیلووات</a> را به صورت از پیش آماده شده قیمت‌گذاری کرده‌ایم. برای مشاهده جدول ریالی خانگی، به صفحه قیمت پکیج‌های ویلایی و برای استعلام نیروگاه‌های سوله، به طرح توجیهی صنعتی مراجعه کنید.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<a href="https://horasolar.ir/pricing/residential-commercial-packages.html" class="inline-flex items-center gap-3 px-8 py-4 bg-solar-gold text-deep-navy font-bold rounded-2xl hover:bg-solar-gold/90 transition-colors w-full md:w-auto justify-center" role="button" aria-label="مشاهده قیمت پکیج‌های ویلایی و تجاری"><span class="font-bold text-lg">مشاهده قیمت پکیج‌های خانگی</span></a>
+<a href="https://horasolar.ir/pricing/industrial-power-plants.html" class="inline-flex items-center gap-3 px-8 py-4 bg-eco-green text-pure-white font-bold rounded-2xl hover:bg-eco-green/90 transition-colors w-full md:w-auto justify-center" role="button" aria-label="مشاهده قیمت نیروگاه‌های صنعتی"><span class="font-bold text-lg">مشاهده قیمت نیروگاه‌های صنعتی</span></a>
+</div>
+</div>
+</div>
+</section>
+
+<section id="sec-08" class="py-20 md:py-32 bg-gradient-to-b from-deep-navy to-navy-mid">
+<div class="container mx-auto px-4 max-w-3xl text-center">
+<h2 class="font-vazirmatn font-extrabold text-2xl md:text-4xl text-pure-white mb-8">محاسبه نرخ <span class="text-solar-gold">بازگشت سرمایه</span> (ROI)</h2>
+<div class="relative w-[250px] h-[150px] mx-auto mb-10" role="img" aria-label="نمودار بازگشت سرمایه: ۴ سال در ناحیه طلایی">
+<svg viewBox="0 0 300 160" class="w-full h-full">
+<path d="M 30 150 A 120 120 0 0 1 150 30" stroke="#E74C3C" stroke-width="20" fill="none" stroke-linecap="round"/>
+<path d="M 150 30 A 120 120 0 0 1 270 150" stroke="#F5A623" stroke-width="20" fill="none" stroke-linecap="round"/>
+<line x1="150" y1="150" x2="200" y2="50" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round"/>
+</svg>
+<div class="flex justify-center gap-6 mt-2 text-xs">
+<span class="text-alert-red font-bold">۳ سال</span>
+<span class="text-solar-gold font-bold">۳-۵ سال</span>
+<span class="text-eco-green font-bold">۵+ سال</span>
+</div>
+</div>
+<h3 class="font-bold text-xl text-pure-white mb-4">نرخ بازگشت سرمایه</h3>
+<p class="text-pure-white/85 text-base md:text-lg leading-relaxed max-w-2xl mx-auto mb-8">یکی از سوالاتی که پس از رویت هزینه نهایی سیستم در ذهن مخاطب نقش می‌بندد، ارزش سرمایه‌گذاری است. فرمول‌های مالی هورا نور سهند (بر اساس پروژه‌های اجرا شده) نشان می‌دهد که خرید یک سیستم مهندسی‌شده با قطعات رده بالا، هزینه‌های جاری شما را به قدری کاهش می‌دهد (حذف سوخت دیزل، حذف خرابی لوازم خانگی به دلیل نوسان و حذف قبوض برق) که اصل سرمایه اولیه شما در مدت زمان ۳ تا ۵ سال به طور کامل مستهلک شده و به جیب شما برمی‌گردد. ۲۵ سال پس از آن، انرژی تولیدی کاملاً رایگان و سود خالص است.</p>
+<div class="glass-card p-5 border-s-4 border-solar-gold max-w-2xl mx-auto text-start">
+<p class="text-sm font-bold text-solar-gold mb-1">نتیجه‌گیری</p>
+<p class="text-pure-white/90 text-base leading-relaxed">سرمایه‌گذاری روی سیستم محاسبه‌شده خورشیدی، با احتساب صرفه‌جویی در قبوض برق و عدم نیاز به ژنراتور، نرخ بازگشت سرمایه‌ای (ROI) معادل ۳ الی ۵ سال خواهد داشت.</p>
+</div>
+</div>
+</section>
+
+<section id="sec-09" class="py-20 md:py-32 bg-navy-mid" x-data="{ openFaq: null }">
+<div class="container mx-auto px-4 max-w-3xl">
+<h2 class="font-vazirmatn font-extrabold text-2xl md:text-4xl text-pure-white text-center mb-4">سوالات متداول <span class="text-solar-gold">ماشین‌حساب خورشیدی</span></h2>
+<div class="bg-cream-warm/5 rounded-xl p-4 mb-10 border border-solar-gold/20 text-center">
+<p class="text-pure-white/80 text-sm">پرسش‌های رایج در خصوص نحوه کار با ماشین حساب خورشیدی، تفاوت وات و وات-ساعت، و محاسبه توان استارت دستگاه‌ها.</p>
+</div>
+<div class="space-y-4">
+<details class="glass-card overflow-hidden group" :class="openFaq === 1 ? 'border-s-4 border-solar-gold' : 'border-s-4 border-pure-white/10'" x-data @toggle="openFaq = openFaq === 1 ? null : 1">
+<summary class="cursor-pointer py-5 px-6 flex items-center justify-between text-start" role="button" aria-expanded="false" :aria-expanded="openFaq === 1 ? 'true' : 'false'">
+<span class="font-bold text-lg" :class="openFaq === 1 ? 'text-solar-gold' : 'text-pure-white'">تفاوت "وات" و "وات-ساعت" در محاسبه برق خورشیدی چیست؟</span>
+<svg class="w-5 h-5 text-solar-gold transition-transform" :class="openFaq === 1 ? 'rotate-180' : ''" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+</summary>
+<div class="px-6 pb-5 text-pure-white/80 text-base leading-relaxed">"وات" (Watt) نشان‌دهنده توانی است که یک دستگاه برای روشن شدن نیاز دارد (مثل لامپ ۱۰ وات). اما "وات-ساعت" (Wh) نشان‌دهنده مقدار انرژی مصرفی در طول زمان است. اگر همان لامپ را ۱۰ ساعت روشن بگذارید، مصرف شما ۱۰۰ وات‌ساعت خواهد بود. محاسبات باتری و پنل همیشه بر اساس وات‌ساعت انجام می‌شود.</div>
+</details>
+<details class="glass-card overflow-hidden group" :class="openFaq === 2 ? 'border-s-4 border-solar-gold' : 'border-s-4 border-pure-white/10'" x-data @toggle="openFaq = openFaq === 2 ? null : 2">
+<summary class="cursor-pointer py-5 px-6 flex items-center justify-between text-start" role="button" aria-expanded="false" :aria-expanded="openFaq === 2 ? 'true' : 'false'">
+<span class="font-bold text-lg" :class="openFaq === 2 ? 'text-solar-gold' : 'text-pure-white'">آیا توان استارت (Surge) یخچال را باید در ماشین‌حساب وارد کنم؟</span>
+<svg class="w-5 h-5 text-solar-gold transition-transform" :class="openFaq === 2 ? 'rotate-180' : ''" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+</summary>
+<div class="px-6 pb-5 text-pure-white/80 text-base leading-relaxed">بله، اینورتر شما باید بتواند شوک اولیه موتورها را تحمل کند. به طور معمول توان استارت یخچال و پمپ آب ۳ تا ۵ برابر توان نامی آن‌هاست. محاسبه‌گر پیشرفته ما در پس‌زمینه این ضریب هجومی را به صورت خودکار برای موتورهای القایی لحاظ می‌کند.</div>
+</details>
+</div>
+</div>
+</section>
+
+<section id="sec-10" class="py-20 md:py-32 bg-solar-gold relative overflow-hidden">
+<div class="relative z-10 container mx-auto px-4 grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+<div class="lg:col-span-7 text-start">
+<h2 class="font-vazirmatn font-extrabold text-2xl md:text-4xl text-deep-navy mb-6">همین امروز، طراحی دقیق سیستم خورشیدی خود را آغاز کنید</h2>
+<p class="text-deep-navy/80 text-base md:text-lg leading-relaxed mb-8">ماشین‌حساب‌های آنلاین ابزارهای فوق‌العاده‌ای برای ایجاد دیدگاه اولیه هستند، اما هیچ چیز جای یک آنالیز تخصصی توسط مهندس طراح را نمی‌گیرد. تیم فنی هورا نور سهند آماده است تا بر اساس شرایط سقف شما در منطقه البرز یا تهران، سایه‌اندازی‌ها (Shading Analysis) و نوع کابل‌کشی، پروپوزال دقیق و ریالی را صادر کند. برای هماهنگی و ارسال لیست لوازم برقی خود، با دفتر مرکزی کرج تماس بگیرید. پشتیبانی آنلاین از طریق واتس‌اپ، بله و ایتا برای دریافت کاتالوگ و مشاوره رایگان در دسترس است.</p>
+<div class="space-y-4">
+<a href="tel:02636506485" class="block text-3xl md:text-5xl font-black text-deep-navy hover:text-deep-navy/70 transition-colors" dir="ltr" aria-label="تماس با دفتر مرکزی کرج: ۰۲۶-۳۶۵۰۶۴۸۵">026-36506485</a>
+<a href="tel:09122641473" class="block text-2xl md:text-4xl font-bold text-deep-navy/80 hover:text-deep-navy/60 transition-colors" dir="ltr" aria-label="تماس با مدیریت پروژه: ۰۹۱۲۲۶۴۱۴۷۳">09122641473</a>
+</div>
+<a href="https://wa.me/989122641473?text=%D8%B3%D9%84%D8%A7%D9%85%D8%8C%20%D9%86%D8%AA%DB%8C%D8%AC%D9%87%20%D9%85%D8%AD%D8%A7%D8%B3%D8%A8%D9%87%E2%80%8C%DA%AF%D8%B1%20%D8%AE%D9%88%D8%B1%D8%B4%DB%8C%D8%AF%DB%8C%20%D8%B1%D8%A7%20%D8%A8%D8%B1%D8%B1%D8%B3%DB%8C%20%DA%A9%D9%86%DB%8C%D8%AF" class="inline-flex items-center gap-2 mt-6 px-8 py-4 bg-deep-navy text-solar-gold font-bold rounded-2xl hover:bg-deep-navy/90 transition-colors" role="button" aria-label="ارسال نتیجه محاسبه به واتس‌اپ" rel="external noopener" target="_blank">ارسال نتیجه محاسبه به واتس‌اپ</a>
+</div>
+<div class="lg:col-span-5 flex flex-col items-center lg:items-start gap-6">
+<p class="text-deep-navy font-bold text-lg">ارتباط از طریق پیام‌رسان‌ها:</p>
+<div class="flex gap-4">
+<a href="https://wa.me/989122641473" target="_blank" rel="external noopener" class="w-16 h-16 rounded-full bg-deep-navy text-solar-gold flex items-center justify-center text-2xl hover:scale-110 transition-transform" aria-label="واتس‌اپ"><svg class="w-8 h-8" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.625.846 5.059 2.284 7.034L.789 23.492l4.634-1.215A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75c-2.17 0-4.207-.58-5.963-1.588l-.427-.254-2.75.722.734-2.685-.278-.442A9.717 9.717 0 012.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75z"/></svg></a>
+<a href="https://ble.ir/horasolar" target="_blank" rel="external noopener" class="w-16 h-16 rounded-full bg-deep-navy text-solar-gold flex items-center justify-center text-2xl hover:scale-110 transition-transform" aria-label="بله"><svg class="w-8 h-8" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15l-4-4 1.41-1.41L11 14.17l6.59-6.59L19 9l-8 8z"/></svg></a>
+<a href="https://eitaa.com/horasolar" target="_blank" rel="external noopener" class="w-16 h-16 rounded-full bg-deep-navy text-solar-gold flex items-center justify-center text-2xl hover:scale-110 transition-transform" aria-label="ایتا"><svg class="w-8 h-8" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-2-3.5l6-4.5-6-4.5v9z"/></svg></a>
+</div>
+<div class="bg-deep-navy/10 rounded-2xl p-5 border-2 border-deep-navy/20 mt-4">
+<p class="text-deep-navy text-base leading-relaxed font-medium">خروجی محاسبه‌گر یک برآورد اولیه است؛ برای طراحی قطعی و تهیه پیش‌فاکتور تجهیزات Tier-1، نقشه مصرف خود را برای مهندسین هورا نور سهند در کرج ارسال کنید.</p>
+</div>
+</div>
+</div>
+</section>
+
+</body>
+</html>
+[VERIFIED_UI_END_OF_FILE]
