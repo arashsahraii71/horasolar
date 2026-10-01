@@ -107,7 +107,7 @@ tailwind.config={theme:{extend:{colors:{'solar-gold':'#F5A623','deep-navy':'#0A1
          class="absolute inset-0 w-full h-full object-cover"
          loading="eager" fetchpriority="high"
          :class="loaded ? 'opacity-100 scale-100' : 'opacity-0 scale-105'"
-         style="transition: opacity 1.2s ease, transform 1.2s ease;">
+         style="transition: opacity 1.2s ease, transform 1.2s ease;" onerror="this.style.display='none'">
     <div class="absolute inset-0 bg-gradient-to-b from-deep-navy/80 via-deep-navy/50 to-deep-navy"></div>
     <div class="relative z-10 container mx-auto px-4 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center py-24">
       <div class="lg:col-span-7 text-start">
@@ -184,7 +184,7 @@ tailwind.config={theme:{extend:{colors:{'solar-gold':'#F5A623','deep-navy':'#0A1
   <section id="sec-03" class="relative py-20 md:py-0 overflow-hidden">
     <div class="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-12 lg:min-h-[600px]">
       <div class="lg:col-span-6 relative flex items-center justify-center p-8 bg-navy-mid/90 overflow-hidden">
-        <img src="https://arashsahraii71.github.io/horasolar/img/industrial-blackout.webp" alt="کارخانه در حالت قطعی برق و توقف تولید" class="absolute inset-0 w-full h-full object-cover opacity-20" loading="lazy">
+        <img src="https://arashsahraii71.github.io/horasolar/img/industrial-blackout.webp" alt="کارخانه در حالت قطعی برق و توقف تولید" class="absolute inset-0 w-full h-full object-cover opacity-20" loading="lazy" onerror="this.style.display='none'">
         <div class="relative z-10 text-center">
           <span class="text-6xl">⚡</span>
           <h3 class="text-alert-red font-bold text-xl mt-4">قطعی برق و توقف خطوط تولید</h3>
@@ -192,7 +192,7 @@ tailwind.config={theme:{extend:{colors:{'solar-gold':'#F5A623','deep-navy':'#0A1
         </div>
       </div>
       <div class="lg:col-span-6 relative flex items-center justify-center p-8 bg-deep-navy overflow-hidden">
-        <img src="https://arashsahraii71.github.io/horasolar/img/solar-powered-factory.webp" alt="کارخانه با نیروگاه خورشیدی روی سقف" class="absolute inset-0 w-full h-full object-cover opacity-30" loading="lazy">
+        <img src="https://arashsahraii71.github.io/horasolar/img/solar-powered-factory.webp" alt="کارخانه با نیروگاه خورشیدی روی سقف" class="absolute inset-0 w-full h-full object-cover opacity-30" loading="lazy" onerror="this.style.display='none'">
         <div class="relative z-10 text-center">
           <span class="text-6xl">⚡</span>
           <h3 class="text-eco-green font-bold text-xl mt-4">نیروگاه آنگرید: درآمد، معافیت، تداوم</h3>
@@ -264,7 +264,7 @@ tailwind.config={theme:{extend:{colors:{'solar-gold':'#F5A623','deep-navy':'#0A1
         <div class="min-w-[160px] snap-center glass-card p-6 border-s-4 border-solar-gold flex flex-col items-center text-center shrink-0"
              @mouseenter="$el.classList.remove('grayscale')" @mouseleave="$el.classList.add('grayscale')"
              class="grayscale transition-colors duration-300">
-          <img src="https://arashsahraii71.github.io/horasolar/img/logo-trina.webp" alt="Trina Solar" class="w-20 h-20 object-contain mb-2">
+          <img src="https://arashsahraii71.github.io/horasolar/img/logo-trina.webp" alt="Trina Solar" class="w-20 h-20 object-contain mb-2" onerror="this.style.display='none'">
           <span class="font-bold text-pure-white text-lg">Trina Solar</span>
         </div>
         <!-- Repeat for Jinko, LONGi, JA Solar, Mana, Taban, Vmax -->
