@@ -1,4 +1,4 @@
-# UI Wireframe Specification: اینورتر خورشیدی و باتری ژل | تجهیزات نیروگاهی | هورا نور
+# UI Wireframe Specification: اینورتر خورشیدی و باتری ژل | تجهیزات نیروگاهی | هورا نور سهند
 - **Source Dossier:** `seo_dossiers/engineering_inverters-and-storage.md`
 - **Target URL:** `/engineering/inverters-and-storage`
 - **Page Language:** `fa` | **Direction:** `rtl`
