@@ -142,24 +142,24 @@ tailwind.config={theme:{extend:{colors:{'solar-gold':'#F5A623','deep-navy':'#0A1
           <div class="flex flex-col gap-5 items-center" x-data="{ activeNode: 0 }">
             <div class="w-full rounded-xl bg-solar-gold/20 border-2 border-solar-gold p-4 text-center"
                  :class="{ 'ring-2 ring-solar-gold': activeNode === 0 }">
-              <span class="text-solar-gold font-black text-xl">☀️ پنل‌های فتوولتائیک (DC)</span>
+              <span class="text-solar-gold font-black text-xl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" style="width:1em;height:1em;vertical-align:-0.125em;display:inline-block"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4l1.4-1.4M18 6l1.4-1.4"/></svg> پنل‌های فتوولتائیک (DC)</span>
             </div>
             <svg class="w-1 h-8"><line x1="50%" y1="0" x2="50%" y2="100%" stroke="#F5A623" stroke-width="2" stroke-dasharray="6"/></svg>
             <div class="w-full rounded-xl bg-navy-mid border border-solar-gold/40 p-4 text-center"
                  :class="{ 'ring-2 ring-solar-gold': activeNode === 1 }">
-              <span class="text-solar-gold font-bold text-lg">⚡ اینورتر آنگرید (Sync + AC)</span>
+              <span class="text-solar-gold font-bold text-lg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" style="width:1em;height:1em;vertical-align:-0.125em;display:inline-block"><path d="M13 2.5 4 13.5h7l-1 8 9-11h-7l1-8z"/></svg> اینورتر آنگرید (Sync + AC)</span>
             </div>
             <svg class="w-1 h-8"><line x1="50%" y1="0" x2="50%" y2="100%" stroke="#F5A623" stroke-width="2" stroke-dasharray="6"/></svg>
             <div class="w-full rounded-xl bg-navy-mid border border-solar-gold/40 p-4 text-center">
-              <span class="text-solar-gold font-bold text-lg">📋 تابلو حفاظت AC</span>
+              <span class="text-solar-gold font-bold text-lg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" style="width:1em;height:1em;vertical-align:-0.125em;display:inline-block"><rect x="6.5" y="4" width="11" height="17" rx="2.2"/><path d="M9.5 4h5v2.6h-5z"/><path d="M10 11h4M10 15h4"/></svg> تابلو حفاظت AC</span>
             </div>
             <svg class="w-1 h-8"><line x1="50%" y1="0" x2="50%" y2="100%" stroke="#F5A623" stroke-width="2" stroke-dasharray="6"/></svg>
             <div class="w-full rounded-xl bg-navy-mid border border-solar-gold/40 p-4 text-center">
-              <span class="text-solar-gold font-bold text-lg">📊 کنتور دوطرفه (طرح فهام)</span>
+              <span class="text-solar-gold font-bold text-lg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" style="width:1em;height:1em;vertical-align:-0.125em;display:inline-block"><path d="M4 20V10.5M10 20V4M16 20v-6.5M21.5 20H2.5"/></svg> کنتور دوطرفه (طرح فهام)</span>
             </div>
             <svg class="w-1 h-8"><line x1="50%" y1="0" x2="50%" y2="100%" stroke="#F5A623" stroke-width="2" stroke-dasharray="6"/></svg>
             <div class="w-full rounded-xl bg-solar-gold/20 border-2 border-solar-gold p-4 text-center">
-              <span class="text-pure-white font-black text-xl">⚡ شبکه برق ملی</span>
+              <span class="text-pure-white font-black text-xl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" style="width:1em;height:1em;vertical-align:-0.125em;display:inline-block"><path d="M13 2.5 4 13.5h7l-1 8 9-11h-7l1-8z"/></svg> شبکه برق ملی</span>
             </div>
           </div>
         </div>
@@ -172,7 +172,7 @@ tailwind.config={theme:{extend:{colors:{'solar-gold':'#F5A623','deep-navy':'#0A1
           از نظر فنی، مکانیزم عملکرد سیستم‌های متصل به شبکه فاقد پیچیدگی‌های استهلاک‌پذیر نظیر باتری‌های ذخیره‌ساز است. ابتدا ماژول‌های فتوولتائیک انرژی تابشی را به جریان مستقیم (DC) تبدیل می‌کنند. سپس این جریان وارد قلب تپنده نیروگاه یعنی اینورترهای آنگرید می‌شود. اینورترها علاوه بر تبدیل جریان DC به AC، وظیفه سنکرون کردن (همگام‌سازی) دقیق فاز، ولتاژ و فرکانس برق تولیدی را با شبکه سراسری برق بر عهده دارند. پس از عبور از تابلوهای حفاظتی دقیق، برق تولید شده از طریق یک کنتور دوطرفه هوشمند (طرح فهام) به شبکه توزیع تزریق می‌گردد. این عدم وابستگی به سیستم‌های ذخیره‌ساز، بازدهی و عمر مفید سیستم را به شدت افزایش می‌دهد.
         </p>
         <div class="glass-card p-6 border-s-4 border-solar-gold bg-cream-warm/5">
-          <p class="text-sm font-bold text-solar-gold mb-1">🔑 نکته کلیدی برای موتورهای جستجو</p>
+          <p class="text-sm font-bold text-solar-gold mb-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" style="width:1em;height:1em;vertical-align:-0.125em;display:inline-block"><circle cx="8.2" cy="12" r="3.2"/><path d="M11.4 12H21M18 12v3M14.6 12v2.2"/></svg> نکته کلیدی برای موتورهای جستجو</p>
           <p class="text-pure-white/90 text-base leading-relaxed">
             در سیستم‌های آنگرید، پنل‌ها برق مستقیم (DC) تولید کرده و اینورتر آن را به جریان متناوب (AC) تبدیل می‌کند. این جریان سپس از طریق تابلو حفاظت AC مستقیماً وارد شبکه برق شهری می‌شود و نیازی به باتری ذخیره‌ساز ندارد.
           </p>
@@ -186,7 +186,7 @@ tailwind.config={theme:{extend:{colors:{'solar-gold':'#F5A623','deep-navy':'#0A1
       <div class="lg:col-span-6 relative flex items-center justify-center p-8 bg-navy-mid/90 overflow-hidden">
         <img src="https://arashsahraii71.github.io/horasolar/img/industrial-blackout.webp" alt="کارخانه در حالت قطعی برق و توقف تولید" class="absolute inset-0 w-full h-full object-cover opacity-20" loading="lazy" onerror="this.style.display='none'">
         <div class="relative z-10 text-center">
-          <span class="text-6xl">⚡</span>
+          <span class="text-6xl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" style="width:1em;height:1em;vertical-align:-0.125em;display:inline-block"><path d="M13 2.5 4 13.5h7l-1 8 9-11h-7l1-8z"/></svg></span>
           <h3 class="text-alert-red font-bold text-xl mt-4">قطعی برق و توقف خطوط تولید</h3>
           <p class="text-pure-white/60 mt-2 text-sm">پیک تابستانی + ماده ۱۶ = ضرر مالی</p>
         </div>
@@ -194,13 +194,13 @@ tailwind.config={theme:{extend:{colors:{'solar-gold':'#F5A623','deep-navy':'#0A1
       <div class="lg:col-span-6 relative flex items-center justify-center p-8 bg-deep-navy overflow-hidden">
         <img src="https://arashsahraii71.github.io/horasolar/img/solar-powered-factory.webp" alt="کارخانه با نیروگاه خورشیدی روی سقف" class="absolute inset-0 w-full h-full object-cover opacity-30" loading="lazy" onerror="this.style.display='none'">
         <div class="relative z-10 text-center">
-          <span class="text-6xl">⚡</span>
+          <span class="text-6xl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" style="width:1em;height:1em;vertical-align:-0.125em;display:inline-block"><path d="M13 2.5 4 13.5h7l-1 8 9-11h-7l1-8z"/></svg></span>
           <h3 class="text-eco-green font-bold text-xl mt-4">نیروگاه آنگرید: درآمد، معافیت، تداوم</h3>
           <p class="text-pure-white/70 mt-2 text-sm">تزریق به شبکه + معافیت ماده ۱۶</p>
         </div>
       </div>
       <div class="lg:absolute lg:start-1/2 lg:top-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 z-20 w-full lg:max-w-md mx-auto mt-6 lg:mt-0 glass-card p-6 border-2 border-solar-gold">
-        <p class="text-sm font-bold text-solar-gold mb-1">💡 خلاصه تصمیم‌ساز</p>
+        <p class="text-sm font-bold text-solar-gold mb-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" style="width:1em;height:1em;vertical-align:-0.125em;display:inline-block"><path d="M9.2 18h5.6M10.2 21h3.6"/><path d="M12 3a6 6 0 0 1 3.9 10.6V16H8.1v-2.4A6 6 0 0 1 12 3z"/></svg> خلاصه تصمیم‌ساز</p>
         <p class="text-pure-white/90 text-base leading-relaxed">
           احداث نیروگاه خورشیدی متصل به شبکه، راهکار قطعی صنایع برای معافیت از جرایم سنگین ماده ۱۶ قانون جهش تولید است. علاوه بر این، از توقف خطوط تولید در زمان قطعی و کمبود برق در سراسر کشور جلوگیری می‌کند.
         </p>
@@ -231,7 +231,7 @@ tailwind.config={theme:{extend:{colors:{'solar-gold':'#F5A623','deep-navy':'#0A1
            x-intersect.once="revealed = true">
         <div class="rounded-2xl p-6 bg-alert-red/10 border border-alert-red/30 transition-all duration-700"
              :class="revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'">
-          <span class="text-3xl">❌</span>
+          <span class="text-3xl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" style="width:1em;height:1em;vertical-align:-0.125em;display:inline-block"><circle cx="12" cy="12" r="9"/><path d="M15 9l-6 6M9 9l6 6"/></svg></span>
           <h3 class="font-bold text-deep-navy text-lg mt-3">باور غلط</h3>
           <p class="text-deep-navy/80 mt-2 text-base leading-relaxed">
             نیروگاه‌های متصل به شبکه در مناطق نیمه‌ابری بازدهی ندارند.
@@ -239,7 +239,7 @@ tailwind.config={theme:{extend:{colors:{'solar-gold':'#F5A623','deep-navy':'#0A1
         </div>
         <div class="rounded-2xl p-6 bg-eco-green/10 border border-eco-green/30 transition-all duration-700 delay-200"
              :class="revealed ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'">
-          <span class="text-3xl">✅</span>
+          <span class="text-3xl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" style="width:1em;height:1em;vertical-align:-0.125em;display:inline-block"><circle cx="12" cy="12" r="9"/><path d="M8.2 12.4l2.6 2.6 5-5.4"/></svg></span>
           <h3 class="font-bold text-deep-navy text-lg mt-3">واقعیت مهندسی</h3>
           <p class="text-deep-navy/80 mt-2 text-base leading-relaxed">
             راندمان پنل‌ها به پرتوهای فرابنفش وابسته است، نه گرمای مستقیم. هوای خنک راندمان را بالا می‌برد. البرز با ۲۵۰ روز آفتابی و دمای بهینه، طلایی‌ترین منطقه است.
@@ -247,7 +247,7 @@ tailwind.config={theme:{extend:{colors:{'solar-gold':'#F5A623','deep-navy':'#0A1
         </div>
       </div>
       <div class="border-t-4 border-solar-gold bg-pure-white rounded-2xl p-6 shadow-lg">
-        <p class="text-sm font-bold text-solar-gold mb-1">🔬 حقیقت علمی</p>
+        <p class="text-sm font-bold text-solar-gold mb-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" style="width:1em;height:1em;vertical-align:-0.125em;display:inline-block"><path d="M6.5 20.5h11"/><path d="M9.5 20.5V10a3 3 0 0 1 6 0v10.5"/><path d="M12 4.5v2.8"/><path d="M7 20.5a5.2 5.2 0 0 1 10.4 0"/></svg> حقیقت علمی</p>
         <p class="text-deep-navy text-base leading-relaxed">
           بزرگترین باور غلط این است که نیروگاه‌های خورشیدی در مناطق نیمه‌ابری بازدهی ندارند. واقعیت مهندسی نشان می‌دهد که راندمان پنل‌ها به تابش پرتوهای فرابنفش وابسته است و نه گرمای مستقیم؛ پنل‌ها در هوای خنک عملکرد بهتری از خود نشان می‌دهند.
         </p>
@@ -270,7 +270,7 @@ tailwind.config={theme:{extend:{colors:{'solar-gold':'#F5A623','deep-navy':'#0A1
         <!-- Repeat for Jinko, LONGi, JA Solar, Mana, Taban, Vmax -->
       </div>
       <div class="glass-card p-5 border-s-4 border-solar-gold mt-8">
-        <p class="text-sm font-bold text-solar-gold mb-1">🛡️ تضمین کیفیت</p>
+        <p class="text-sm font-bold text-solar-gold mb-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" style="width:1em;height:1em;vertical-align:-0.125em;display:inline-block"><path d="M12 3.2 19 6v5.6c0 4.6-3 7.8-7 9.2-4-1.4-7-4.6-7-9.2V6z"/></svg> تضمین کیفیت</p>
         <p class="text-pure-white/90 text-base leading-relaxed">
           استفاده از پنل‌های فتوولتائیک رده یک جهانی (Tier-1) مانند Trina، Jinko و LONGi شرط اساسی برای تضمین تولید بی‌وقفه ۲۰ ساله در نیروگاه‌های متصل به شبکه است.
         </p>
@@ -310,7 +310,7 @@ tailwind.config={theme:{extend:{colors:{'solar-gold':'#F5A623','deep-navy':'#0A1
           سرمایه‌گذاری روی نیروگاه متصل به شبکه تنها یک مسئولیت زیست‌محیطی نیست، بلکه یکی از امن‌ترین پورتفولیوهای مالی در شرایط اقتصادی کنونی است. داده‌های استخراج‌شده از بیش از ۴۰ پروژه موفق هورا نور سهند نشان می‌دهد که بازگشت سرمایه (ROI) این پروژه‌ها به طور میانگین بین ۳ تا ۵ سال محقق می‌شود. از آنجا که عمر مفید تجهیزات بیش از ۲۵ سال است، سرمایه‌گذار از دو دهه سودآوری خالص بدون نیاز به تامین مواد اولیه بهره‌مند می‌گردد.
         </p>
         <div class="glass-card p-5 border-s-4 border-solar-gold">
-          <p class="text-sm font-bold text-solar-gold mb-1">📊 نتیجه‌گیری</p>
+          <p class="text-sm font-bold text-solar-gold mb-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" style="width:1em;height:1em;vertical-align:-0.125em;display:inline-block"><path d="M4 20V10.5M10 20V4M16 20v-6.5M21.5 20H2.5"/></svg> نتیجه‌گیری</p>
           <p class="text-pure-white/90 text-base leading-relaxed">
             نرخ بازگشت سرمایه (ROI) در نیروگاه‌های خورشیدی آنگرید در ایران بین ۳ تا ۵ سال برآورد می‌شود. این سیستم‌ها یک جریان نقدینگی پایدار و مقاوم در برابر تورم ایجاد می‌کنند.
           </p>
@@ -337,17 +337,17 @@ tailwind.config={theme:{extend:{colors:{'solar-gold':'#F5A623','deep-navy':'#0A1
       </p>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
         <div class="glass-card p-5 border-s-4 border-solar-gold flex flex-col items-center text-center">
-          <span class="text-3xl mb-2">⚡</span>
+          <span class="text-3xl mb-2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" style="width:1em;height:1em;vertical-align:-0.125em;display:inline-block"><path d="M13 2.5 4 13.5h7l-1 8 9-11h-7l1-8z"/></svg></span>
           <h4 class="font-bold text-pure-white text-lg">سازمان ساتبا</h4>
           <p class="text-pure-white/60 text-sm">قرارداد ۲۰ ساله</p>
         </div>
         <div class="glass-card p-5 border-s-4 border-solar-gold flex flex-col items-center text-center">
-          <span class="text-3xl mb-2">⚡</span>
+          <span class="text-3xl mb-2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" style="width:1em;height:1em;vertical-align:-0.125em;display:inline-block"><path d="M13 2.5 4 13.5h7l-1 8 9-11h-7l1-8z"/></svg></span>
           <h4 class="font-bold text-pure-white text-lg">وزارت نیرو</h4>
           <p class="text-pure-white/60 text-sm">آیین‌نامه Grid Code</p>
         </div>
         <div class="glass-card p-5 border-s-4 border-solar-gold flex flex-col items-center text-center">
-          <span class="text-3xl mb-2">📜</span>
+          <span class="text-3xl mb-2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" style="width:1em;height:1em;vertical-align:-0.125em;display:inline-block"><path d="M6 3.5h11a2 2 0 0 1 2 2v13a2 2 0 0 0 2 2H7.5a2 2 0 0 1-2-2V5.5a2 2 0 0 1 .5-2z"/><path d="M8.5 7.5h7M8.5 11h7M8.5 14.5h5"/></svg></span>
           <h4 class="font-bold text-pure-white text-lg">اینماد / ساماندهی</h4>
           <p class="text-pure-white/60 text-sm">تأیید تجارت الکترونیک</p>
         </div>
@@ -375,12 +375,12 @@ tailwind.config={theme:{extend:{colors:{'solar-gold':'#F5A623','deep-navy':'#0A1
           به عنوان یک پیمانکار EPC و بومی در قلب صنعتی ایران، دفتر مرکزی هورا نور سهند در کرج (جاده ملارد) مستقر است. این استقرار استراتژیک به ما اجازه می‌دهد تا بالاترین کیفیت پشتیبانی فنی و نظارت مهندسی را در هاب‌های صنعتی و تجاری استان‌های البرز، تهران و قزوین اعمال کنیم. پروژه‌های شاخص ما در شهرک صنعتی اشتهارد و سیمین‌دشت اثباتی بر توانایی اجرای سریع و بدون نقص نیروگاه‌های مگاواتی است.
         </p>
         <address class="not-italic bg-solar-gold text-deep-navy rounded-2xl p-6 font-bold space-y-2">
-          <p class="text-lg">🏢 دفتر مرکزی: کرج، جاده ملارد</p>
-          <p>📞 ۰۲۶-۳۶۵۰۶۴۸۵</p>
-          <p>📱 ۰۹۱۲۵۷۲۸۱۷۰</p>
+          <p class="text-lg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" style="width:1em;height:1em;vertical-align:-0.125em;display:inline-block"><path d="M4.5 21V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v16"/><path d="M14.5 9.5H18a2 2 0 0 1 2 2V21"/><path d="M3 21h18"/><path d="M8 7h2.5M8 11h2.5M8 15h2.5"/></svg> دفتر مرکزی: کرج، جاده ملارد</p>
+          <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" style="width:1em;height:1em;vertical-align:-0.125em;display:inline-block"><path d="M15.4 21A13.4 13.4 0 0 1 3 8.6 3.4 3.4 0 0 1 6.4 5.2h1a1 1 0 0 1 1 .8l.7 3a1 1 0 0 1-.3 1L7.4 11a11 11 0 0 0 5.6 5.6l1.2-1.4a1 1 0 0 1 1-.3l3 .7a1 1 0 0 1 .8 1v1A3.4 3.4 0 0 1 15.4 21z"/></svg> ۰۲۶-۳۶۵۰۶۴۸۵</p>
+          <p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" style="width:1em;height:1em;vertical-align:-0.125em;display:inline-block"><rect x="6.8" y="2.5" width="10.4" height="19" rx="2.4"/><path d="M11 18.4h2"/></svg> ۰۹۱۲۵۷۲۸۱۷۰</p>
         </address>
         <div class="glass-card p-5 border-s-4 border-solar-gold">
-          <p class="text-sm font-bold text-solar-gold mb-1">📍 پوشش صنعتی</p>
+          <p class="text-sm font-bold text-solar-gold mb-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" style="width:1em;height:1em;vertical-align:-0.125em;display:inline-block"><path d="M12 21.2s7-6.4 7-11.4a7 7 0 1 0-14 0c0 5 7 11.4 7 11.4z"/><circle cx="12" cy="9.8" r="2.5"/></svg> پوشش صنعتی</p>
           <p class="text-pure-white/90 text-base leading-relaxed">
             هورا نور سهند مستقر در استان البرز و کرج، مجری مستقیم پروژه‌های نیروگاه خورشیدی در شهرک‌های صنعتی اشتهارد، سیمین‌دشت و مناطق تهران، قزوین و شمال کشور است.
           </p>
@@ -416,7 +416,7 @@ tailwind.config={theme:{extend:{colors:{'solar-gold':'#F5A623','deep-navy':'#0A1
           <svg><!-- Arrow --></svg>
         </a>
         <div class="glass-card p-5 border-s-4 border-solar-gold mt-8">
-          <p class="text-sm font-bold text-solar-gold mb-1">🔄 انتخاب معماری</p>
+          <p class="text-sm font-bold text-solar-gold mb-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" style="width:1em;height:1em;vertical-align:-0.125em;display:inline-block"><path d="M20 11.5a8 8 0 1 0-2.4 5.6"/><path d="M20.5 5.5v6h-6"/></svg> انتخاب معماری</p>
           <p class="text-pure-white/90 text-base leading-relaxed">
             برخلاف سیستم‌های آفگرید که برای تامین برق مناطق دورافتاده به باتری نیاز دارند، سیستم‌های متصل به شبکه (آنگرید) فاقد باتری بوده و برق را مستقیماً به شبکه سراسری شهری تزریق می‌کنند.
           </p>

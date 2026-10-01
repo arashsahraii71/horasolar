@@ -137,11 +137,11 @@ tailwind.config={theme:{extend:{colors:{'solar-gold':'#F5A623','deep-navy':'#0A1
 <div class="lg:col-span-5 lg:sticky lg:top-20" aria-label="نمودار اولویت‌بندی انرژی در سیستم هیبریدی" role="img">
 <div class="glass-card p-8">
 <div class="flex flex-col gap-4 items-center">
-<div class="w-full rounded-xl bg-solar-gold/20 border-2 border-solar-gold p-4 text-center" :class="{ 'ring-2 ring-solar-gold': activeRung === 0 }"><span class="text-solar-gold font-black text-xl">☀️ اولویت ۱: پنل‌های خورشیدی</span><p class="text-pure-white/70 text-sm mt-1">مصروف مستقیم + شارژ باتری</p></div>
+<div class="w-full rounded-xl bg-solar-gold/20 border-2 border-solar-gold p-4 text-center" :class="{ 'ring-2 ring-solar-gold': activeRung === 0 }"><span class="text-solar-gold font-black text-xl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" style="width:1em;height:1em;vertical-align:-0.125em;display:inline-block"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2M12 19.5v2M4.6 4.6l1.4 1.4M18 18l1.4 1.4M2.5 12h2M19.5 12h2M4.6 19.4l1.4-1.4M18 6l1.4-1.4"/></svg> اولویت ۱: پنل‌های خورشیدی</span><p class="text-pure-white/70 text-sm mt-1">مصروف مستقیم + شارژ باتری</p></div>
 <svg class="w-1 h-8"><line x1="50%" y1="0" x2="50%" y2="100%" stroke="#F5A623" stroke-width="2" stroke-dasharray="6"/></svg>
-<div class="w-full rounded-xl bg-navy-mid border border-solar-gold/40 p-4 text-center"><span class="text-solar-gold font-bold text-lg">🏠 اولویت ۲: بار مصرفی (Load)</span><p class="text-pure-white/70 text-sm mt-1">تأمین مستقیم از پنل‌ها</p></div>
+<div class="w-full rounded-xl bg-navy-mid border border-solar-gold/40 p-4 text-center"><span class="text-solar-gold font-bold text-lg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" style="width:1em;height:1em;vertical-align:-0.125em;display:inline-block"><path d="M4 11 12 4l8 7v9a1.2 1.2 0 0 1-1.2 1.2H5.2A1.2 1.2 0 0 1 4 20z"/><path d="M10 20.6v-5.4h4v5.4"/></svg> اولویت ۲: بار مصرفی (Load)</span><p class="text-pure-white/70 text-sm mt-1">تأمین مستقیم از پنل‌ها</p></div>
 <svg class="w-1 h-8"><line x1="50%" y1="0" x2="50%" y2="100%" stroke="#F5A623" stroke-width="2" stroke-dasharray="6"/></svg>
-<div class="w-full rounded-xl bg-navy-mid border border-solar-gold/40 p-4 text-center"><span class="text-solar-gold font-bold text-lg">🔋 اولویت ۳: باتری ذخیره‌ساز</span><p class="text-pure-white/70 text-sm mt-1">مازاد تولید / پشتیبان قطعی</p></div>
+<div class="w-full rounded-xl bg-navy-mid border border-solar-gold/40 p-4 text-center"><span class="text-solar-gold font-bold text-lg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" style="width:1em;height:1em;vertical-align:-0.125em;display:inline-block"><rect x="2.5" y="7" width="16" height="10" rx="2.5"/><path d="M21.5 10.5v3"/><path d="M6.5 10.5v3M10.5 10.5v3M14.5 10.5v3"/></svg> اولویت ۳: باتری ذخیره‌ساز</span><p class="text-pure-white/70 text-sm mt-1">مازاد تولید / پشتیبان قطعی</p></div>
 <svg class="w-1 h-8"><line x1="50%" y1="0" x2="50%" y2="100%" stroke="#F5A623" stroke-width="2" stroke-dasharray="6"/></svg>
 <div class="w-full rounded-xl bg-navy-mid border border-solar-gold/40 p-4 text-center"><span class="text-solar-gold font-bold text-lg">اولویت ۴: شبکه برق شهری</span><p class="text-pure-white/70 text-sm mt-1">جبران کمبود / فروش مازاد</p></div>
 <svg class="w-1 h-8"><line x1="50%" y1="0" x2="50%" y2="100%" stroke="#F5A623" stroke-width="2" stroke-dasharray="6"/></svg>
@@ -153,7 +153,7 @@ tailwind.config={theme:{extend:{colors:{'solar-gold':'#F5A623','deep-navy':'#0A1
 <h2 class="font-vazirmatn font-extrabold text-2xl md:text-4xl text-pure-white">مکانیزم <span class="text-solar-gold">سوئیچینگ هوشمند</span> و اینورترهای هیبریدی</h2>
 <p class="text-pure-white/85 text-base md:text-lg leading-relaxed">معماری فنی یک سیستم هیبریدی بر پایه یک پردازشگر مرکزی در داخل اینورتر هیبریدی استوار است. این پردازشگر (Smart Energy Manager) به صورت لحظه‌ای پروفایل مصرف شما را تحلیل می‌کند. الگوریتم استاندارد به این شکل برنامه‌ریزی می‌شود: در طول روز، انرژی تولیدی پنل‌ها مستقیماً صرف روشن نگه‌داشتن تجهیزات می‌شود. مازاد این انرژی، بانک باتری‌ها را شارژ می‌کند. اگر مصرف شما بیش از تولید پنل‌ها باشد، اینورتر به صورت هوشمند کمبود را از شبکه برق شهری جبران می‌کند. در زمان قطعی کامل شبکه، مدار ایزوله شده و جریان بدون قطعی (شبیه به عملکرد دستگاه UPS صنعتی) از باتری‌ها کشیده می‌شود.</p>
 <div class="glass-card p-6 border-s-4 border-solar-gold bg-cream-warm/5">
-<p class="text-sm font-bold text-solar-gold mb-1">🔑 نکته کلیدی برای موتورهای جستجو</p>
+<p class="text-sm font-bold text-solar-gold mb-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" style="width:1em;height:1em;vertical-align:-0.125em;display:inline-block"><circle cx="8.2" cy="12" r="3.2"/><path d="M11.4 12H21M18 12v3M14.6 12v2.2"/></svg> نکته کلیدی برای موتورهای جستجو</p>
 <p class="text-pure-white/90 text-base leading-relaxed">قلب تپنده یک نیروگاه هیبریدی، اینورتر هوشمند آن است. این دستگاه به صورت دینامیک اولویت‌بندی می‌کند که بار مصرفی ابتدا از پنل‌ها، سپس از باتری و در نهایت از شبکه برق شهری یا دیزل ژنراتور تامین شود.</p>
 </div>
 </div>
@@ -164,20 +164,20 @@ tailwind.config={theme:{extend:{colors:{'solar-gold':'#F5A623','deep-navy':'#0A1
 <div class="container mx-auto px-4 grid grid-cols-1 lg:grid-cols-12 lg:min-h-[600px]">
 <div class="lg:col-span-6 relative flex items-center justify-center p-8 bg-navy-mid/90 overflow-hidden">
 <div class="relative z-10 text-center">
-<span class="text-6xl">⛽</span>
+<span class="text-6xl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" style="width:1em;height:1em;vertical-align:-0.125em;display:inline-block"><path d="M4.5 21V5a2 2 0 0 1 2-2h4.5a2 2 0 0 1 2 2v16"/><path d="M3 21h11.5"/><path d="M13 9.5h3.2a2 2 0 0 1 2 2v5a1.6 1.6 0 0 0 3.2 0v-6l-3-3"/></svg></span>
 <h3 class="text-alert-red font-bold text-xl mt-4">ژنراتور دیزلی: صدا، سوخت، استهلاک</h3>
 <p class="text-pure-white/60 mt-2 text-sm">هزینه روغن + سوخت + تعمیرات + صدا</p>
 </div>
 </div>
 <div class="lg:col-span-6 relative flex items-center justify-center p-8 bg-deep-navy overflow-hidden">
 <div class="relative z-10 text-center">
-<span class="text-6xl">⚡</span>
+<span class="text-6xl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" style="width:1em;height:1em;vertical-align:-0.125em;display:inline-block"><path d="M13 2.5 4 13.5h7l-1 8 9-11h-7l1-8z"/></svg></span>
 <h3 class="text-eco-green font-bold text-xl mt-4">هیبریدی خورشیدی: آرام، هوشمند، اتوماتیک</h3>
 <p class="text-pure-white/70 mt-2 text-sm">سوییچینگ ۲۰ میلی‌ثانیه / بدون صدا / بدون سوخت</p>
 </div>
 </div>
 <div class="lg:absolute lg:start-1/2 lg:top-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2 z-20 w-full lg:max-w-md mx-auto mt-6 lg:mt-0 glass-card p-6 border-2 border-solar-gold">
-<p class="text-sm font-bold text-solar-gold mb-1">💡 خلاصه تصمیم‌ساز</p>
+<p class="text-sm font-bold text-solar-gold mb-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" style="width:1em;height:1em;vertical-align:-0.125em;display:inline-block"><path d="M9.2 18h5.6M10.2 21h3.6"/><path d="M12 3a6 6 0 0 1 3.9 10.6V16H8.1v-2.4A6 6 0 0 1 12 3z"/></svg> خلاصه تصمیم‌ساز</p>
 <p class="text-pure-white/90 text-base leading-relaxed">سیستم‌های هیبریدی پاسخ مهندسی قطعی به معضل خاموشی‌های تابستان و زمستان در ایران هستند. این سیستم‌ها نیاز به استفاده از دیزل ژنراتورهای پرهزینه، پرسر و صدا و آلاینده را به طور کامل مرتفع می‌سازند.</p>
 </div>
 </div>
@@ -192,18 +192,18 @@ tailwind.config={theme:{extend:{colors:{'solar-gold':'#F5A623','deep-navy':'#0A1
 <h2 class="font-vazirmatn font-extrabold text-2xl md:text-4xl text-deep-navy text-center mb-12">باورهای غلط در <span class="text-solar-gold">سیستم‌های هیبریدی</span></h2>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
 <div class="rounded-2xl p-6 bg-alert-red/10 border border-alert-red/30">
-<span class="text-3xl">❌</span>
+<span class="text-3xl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" style="width:1em;height:1em;vertical-align:-0.125em;display:inline-block"><circle cx="12" cy="12" r="9"/><path d="M15 9l-6 6M9 9l6 6"/></svg></span>
 <h3 class="font-bold text-deep-navy text-lg mt-3">باور غلط</h3>
 <p class="text-deep-navy/80 mt-2 text-base leading-relaxed">سیستم هیبریدی همان UPS است و در قطعی‌های طولانی کارایی ندارد.</p>
 </div>
 <div class="rounded-2xl p-6 bg-eco-green/10 border border-eco-green/30">
-<span class="text-3xl">✅</span>
+<span class="text-3xl"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" style="width:1em;height:1em;vertical-align:-0.125em;display:inline-block"><circle cx="12" cy="12" r="9"/><path d="M8.2 12.4l2.6 2.6 5-5.4"/></svg></span>
 <h3 class="font-bold text-deep-navy text-lg mt-3">واقعیت مهندسی</h3>
 <p class="text-deep-navy/80 mt-2 text-base leading-relaxed">بسیاری از مشتریان تفاوت میان سیستم هیبریدی خورشیدی و یو‌پی‌اس (UPS) را متوجه نمی‌شوند. دستگاه UPS برای شارژ باتری‌های خود کاملاً وابسته به شبکه برق شهری است؛ یعنی اگر شبکه چند روز قطع باشد، UPS پس از اتمام باتری کاملاً بلااستفاده می‌شود. اما یک سیستم برق خورشیدی هیبریدی، یک مولد مستقل است. با استفاده از پنل‌های فتوولتائیک در روزهای آفتابی منطقه البرز (که بالغ بر ۲۵۰ روز در سال است)، باتری‌ها هر روز به طور مستقل و رایگان فول‌شارژ می‌شوند و وابستگی به وصل شدن مجدد برق شبکه به صفر می‌رسد.</p>
 </div>
 </div>
 <div class="border-t-4 border-solar-gold bg-pure-white rounded-2xl p-6 shadow-lg">
-<p class="text-sm font-bold text-solar-gold mb-1">🔬 حقیقت علمی</p>
+<p class="text-sm font-bold text-solar-gold mb-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" style="width:1em;height:1em;vertical-align:-0.125em;display:inline-block"><path d="M6.5 20.5h11"/><path d="M9.5 20.5V10a3 3 0 0 1 6 0v10.5"/><path d="M12 4.5v2.8"/><path d="M7 20.5a5.2 5.2 0 0 1 10.4 0"/></svg> حقیقت علمی</p>
 <p class="text-deep-navy text-base leading-relaxed">یک باور غلط این است که سیستم هیبریدی همان دستگاه UPS است. واقعیت این است که UPS تنها یک باتری پشتیبان موقت است، در حالی که سیستم هیبریدی یک نیروگاه تولید مولد است که باتری‌های خود را با انرژی رایگان خورشید شارژ می‌کند.</p>
 </div>
 </div>
@@ -227,7 +227,7 @@ tailwind.config={theme:{extend:{colors:{'solar-gold':'#F5A623','deep-navy':'#0A1
 </table>
 </div>
 <div class="lg:col-span-4 glass-card p-5 border-s-4 border-solar-gold">
-<p class="text-sm font-bold text-solar-gold mb-1">🛡️ تضمین کیفیت</p>
+<p class="text-sm font-bold text-solar-gold mb-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" style="width:1em;height:1em;vertical-align:-0.125em;display:inline-block"><path d="M12 3.2 19 6v5.6c0 4.6-3 7.8-7 9.2-4-1.4-7-4.6-7-9.2V6z"/></svg> تضمین کیفیت</p>
 <p class="text-pure-white/90 text-base leading-relaxed">پایداری یک نیروگاه هیبریدی به کیفیت باتری‌ها و پنل‌های آن بستگی دارد. ما در هورا نور سهند صرفاً از پنل‌های مونوکریستال برندهای جهانی Jinko، Trina و LONGi همراه با باتری‌های دیپ‌سایکل ژل استاندارد استفاده می‌کنیم.</p>
 </div>
 </div>
@@ -242,9 +242,9 @@ tailwind.config={theme:{extend:{colors:{'solar-gold':'#F5A623','deep-navy':'#0A1
 </div>
 <p class="text-pure-white/85 text-base md:text-lg leading-relaxed mb-8">در شرایط فعلی شبکه توزیع (آپدیت پاییز ۱۴۰۳)، اتصال تجهیزات به مدار شهری نیازمند رعایت دقیق حفاظت‌های الکتریکی (Grid Codes) است. اینورترهای هیبریدی مورد استفاده ما به طور کامل دارای پروتکل‌های حفاظتی Anti-Islanding هستند. این بدان معناست که در زمان خاموشی سراسری، جریان برق خروجی را از سمت شبکه ایزوله کرده و از برق‌گرفتگی تکنسین‌های اداره برق جلوگیری می‌کنند. این مکانیزم با تاییدیه سازمان ایمنی و <a href="https://moe.gov.ir" rel="external noopener" target="_blank" class="text-solar-gold underline hover:text-solar-gold/80">وزارت نیرو</a> اجرا می‌شود.</p>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-<div class="glass-card p-5 border-s-4 border-solar-gold flex flex-col items-center text-center"><span class="text-3xl mb-2">⚡</span><h4 class="font-bold text-pure-white text-lg">سازمان ساتبا</h4><p class="text-pure-white/60 text-sm">قرارداد ۲۰ ساله</p></div>
-<div class="glass-card p-5 border-s-4 border-solar-gold flex flex-col items-center text-center"><span class="text-3xl mb-2">⚡</span><h4 class="font-bold text-pure-white text-lg"><a href="https://moe.gov.ir" rel="external noopener" target="_blank" class="text-solar-gold underline hover:text-solar-gold/80">وزارت نیرو</a></h4><p class="text-pure-white/60 text-sm">آیین‌نامه Grid Code</p></div>
-<div class="glass-card p-5 border-s-4 border-solar-gold flex flex-col items-center text-center"><span class="text-3xl mb-2">📜</span><h4 class="font-bold text-pure-white text-lg">اینماد / ساماندهی</h4><p class="text-pure-white/60 text-sm">تأیید تجارت الکترونیک</p></div>
+<div class="glass-card p-5 border-s-4 border-solar-gold flex flex-col items-center text-center"><span class="text-3xl mb-2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" style="width:1em;height:1em;vertical-align:-0.125em;display:inline-block"><path d="M13 2.5 4 13.5h7l-1 8 9-11h-7l1-8z"/></svg></span><h4 class="font-bold text-pure-white text-lg">سازمان ساتبا</h4><p class="text-pure-white/60 text-sm">قرارداد ۲۰ ساله</p></div>
+<div class="glass-card p-5 border-s-4 border-solar-gold flex flex-col items-center text-center"><span class="text-3xl mb-2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" style="width:1em;height:1em;vertical-align:-0.125em;display:inline-block"><path d="M13 2.5 4 13.5h7l-1 8 9-11h-7l1-8z"/></svg></span><h4 class="font-bold text-pure-white text-lg"><a href="https://moe.gov.ir" rel="external noopener" target="_blank" class="text-solar-gold underline hover:text-solar-gold/80">وزارت نیرو</a></h4><p class="text-pure-white/60 text-sm">آیین‌نامه Grid Code</p></div>
+<div class="glass-card p-5 border-s-4 border-solar-gold flex flex-col items-center text-center"><span class="text-3xl mb-2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" style="width:1em;height:1em;vertical-align:-0.125em;display:inline-block"><path d="M6 3.5h11a2 2 0 0 1 2 2v13a2 2 0 0 0 2 2H7.5a2 2 0 0 1-2-2V5.5a2 2 0 0 1 .5-2z"/><path d="M8.5 7.5h7M8.5 11h7M8.5 14.5h5"/></svg></span><h4 class="font-bold text-pure-white text-lg">اینماد / ساماندهی</h4><p class="text-pure-white/60 text-sm">تأیید تجارت الکترونیک</p></div>
 </div>
 </div>
 </section>
@@ -258,12 +258,12 @@ tailwind.config={theme:{extend:{colors:{'solar-gold':'#F5A623','deep-navy':'#0A1
 <h2 class="font-vazirmatn font-extrabold text-2xl md:text-4xl text-pure-white">مناطق تحت پوشش <span class="text-solar-gold">هورا نور سهند</span></h2>
 <p class="text-pure-white/85 text-base md:text-lg leading-relaxed">سیستم‌های هیبریدی به دلیل پیچیدگی‌های تنظیمات نرم‌افزاری اینورتر و مانیتورینگ باتری‌ها، نیازمند پشتیبانی محلی و سریع هستند. دفتر مرکزی ما واقع در کرج، جاده ملارد (بعد از دانشگاه فرهنگیان)، به ما این امکان را می‌دهد تا در کمتر از چند ساعت، خدمات عیب‌یابی و سرویس دوره‌ای را برای ویلاهای لوکس در کردان، لواسان، مهرشهر، هشتگرد و همچنین سوله های صنعتی اشتهارد تامین کنیم. مجاورت ما با پروژه‌ها، برگ برنده شما در پایداری سیستم است.</p>
 <address class="not-italic bg-solar-gold text-deep-navy rounded-2xl p-6 font-bold space-y-2">
-<p class="text-lg">🏢 دفتر مرکزی: کرج، جاده ملارد، بعد از دانشگاه فرهنگیان</p>
-<p>📞 <span dir="ltr">026-36506485</span></p>
-<p>📱 <span dir="ltr">09125728170</span></p>
+<p class="text-lg"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" style="width:1em;height:1em;vertical-align:-0.125em;display:inline-block"><path d="M4.5 21V5a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v16"/><path d="M14.5 9.5H18a2 2 0 0 1 2 2V21"/><path d="M3 21h18"/><path d="M8 7h2.5M8 11h2.5M8 15h2.5"/></svg> دفتر مرکزی: کرج، جاده ملارد، بعد از دانشگاه فرهنگیان</p>
+<p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" style="width:1em;height:1em;vertical-align:-0.125em;display:inline-block"><path d="M15.4 21A13.4 13.4 0 0 1 3 8.6 3.4 3.4 0 0 1 6.4 5.2h1a1 1 0 0 1 1 .8l.7 3a1 1 0 0 1-.3 1L7.4 11a11 11 0 0 0 5.6 5.6l1.2-1.4a1 1 0 0 1 1-.3l3 .7a1 1 0 0 1 .8 1v1A3.4 3.4 0 0 1 15.4 21z"/></svg> <span dir="ltr">026-36506485</span></p>
+<p><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" style="width:1em;height:1em;vertical-align:-0.125em;display:inline-block"><rect x="6.8" y="2.5" width="10.4" height="19" rx="2.4"/><path d="M11 18.4h2"/></svg> <span dir="ltr">09125728170</span></p>
 </address>
 <div class="glass-card p-5 border-s-4 border-solar-gold">
-<p class="text-sm font-bold text-solar-gold mb-1">📍 پوشش محلی</p>
+<p class="text-sm font-bold text-solar-gold mb-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" style="width:1em;height:1em;vertical-align:-0.125em;display:inline-block"><path d="M12 21.2s7-6.4 7-11.4a7 7 0 1 0-14 0c0 5 7 11.4 7 11.4z"/><circle cx="12" cy="9.8" r="2.5"/></svg> پوشش محلی</p>
 <p class="text-pure-white/90 text-base leading-relaxed">تیم پشتیبانی سریع هورا نور سهند، با استقرار در کرج (جاده ملارد)، عملیات احداث و خدمات پس از فروش سیستم‌های هیبریدی را در کردان، مهرشهر، تهراندشت و شهرک‌های صنعتی ارائه می‌دهد.</p>
 </div>
 </div>
@@ -290,7 +290,7 @@ tailwind.config={theme:{extend:{colors:{'solar-gold':'#F5A623','deep-navy':'#0A1
 <h2 class="font-vazirmatn font-extrabold text-2xl md:text-4xl text-pure-white">سرمایه‌گذاری <span class="text-solar-gold">مطمئن</span> با بازگشت <span class="text-eco-green">۳ تا ۵ ساله</span></h2>
 <p class="text-pure-white/85 text-base md:text-lg leading-relaxed">وقتی هزینه از کار افتادن دستگاه‌های صنعتی گران‌قیمت یا فساد مواد غذایی در یخچال‌های ویلایی را در زمان قطعی برق محاسبه می‌کنید، متوجه خواهید شد که سیستم هیبریدی یک "هزینه" نیست، بلکه یک "بیمه تجهیزات" است. با حذف کامل هزینه‌های سوخت گازوئیل و روغن‌کاری دیزل ژنراتورها، بازگشت سرمایه سیستم‌های خورشیدی ما (با تکیه بر اطلاعات استخراج شده از پورتفولیوی ۴۰ پروژه اجرا شده) به شدت منطقی و بین ۳ الی ۵ سال است.</p>
 <div class="glass-card p-5 border-s-4 border-solar-gold">
-<p class="text-sm font-bold text-solar-gold mb-1">📊 نتیجه‌گیری</p>
+<p class="text-sm font-bold text-solar-gold mb-1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" style="width:1em;height:1em;vertical-align:-0.125em;display:inline-block"><path d="M4 20V10.5M10 20V4M16 20v-6.5M21.5 20H2.5"/></svg> نتیجه‌گیری</p>
 <p class="text-pure-white/90 text-base leading-relaxed">نصب یک سیستم هیبریدی نه تنها جلوی ضررهای میلیاردی ناشی از توقف خطوط تولید و خرابی تجهیزات حساس را می‌گیرد، بلکه یک سرمایه‌گذاری مطمئن با بازگشت ۳ تا ۵ ساله است.</p>
 </div>
 <a href="https://arashsahraii71.github.io/horasolar/pricing/solar-calculator.html" class="inline-flex items-center gap-2 px-8 py-4 bg-solar-gold text-deep-navy font-bold rounded-2xl hover:bg-solar-gold/90 transition-colors" aria-label="محاسبه‌گر آنلاین سرمایه‌گذاری هیبریدی">محاسبه سرمایه‌گذاری</a>
