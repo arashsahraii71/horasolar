@@ -366,7 +366,7 @@
             </thead>
             <tbody>
               <tr class="bg-deep-navy/60"><td class="p-3">چرخه عمر (DoD 50%)</td><td class="p-3 text-alert-red font-bold">۳۰۰–۵۰۰</td><td class="p-3 text-eco-green font-bold">۱۰۰۰–۱۵۰۰</td></tr>
-              <tr class="bg-navy-mid/40"><td class="p-3">نیاز به نگهداری</td><td class="p-3 text-alert-red font-bold">بله (آب蒸馏/روغن)</td><td class="p-3 text-eco-green font-bold">بدون نگهداری</td></tr>
+              <tr class="bg-navy-mid/40"><td class="p-3">نیاز به نگهداری</td><td class="p-3 text-alert-red font-bold">بله (آب مقطر/روغن)</td><td class="p-3 text-eco-green font-bold">بدون نگهداری</td></tr>
               <tr class="bg-deep-navy/60"><td class="p-3">عملکرد در دمای پایین</td><td class="p-3 text-alert-red font-bold">ضعیف</td><td class="p-3 text-eco-green font-bold">عالی</td></tr>
               <tr class="bg-navy-mid/40"><td class="p-3">خطر نشت/گاز</td><td class="p-3 text-alert-red font-bold">بله (هیدروژن)</td><td class="p-3 text-eco-green font-bold">خیر (مُهر شده)</td></tr>
               <tr class="bg-deep-navy/60"><td class="p-3">عمر مفید در هیبریدی</td><td class="p-3 text-alert-red font-bold">۱–۲ سال</td><td class="p-3 text-eco-green font-bold">۵–۷ سال</td></tr>
