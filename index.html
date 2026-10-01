@@ -50,11 +50,11 @@ tailwind.config = {
   "@graph": [
     {
       "@type": "EnergyBusiness",
-      "@id": "https://horasahand.ir/#organization",
+      "@id": "https://arashsahraii71.github.io/horasolar/#organization",
       "name": "شرکت برق خورشیدی هورا نور سهند",
       "alternateName": "Hora Nor Sahand",
-      "url": "https://horasahand.ir",
-      "logo": "https://horasahand.ir/logo.png",
+      "url": "https://arashsahraii71.github.io/horasolar",
+      "logo": "https://arashsahraii71.github.io/horasolar/logo.png",
       "foundingDate": "2016",
       "telephone": "+98-26-36506485",
       "address": {
@@ -79,10 +79,10 @@ tailwind.config = {
     },
     {
       "@type": "WebSite",
-      "@id": "https://horasahand.ir/#website",
-      "url": "https://horasahand.ir",
+      "@id": "https://arashsahraii71.github.io/horasolar/#website",
+      "url": "https://arashsahraii71.github.io/horasolar",
       "name": "هورانور سهند | طراحی و اجرای نیروگاه خورشیدی",
-      "publisher": {"@id": "https://horasahand.ir/#organization"}
+      "publisher": {"@id": "https://arashsahraii71.github.io/horasolar/#organization"}
     },
     {
       "@type": "FAQPage",
@@ -121,15 +121,29 @@ tailwind.config = {
   .scrollbar-hide::-webkit-scrollbar { display: none; }
   .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
 </style>
+
+<style id="global-chrome-styles">
+[x-cloak]{display:none!important}
+@keyframes pulseGlow{0%,100%{box-shadow:0 0 0 0 rgba(245,166,35,.4)}50%{box-shadow:0 0 0 12px rgba(245,166,35,0)}}
+.animate-pulse-glow{animation:pulseGlow 2s ease-in-out infinite}
+.bg-solar-gold{background-color:#F5A623}
+.hover\:bg-solar-gold-light:hover{background-color:#FFD580}
+.text-solar-gold{color:#F5A623}
+.hover\:text-solar-gold:hover{color:#F5A623}
+.text-deep-navy{color:#0A1929}
+.bg-deep-navy{background-color:#0A1929}
+.shadow-solar-gold\/30{box-shadow:0 10px 15px -3px rgba(245,166,35,.3)}
+.shadow-solar-gold\/20{box-shadow:0 10px 15px -3px rgba(245,166,35,.2)}
+</style>
 </head>
 <body class="bg-white font-vazir text-text-primary antialiased">
 
-<header class="fixed top-0 inset-x-0 z-50 bg-white backdrop-blur-xl border-b border-white/[0.12]" x-data="{ mobileOpen: false }">
+<header id="global-site-header" class="fixed top-0 inset-x-0 z-50 bg-white backdrop-blur-xl border-b border-white/[0.12]" x-data="{ mobileOpen: false, servicesOpen: false }">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-12 items-center h-20 gap-4">
             <div class="col-span-8 lg:col-span-3 flex items-center">
-                <a href="https://horasolar.ir/index.html" class="flex items-center gap-3 group">
-                    <img src="img/logo.webp" alt="هورانور سهند" class="w-10 h-10 group-hover:scale-110 transition-transform">
+                <a href="https://arashsahraii71.github.io/horasolar/index.html" class="flex items-center gap-3 group">
+                    <img src="https://arashsahraii71.github.io/horasolar/img/logo.webp" alt="هورانور سهند" class="w-10 h-10 group-hover:scale-110 transition-transform">
                     <div class="flex flex-col">
                         <span class="text-lg font-black text-slate-900 leading-none">هورانور سهند</span>
                         <span class="text-xs font-medium text-slate-400 tracking-widest uppercase">Hora Nor Sahand</span>
@@ -137,38 +151,31 @@ tailwind.config = {
                 </a>
             </div>
             <nav class="hidden lg:block col-span-6" aria-label="Main Navigation">
-                <ul class="flex items-center justify-center gap-8">
-                    <li>
-                        <a href="https://horasolar.ir/applications/residential-villa-appliances.html" class="text-sm font-bold text-slate-700 hover:text-solar-gold transition-colors flex items-center gap-1.5 group relative">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
-                            خانگی و ویلایی
-                            <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-solar-gold absolute bottom-0 left-0"></span>
-                        </a>
+                <ul class="flex items-center justify-center gap-6 xl:gap-8">
+                    <li class="relative" @mouseenter="servicesOpen = true" @mouseleave="servicesOpen = false">
+                        <button type="button" @click="servicesOpen = !servicesOpen" class="text-sm font-bold text-slate-700 hover:text-solar-gold transition-colors flex items-center gap-1.5" :aria-expanded="servicesOpen.toString()" aria-haspopup="true">
+                            خدمات و پروژه‌ها
+                            <svg class="w-4 h-4 transition-transform" :class="servicesOpen ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                        </button>
+                        <div x-show="servicesOpen" x-cloak x-transition class="absolute top-full right-0 mt-3 w-64 bg-white rounded-2xl shadow-xl border border-slate-100 py-2 z-[70]">
+                            <a href="https://arashsahraii71.github.io/horasolar/applications/residential-villa-appliances.html" class="flex items-center gap-3 px-4 py-3 text-sm font-bold text-slate-700 hover:bg-slate-50 hover:text-solar-gold">ویلایی و خانگی</a>
+                            <a href="https://arashsahraii71.github.io/horasolar/applications/industrial-shed-roofs.html" class="flex items-center gap-3 px-4 py-3 text-sm font-bold text-slate-700 hover:bg-slate-50 hover:text-solar-gold">صنعتی و سوله</a>
+                            <a href="https://arashsahraii71.github.io/horasolar/applications/agricultural-water-pumps.html" class="flex items-center gap-3 px-4 py-3 text-sm font-bold text-slate-700 hover:bg-slate-50 hover:text-solar-gold">پمپ آب کشاورزی</a>
+                        </div>
                     </li>
                     <li>
-                        <a href="https://horasolar.ir/applications/industrial-shed-roofs.html" class="text-sm font-bold text-slate-700 hover:text-solar-gold transition-colors flex items-center gap-1.5">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
-                            صنعتی و سوله
-                        </a>
+                        <a href="https://arashsahraii71.github.io/horasolar/pricing/residential-commercial-packages.html" class="text-sm font-bold text-slate-700 hover:text-solar-gold transition-colors whitespace-nowrap">قیمت و محاسبه‌گر</a>
                     </li>
                     <li>
-                        <a href="https://horasolar.ir/applications/agricultural-water-pumps.html" class="text-sm font-bold text-slate-700 hover:text-solar-gold transition-colors flex items-center gap-1.5">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
-                            کشاورزی
-                        </a>
+                        <a href="https://arashsahraii71.github.io/horasolar/investment/satba-guaranteed-purchase.html" class="text-sm font-bold text-slate-700 hover:text-solar-gold transition-colors whitespace-nowrap">سرمایه‌گذاری ساتبا</a>
                     </li>
                     <li>
-                        <a href="https://horasolar.ir/investment/satba-guaranteed-purchase.html" class="text-sm font-bold text-slate-700 hover:text-solar-gold transition-colors flex items-center gap-1.5">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
-                            سرمایه‌گذاری
-                        </a>
+                        <a href="https://arashsahraii71.github.io/horasolar/investment/article-16-industrial-mandate.html" class="text-sm font-bold text-slate-700 hover:text-solar-gold transition-colors whitespace-nowrap">ماده ۱۶ صنایع</a>
                     </li>
                 </ul>
             </nav>
-            <div class="hidden lg:flex col-span-3 justify-end items-center gap-5">
-                <a href="tel:02636506485" class="text-sm font-bold text-slate-700 hover:text-slate-900 transition-colors" dir="ltr">
-                    ۰۲۶-۳۶۵۰۶۴۸۵
-                </a>
+            <div class="hidden lg:flex col-span-3 justify-end items-center gap-4">
+                <a href="tel:02636506485" class="text-sm font-bold text-slate-700 hover:text-slate-900 transition-colors" dir="ltr">۰۲۶-۳۶۵۰۶۴۸۵</a>
                 <a href="https://wa.me/989399935298" target="_blank" data-track="whatsapp_header" class="bg-solar-gold hover:bg-solar-gold-light text-deep-navy text-sm font-bold py-2.5 px-6 rounded-full shadow-lg shadow-solar-gold/30 transition-all hover:-translate-y-0.5 animate-pulse-glow flex items-center gap-2">
                     <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.305-.885-.653-1.482-1.46-1.656-1.758-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                     مشاوره رایگان
@@ -182,35 +189,26 @@ tailwind.config = {
             </div>
         </div>
     </div>
-    <div x-show="mobileOpen" x-transition x-cloak class="lg:hidden fixed inset-0 top-16 bg-white z-[60]">
-        <ul class="flex flex-col p-6 space-y-4 bg-white">
+    <div x-show="mobileOpen" x-transition x-cloak class="lg:hidden fixed inset-0 top-16 bg-white z-[60] overflow-y-auto">
+        <ul class="flex flex-col p-6 space-y-2 bg-white">
             <li>
-                <a href="https://horasolar.ir/applications/residential-villa-appliances.html" class="flex items-center gap-3 text-xl font-bold text-slate-900 py-4">
-                    <svg class="w-5 h-5 text-solar-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
-                    خانگی و ویلایی
-                </a>
+                <p class="text-xs font-bold text-slate-400 mb-1">خدمات و پروژه‌ها</p>
+                <a href="https://arashsahraii71.github.io/horasolar/applications/residential-villa-appliances.html" class="block text-lg font-bold text-slate-900 py-2">ویلایی و خانگی</a>
+                <a href="https://arashsahraii71.github.io/horasolar/applications/industrial-shed-roofs.html" class="block text-lg font-bold text-slate-900 py-2">صنعتی و سوله</a>
+                <a href="https://arashsahraii71.github.io/horasolar/applications/agricultural-water-pumps.html" class="block text-lg font-bold text-slate-900 py-2">پمپ آب کشاورزی</a>
             </li>
             <li>
-                <a href="https://horasolar.ir/applications/industrial-shed-roofs.html" class="flex items-center gap-3 text-xl font-bold text-slate-900 py-4">
-                    <svg class="w-5 h-5 text-solar-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
-                    صنعتی و سوله
-                </a>
+                <a href="https://arashsahraii71.github.io/horasolar/pricing/residential-commercial-packages.html" class="block text-lg font-bold text-slate-900 py-3">قیمت و محاسبه‌گر</a>
             </li>
             <li>
-                <a href="https://horasolar.ir/applications/agricultural-water-pumps.html" class="flex items-center gap-3 text-xl font-bold text-slate-900 py-4">
-                    <svg class="w-5 h-5 text-solar-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
-                    کشاورزی
-                </a>
+                <a href="https://arashsahraii71.github.io/horasolar/investment/satba-guaranteed-purchase.html" class="block text-lg font-bold text-slate-900 py-3">سرمایه‌گذاری ساتبا</a>
             </li>
             <li>
-                <a href="https://horasolar.ir/investment/satba-guaranteed-purchase.html" class="flex items-center gap-3 text-xl font-bold text-slate-900 py-4">
-                    <svg class="w-5 h-5 text-solar-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
-                    سرمایه‌گذاری
-                </a>
+                <a href="https://arashsahraii71.github.io/horasolar/investment/article-16-industrial-mandate.html" class="block text-lg font-bold text-slate-900 py-3">ماده ۱۶ صنایع</a>
             </li>
             <li class="pt-4 flex flex-col gap-3">
                 <a href="tel:02636506485" class="text-slate-700 font-bold text-center block bg-slate-100 py-3 rounded-lg" dir="ltr">۰۲۶-۳۶۵۰۶۴۸۵</a>
-                <a href="https://wa.me/989399935298" class="bg-solar-gold text-deep-navy font-bold text-center py-3 rounded-lg flex items-center justify-center gap-2 shadow-lg shadow-solar-gold/20">مشاوره در واتساپ</a>
+                <a href="https://wa.me/989399935298" class="bg-solar-gold text-deep-navy font-bold text-center py-3 rounded-lg flex items-center justify-center gap-2 shadow-lg shadow-solar-gold/20">مشاوره رایگان</a>
             </li>
         </ul>
     </div>
@@ -228,7 +226,7 @@ tailwind.config = {
       <p class="text-lg text-slate-400 mt-4 max-w-lg leading-relaxed">نیروگاه‌های خورشیدی هورانور سهند با بیش از ۸۵ پروژه موفق، برق مطمئن و پایدار شما را تضمین می‌کند.</p>
       <div class="flex flex-wrap gap-4 mt-8">
         <a href="https://wa.me/989399935298" class="bg-solar-gold text-deep-navy font-bold rounded-full px-8 py-3 hover:bg-solar-gold-light transition-all duration-300">مشاوره رایگان</a>
-        <a href="https://horasolar.ir/index.html#live-projects" class="border border-white/20 text-white rounded-full px-8 py-3 hover:bg-white/5 transition-all duration-300">نمونه پروژه‌ها</a>
+        <a href="index.html#live-projects" class="border border-white/20 text-white rounded-full px-8 py-3 hover:bg-white/5 transition-all duration-300">نمونه پروژه‌ها</a>
       </div>
     </div>
     <div class="col-span-1 lg:col-span-6 order-2">
@@ -381,7 +379,7 @@ tailwind.config = {
     <h2 class="text-2xl lg:text-4xl font-black text-white mt-3">چهار ستون تخصص هورانور سهند</h2>
   </div>
   <div class="max-w-7xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-3 px-4 lg:px-8">
-    <a href="https://horasolar.ir/applications/residential-villa-appliances.html" class="group relative overflow-hidden rounded-3xl h-[220px] lg:h-[280px] cursor-pointer block">
+    <a href="https://arashsahraii71.github.io/horasolar/applications/residential-villa-appliances.html" class="group relative overflow-hidden rounded-3xl h-[220px] lg:h-[280px] cursor-pointer block">
       <div class="absolute inset-0 bg-cover bg-center brightness-[0.3] group-hover:brightness-50 transition-all duration-500" style="background-image:url('solar-panel-villa-kordan-offgrid.jpg')"></div>
       <div class="absolute bottom-0 inset-x-0 p-4 z-10">
         <svg class="w-10 h-10 text-white mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
@@ -397,7 +395,7 @@ tailwind.config = {
         <span class="text-solar-gold font-bold">بیشتر بدانید ←</span>
       </div>
     </a>
-    <a href="https://horasolar.ir/applications/industrial-shed-roofs.html" class="group relative overflow-hidden rounded-3xl h-[220px] lg:h-[280px] cursor-pointer block">
+    <a href="https://arashsahraii71.github.io/horasolar/applications/industrial-shed-roofs.html" class="group relative overflow-hidden rounded-3xl h-[220px] lg:h-[280px] cursor-pointer block">
       <div class="absolute inset-0 bg-cover bg-center brightness-[0.3] group-hover:brightness-50 transition-all duration-500" style="background-image:url('industrial-solar-power-plant-eshtehard.jpg')"></div>
       <div class="absolute bottom-0 inset-x-0 p-4 z-10">
         <svg class="w-10 h-10 text-white mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
@@ -413,7 +411,7 @@ tailwind.config = {
         <span class="text-solar-gold font-bold">بیشتر بدانید ←</span>
       </div>
     </a>
-    <a href="https://horasolar.ir/applications/agricultural-water-pumps.html" class="group relative overflow-hidden rounded-3xl h-[220px] lg:h-[280px] cursor-pointer block">
+    <a href="https://arashsahraii71.github.io/horasolar/applications/agricultural-water-pumps.html" class="group relative overflow-hidden rounded-3xl h-[220px] lg:h-[280px] cursor-pointer block">
       <div class="absolute inset-0 bg-cover bg-center brightness-[0.3] group-hover:brightness-50 transition-all duration-500" style="background-image:url('solar-water-pump-agricultural-hashtgerd.jpg')"></div>
       <div class="absolute bottom-0 inset-x-0 p-4 z-10">
         <svg class="w-10 h-10 text-white mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
@@ -429,7 +427,7 @@ tailwind.config = {
         <span class="text-solar-gold font-bold">بیشتر بدانید ←</span>
       </div>
     </a>
-    <a href="https://horasolar.ir/investment/satba-guaranteed-purchase.html" class="group relative overflow-hidden rounded-3xl h-[220px] lg:h-[280px] cursor-pointer block">
+    <a href="https://arashsahraii71.github.io/horasolar/investment/satba-guaranteed-purchase.html" class="group relative overflow-hidden rounded-3xl h-[220px] lg:h-[280px] cursor-pointer block">
       <div class="absolute inset-0 bg-cover bg-center brightness-[0.3] group-hover:brightness-50 transition-all duration-500" style="background-image:url('satba-solar-investment-power-plant.jpg')"></div>
       <div class="absolute bottom-0 inset-x-0 p-4 z-10">
         <svg class="w-10 h-10 text-white mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/></svg>
@@ -576,29 +574,29 @@ tailwind.config = {
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
         مناطق ویلایی و مسکونی
       </h3>
-      <p class="text-slate-600 mb-6 text-sm lg:text-base">برای ویلاهای کردان، مهرشهر و لواسان، <a href="https://horasolar.ir/pricing/residential-commercial-packages.html" class="text-primary hover:text-amber-500 font-bold underline decoration-primary/30 underline-offset-4 transition-colors">بسته‌های قیمتی خانگی و تجاری</a> متناسب با مصرف ۵ تا ۲۰ کیلوواتی ارائه می‌شود.</p>
+      <p class="text-slate-600 mb-6 text-sm lg:text-base">برای ویلاهای کردان، مهرشهر و لواسان، <a href="https://arashsahraii71.github.io/horasolar/pricing/residential-commercial-packages.html" class="text-primary hover:text-amber-500 font-bold underline decoration-primary/30 underline-offset-4 transition-colors">بسته‌های قیمتی خانگی و تجاری</a> متناسب با مصرف ۵ تا ۲۰ کیلوواتی ارائه می‌شود.</p>
       <div class="grid grid-cols-2 gap-3 lg:gap-4">
-        <a href="https://horasolar.ir/locations/alborz-province.html" class="bg-amber-50/50 border border-amber-100 rounded-2xl p-5 hover:border-amber-300 hover:-translate-y-1 hover:shadow-md transition-all duration-300 block">
+        <a href="https://arashsahraii71.github.io/horasolar/locations/alborz-province.html" class="bg-amber-50/50 border border-amber-100 rounded-2xl p-5 hover:border-amber-300 hover:-translate-y-1 hover:shadow-md transition-all duration-300 block">
           <span class="font-bold text-text-dark">کردان</span>
           <p class="text-sm text-slate-500 mt-1">برق خورشیدی ویلای لوکس</p>
         </a>
-        <a href="https://horasolar.ir/locations/alborz-province.html" class="bg-amber-50/50 border border-amber-100 rounded-2xl p-5 hover:border-amber-300 hover:-translate-y-1 hover:shadow-md transition-all duration-300 block">
+        <a href="https://arashsahraii71.github.io/horasolar/locations/alborz-province.html" class="bg-amber-50/50 border border-amber-100 rounded-2xl p-5 hover:border-amber-300 hover:-translate-y-1 hover:shadow-md transition-all duration-300 block">
           <span class="font-bold text-text-dark">مهرشهر</span>
           <p class="text-sm text-slate-500 mt-1">سیستم خورشیدی خانگی</p>
         </a>
-        <a href="https://horasolar.ir/locations/tehran-province.html" class="bg-amber-50/50 border border-amber-100 rounded-2xl p-5 hover:border-amber-300 hover:-translate-y-1 hover:shadow-md transition-all duration-300 block">
+        <a href="https://arashsahraii71.github.io/horasolar/locations/tehran-province.html" class="bg-amber-50/50 border border-amber-100 rounded-2xl p-5 hover:border-amber-300 hover:-translate-y-1 hover:shadow-md transition-all duration-300 block">
           <span class="font-bold text-text-dark">لواسان</span>
           <p class="text-sm text-slate-500 mt-1">آفگرید ویلایی</p>
         </a>
-        <a href="https://horasolar.ir/locations/alborz-province.html" class="bg-amber-50/50 border border-amber-100 rounded-2xl p-5 hover:border-amber-300 hover:-translate-y-1 hover:shadow-md transition-all duration-300 block">
+        <a href="https://arashsahraii71.github.io/horasolar/locations/alborz-province.html" class="bg-amber-50/50 border border-amber-100 rounded-2xl p-5 hover:border-amber-300 hover:-translate-y-1 hover:shadow-md transition-all duration-300 block">
           <span class="font-bold text-text-dark">هشتگرد</span>
           <p class="text-sm text-slate-500 mt-1">پمپ آب خورشیدی</p>
         </a>
-        <a href="https://horasolar.ir/locations/alborz-province.html" class="bg-amber-50/50 border border-amber-100 rounded-2xl p-5 hover:border-amber-300 hover:-translate-y-1 hover:shadow-md transition-all duration-300 block">
+        <a href="https://arashsahraii71.github.io/horasolar/locations/alborz-province.html" class="bg-amber-50/50 border border-amber-100 rounded-2xl p-5 hover:border-amber-300 hover:-translate-y-1 hover:shadow-md transition-all duration-300 block">
           <span class="font-bold text-text-dark">بهارستان</span>
           <p class="text-sm text-slate-500 mt-1">برق اضطراری خانگی</p>
         </a>
-        <a href="https://horasolar.ir/locations/alborz-province.html" class="bg-amber-50/50 border border-amber-100 rounded-2xl p-5 hover:border-amber-300 hover:-translate-y-1 hover:shadow-md transition-all duration-300 block">
+        <a href="https://arashsahraii71.github.io/horasolar/locations/alborz-province.html" class="bg-amber-50/50 border border-amber-100 rounded-2xl p-5 hover:border-amber-300 hover:-translate-y-1 hover:shadow-md transition-all duration-300 block">
           <span class="font-bold text-text-dark">کرج</span>
           <p class="text-sm text-slate-500 mt-1">مرکز عملیات</p>
         </a>
@@ -610,19 +608,19 @@ tailwind.config = {
         مناطق صنعتی و تولیدی
       </h3>
       <div class="grid grid-cols-2 gap-3 lg:gap-4">
-        <a href="https://horasolar.ir/locations/alborz-province.html" class="bg-slate-100 border border-slate-200 rounded-2xl p-5 hover:border-slate-400 hover:-translate-y-1 hover:shadow-md transition-all duration-300 block">
+        <a href="https://arashsahraii71.github.io/horasolar/locations/alborz-province.html" class="bg-slate-100 border border-slate-200 rounded-2xl p-5 hover:border-slate-400 hover:-translate-y-1 hover:shadow-md transition-all duration-300 block">
           <span class="font-bold text-text-dark">شهرک صنعتی اشتهارد</span>
           <p class="text-sm text-slate-500 mt-1">نیروگاه ۲۰۰ کیلووات سقف سوله</p>
         </a>
-        <a href="https://horasolar.ir/locations/alborz-province.html" class="bg-slate-100 border border-slate-200 rounded-2xl p-5 hover:border-slate-400 hover:-translate-y-1 hover:shadow-md transition-all duration-300 block">
+        <a href="https://arashsahraii71.github.io/horasolar/locations/alborz-province.html" class="bg-slate-100 border border-slate-200 rounded-2xl p-5 hover:border-slate-400 hover:-translate-y-1 hover:shadow-md transition-all duration-300 block">
           <span class="font-bold text-text-dark">سیمین‌دشت</span>
           <p class="text-sm text-slate-500 mt-1">نیروگاه صنعتی آنگرید</p>
         </a>
-        <a href="https://horasolar.ir/locations/alborz-province.html" class="bg-slate-100 border border-slate-200 rounded-2xl p-5 hover:border-slate-400 hover:-translate-y-1 hover:shadow-md transition-all duration-300 block">
+        <a href="https://arashsahraii71.github.io/horasolar/locations/alborz-province.html" class="bg-slate-100 border border-slate-200 rounded-2xl p-5 hover:border-slate-400 hover:-translate-y-1 hover:shadow-md transition-all duration-300 block">
           <span class="font-bold text-text-dark">کرج</span>
           <p class="text-sm text-slate-500 mt-1">نیروگاه هیبرید کارگاهی</p>
         </a>
-        <a href="https://horasolar.ir/locations/alborz-province.html" class="bg-slate-100 border border-slate-200 rounded-2xl p-5 hover:border-slate-400 hover:-translate-y-1 hover:shadow-md transition-all duration-300 block">
+        <a href="https://arashsahraii71.github.io/horasolar/locations/alborz-province.html" class="bg-slate-100 border border-slate-200 rounded-2xl p-5 hover:border-slate-400 hover:-translate-y-1 hover:shadow-md transition-all duration-300 block">
           <span class="font-bold text-text-dark">شهرک صنعتی هشتگرد</span>
           <p class="text-sm text-slate-500 mt-1">رفع جریمه ماده ۱۶</p>
         </a>
@@ -693,7 +691,7 @@ tailwind.config = {
         <svg class="w-6 h-6 text-slate-400 transition-transform duration-300 group-open:rotate-45 shrink-0 ms-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
       </summary>
       <div class="pb-4 text-slate-600 leading-relaxed text-sm lg:text-base">
-        <p>سازمان <strong class="text-text-dark">ساتبا</strong> قراردادهای <strong class="text-text-dark"><a href="https://horasolar.ir/investment/satba-guaranteed-purchase.html" class="text-primary hover:text-amber-500 font-bold underline decoration-primary/30 underline-offset-4 transition-colors">تضمینی ۲۰ ساله خرید برق</a></strong> با نرخ مصوب ارائه می‌دهد. نیروگاه‌های زیر ۲۰ کیلووات خانگی و نیروگاه‌های صنعتی با ظرفیت بالاتر می‌توانند از این قراردادها بهره‌مند شوند. <strong class="text-text-dark">خرید تضمینی برق</strong> توسط ساتبا، درآمد پایدار و بدون ریسک برای سرمایه‌گذاران ایجاد می‌کند.</p>
+        <p>سازمان <strong class="text-text-dark">ساتبا</strong> قراردادهای <strong class="text-text-dark"><a href="https://arashsahraii71.github.io/horasolar/investment/satba-guaranteed-purchase.html" class="text-primary hover:text-amber-500 font-bold underline decoration-primary/30 underline-offset-4 transition-colors">تضمینی ۲۰ ساله خرید برق</a></strong> با نرخ مصوب ارائه می‌دهد. نیروگاه‌های زیر ۲۰ کیلووات خانگی و نیروگاه‌های صنعتی با ظرفیت بالاتر می‌توانند از این قراردادها بهره‌مند شوند. <strong class="text-text-dark">خرید تضمینی برق</strong> توسط ساتبا، درآمد پایدار و بدون ریسک برای سرمایه‌گذاران ایجاد می‌کند.</p>
       </div>
     </details>
     <details class="border-b border-slate-200 group">
@@ -702,7 +700,7 @@ tailwind.config = {
         <svg class="w-6 h-6 text-slate-400 transition-transform duration-300 group-open:rotate-45 shrink-0 ms-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
       </summary>
       <div class="pb-4 text-slate-600 leading-relaxed text-sm lg:text-base">
-        <p>بله. طبق <strong class="text-text-dark">ماده ۱۶ قانون جهش تولید دانش‌بنیان</strong>، صنایع موظفند ۱ تا ۵ درصد برق خود را از منابع تجدیدپذیر تامین کنند. نصب <a href="https://horasolar.ir/applications/industrial-shed-roofs.html" class="text-primary hover:text-amber-500 font-bold underline decoration-primary/30 underline-offset-4 transition-colors">نیروگاه خورشیدی روی سقف سوله صنعتی</a>، این الزام قانونی را برآورده و جریمه را حذف می‌کند. <strong class="text-text-dark">کاهش هزینه قبض برق</strong> نیز از مزایای جانبی است.</p>
+        <p>بله. طبق <strong class="text-text-dark">ماده ۱۶ قانون جهش تولید دانش‌بنیان</strong>، صنایع موظفند ۱ تا ۵ درصد برق خود را از منابع تجدیدپذیر تامین کنند. نصب <a href="https://arashsahraii71.github.io/horasolar/applications/industrial-shed-roofs.html" class="text-primary hover:text-amber-500 font-bold underline decoration-primary/30 underline-offset-4 transition-colors">نیروگاه خورشیدی روی سقف سوله صنعتی</a>، این الزام قانونی را برآورده و جریمه را حذف می‌کند. <strong class="text-text-dark">کاهش هزینه قبض برق</strong> نیز از مزایای جانبی است.</p>
       </div>
     </details>
     <details class="border-b border-slate-200 group">
@@ -711,7 +709,7 @@ tailwind.config = {
         <svg class="w-6 h-6 text-slate-400 transition-transform duration-300 group-open:rotate-45 shrink-0 ms-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
       </summary>
       <div class="pb-4 text-slate-600 leading-relaxed text-sm lg:text-base">
-        <p>هزینه بسته به ظرفیت مورد نیاز (معمولاً <strong class="text-text-dark">۵ تا ۲۰ کیلووات</strong> برای ویلاهای کردان) متفاوت است. بازگشت سرمایه بین <strong class="text-text-dark">۳ تا ۵ سال</strong> تخمین زده می‌شود. برای برآورد دقیق <a href="https://horasolar.ir/applications/residential-villa-appliances.html" class="text-primary hover:text-amber-500 font-bold underline decoration-primary/30 underline-offset-4 transition-colors">سیستم‌های خورشیدی آفگرید</a> با شماره <a href="tel:+982636506485" class="text-solar-gold font-bold">۰۲۶-۳۶۵۰۶۴۸۵</a> تماس بگیرید.</p>
+        <p>هزینه بسته به ظرفیت مورد نیاز (معمولاً <strong class="text-text-dark">۵ تا ۲۰ کیلووات</strong> برای ویلاهای کردان) متفاوت است. بازگشت سرمایه بین <strong class="text-text-dark">۳ تا ۵ سال</strong> تخمین زده می‌شود. برای برآورد دقیق <a href="https://arashsahraii71.github.io/horasolar/applications/residential-villa-appliances.html" class="text-primary hover:text-amber-500 font-bold underline decoration-primary/30 underline-offset-4 transition-colors">سیستم‌های خورشیدی آفگرید</a> با شماره <a href="tel:+982636506485" class="text-solar-gold font-bold">۰۲۶-۳۶۵۰۶۴۸۵</a> تماس بگیرید.</p>
       </div>
     </details>
   </div>
@@ -719,7 +717,7 @@ tailwind.config = {
 
 </main>
 
-<footer class="bg-deep-navy border-t border-white/[0.06]">
+<footer id="global-site-footer" class="bg-deep-navy border-t border-white/[0.06]">
   <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 pt-12 pb-6 lg:pt-20 lg:pb-10 px-4 lg:px-8">
     <div class="lg:col-span-4">
       <div class="flex items-center gap-3 mb-4">
@@ -741,22 +739,21 @@ tailwind.config = {
       <p class="text-xs text-slate-500 mt-4">تاسیس: ۱۳۹۵</p>
     </div>
     <div class="lg:col-span-2">
-      <h4 class="text-white font-bold mb-4">خدمات</h4>
-      <a href="https://horasolar.ir/applications/residential-villa-appliances.html" class="block text-sm text-slate-400 hover:text-solar-gold py-1.5 transition-colors">خانگی و ویلایی</a>
-      <a href="https://horasolar.ir/applications/industrial-shed-roofs.html" class="block text-sm text-slate-400 hover:text-solar-gold py-1.5 transition-colors">صنعتی و سوله</a>
-      <a href="https://horasolar.ir/applications/agricultural-water-pumps.html" class="block text-sm text-slate-400 hover:text-solar-gold py-1.5 transition-colors">کشاورزی</a>
-      <a href="https://horasolar.ir/investment/satba-guaranteed-purchase.html" class="block text-sm text-slate-400 hover:text-solar-gold py-1.5 transition-colors">سرمایه‌گذاری ساتبا</a>
+      <h4 class="text-white font-bold mb-4">مسیرهای سریع</h4>
+      <a href="https://arashsahraii71.github.io/horasolar/pricing/residential-commercial-packages.html" class="block text-sm text-slate-400 hover:text-solar-gold py-1.5 transition-colors">قیمت نیروگاه خورشیدی</a>
+      <a href="https://arashsahraii71.github.io/horasolar/applications/industrial-shed-roofs.html" class="block text-sm text-slate-400 hover:text-solar-gold py-1.5 transition-colors">برق خورشیدی صنعتی</a>
+      <a href="https://arashsahraii71.github.io/horasolar/applications/residential-villa-appliances.html" class="block text-sm text-slate-400 hover:text-solar-gold py-1.5 transition-colors">برق خورشیدی ویلا</a>
+      <a href="https://arashsahraii71.github.io/horasolar/pricing/solar-calculator.html" class="block text-sm text-slate-400 hover:text-solar-gold py-1.5 transition-colors">محاسبه‌گر آنلاین</a>
     </div>
     <div class="lg:col-span-3">
-      <h4 class="text-white font-bold mb-4">منابع</h4>
-      <a href="https://horasolar.ir/index.html#about" class="block text-sm text-slate-400 hover:text-solar-gold py-1.5 transition-colors">درباره ما</a>
-      <a href="https://horasolar.ir/index.html#blog" class="block text-sm text-slate-400 hover:text-solar-gold py-1.5 transition-colors">بلاگ</a>
-      <a href="https://horasolar.ir/index.html#live-projects" class="block text-sm text-slate-400 hover:text-solar-gold py-1.5 transition-colors">نمونه پروژه‌ها</a>
-      <a href="https://horasolar.ir/index.html#contact" class="block text-sm text-slate-400 hover:text-solar-gold py-1.5 transition-colors">تماس با ما</a>
-      <a href="https://horasolar.ir/index.html#faq" class="block text-sm text-slate-400 hover:text-solar-gold py-1.5 transition-colors">سوالات متداول</a>
+      <h4 class="text-white font-bold mb-4">دانش و تجهیزات</h4>
+      <a href="https://arashsahraii71.github.io/horasolar/engineering/inverters-and-storage.html" class="block text-sm text-slate-400 hover:text-solar-gold py-1.5 transition-colors">اینورتر و باتری</a>
+      <a href="https://arashsahraii71.github.io/horasolar/engineering/tier1-solar-panels.html" class="block text-sm text-slate-400 hover:text-solar-gold py-1.5 transition-colors">پنل‌های Tier-1</a>
+      <a href="https://arashsahraii71.github.io/horasolar/knowledge/generator-vs-solar-analysis.html" class="block text-sm text-slate-400 hover:text-solar-gold py-1.5 transition-colors">مقایسه ژنراتور و پنل</a>
+      <a href="https://arashsahraii71.github.io/horasolar/knowledge/power-production-metrics.html" class="block text-sm text-slate-400 hover:text-solar-gold py-1.5 transition-colors">میزان تولید برق</a>
     </div>
     <div class="lg:col-span-3">
-      <h4 class="text-white font-bold mb-4">ارتباط با ما</h4>
+      <h4 class="text-white font-bold mb-4">اعتماد و ارتباط</h4>
       <div class="grid grid-cols-6 lg:grid-cols-3 gap-3">
         <a href="https://t.me/horasolar" class="w-10 h-10 rounded-xl bg-white/[0.05] border border-white/[0.06] flex items-center justify-center transition-all hover:bg-solar-gold/20 hover:border-solar-gold/30" aria-label="تلگرام">
           <svg class="w-5 h-5 text-slate-300" fill="currentColor" viewBox="0 0 24 24"><path d="M11.944 0A12 12 0 000 12a12 12 0 0012 12 12 12 0 0012-12A12 12 0 0012 0a12 12 0 00-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 01.171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/></svg>
