@@ -63,8 +63,8 @@
 - [ ] **[SEC_05] Hardware Gallery - Large Card:** Needs a wide shot of a hybrid inverter (Growatt/Deye) with gel battery bank (Vmax) in a clean technical room.
 - [ ] **[SEC_05] Hardware Gallery - Small Card 1:** Needs a close-up of Deep-Cycle Gel battery modules (Vmax branding) with BMS visible.
 - [ ] **[SEC_05] Hardware Gallery - Small Card 2:** Needs a close-up of hybrid inverter smart monitoring display showing real-time priority ladder.
-- [ ] **[SEC_07] Coverage Map:** Needs a stylized SVG map of Alborz showing Karaj HQ with gold pulse circles to Kordan, Mehrshahr, Hashtgerd, Eshtehard.
-- [ ] **[SEC_10] CTA Section - Grain Texture:** Needs a subtle repeating grain/noise texture PNG for the premium CTA background overlay.
+- [x] **[SEC_07] Coverage Map:** ✅ DELIVERED — `img/hybrid-coverage-map.svg` (stylized SVG: Karaj HQ + gold pulse connectors to Kordan, Lavasan, Mehrshahr, Hashtgerd, Eshtehard).
+- [x] **[SEC_10] CTA Section - Grain Texture:** ✅ DELIVERED — `img/grain-texture.png` (subtle repeating RGBA noise, used as the CTA background overlay).
 
 ---
 
